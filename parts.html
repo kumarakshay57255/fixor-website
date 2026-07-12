@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genuine Parts — FixorAssist</title>
+<meta name="description" content="The right part. The right performance. Keep your vehicle 100% performance ready with 100% genuine parts from FixorAssist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/parts.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body class="parts-page">
+
+<!-- ═══════════════ SVG ICON SPRITE ═══════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l2.6 12.4A2 2 0 0 0 9.6 17H19a2 2 0 0 0 2-1.6L23 7H6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.6" fill="currentColor"/><circle cx="18" cy="21" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 17l5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield-tick2" viewBox="0 0 48 48"><path d="M24 4l16 6v11.5c0 10-6.8 18.3-16 21.5-9.2-3.2-16-11.5-16-21.5V10z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 23.5l5.5 5.5L34 16.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield-x" viewBox="0 0 48 48"><path d="M24 4l16 6v11.5c0 10-6.8 18.3-16 21.5-9.2-3.2-16-11.5-16-21.5V10z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 18l12 12M30 18L18 30" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-medal2" viewBox="0 0 48 48"><path d="M24 4l3 3.4 4.4-1 1.6 4.2 4.2 1.6-1 4.4L40 20l-3.4 3 1 4.4-4.2 1.6-1.6 4.2-4.4-1-3 3.4-3-3.4-4.4 1-1.6-4.2-4.2-1.6 1-4.4L8 20l3.4-3-1-4.4 4.2-1.6 1.6-4.2 4.4 1z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M24 13l2.2 4.6 5 .7-3.6 3.5.8 5-4.4-2.3-4.4 2.3.8-5-3.6-3.5 5-.7z" fill="currentColor"/><path d="M18 38l-2.5 6M30 38l2.5 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-gear-o2" viewBox="0 0 48 48"><path d="M24 4l3 5.5 6.2-1 2 6 6 2-1 6.2L46 26l-5.5 3 1 6.2-6 2-2 6-6.2-1L24 46l-3-5.5-6.2 1-2-6-6-2 1-6.2L2 24l5.5-3-1-6.2 6-2 2-6 6.2 1z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="24" cy="24" r="7" fill="none" stroke="#e1181e" stroke-width="2.4"/></symbol>
+  <symbol id="i-tick-badge" viewBox="0 0 48 48"><path d="M10 8h28v26l-6 8H16l-6-8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" transform="rotate(3 24 24)"/><path d="M16 22l5.5 5.5L34 15" fill="none" stroke="#e1181e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search-badge" viewBox="0 0 48 48"><circle cx="22" cy="22" r="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="66 12" stroke-linecap="round"/><path d="M33 33l9 9" stroke="#e1181e" stroke-width="2.8" stroke-linecap="round"/><circle cx="22" cy="22" r="6" fill="none" stroke="#e1181e" stroke-width="2.4"/></symbol>
+  <symbol id="i-ribbon" viewBox="0 0 48 48"><circle cx="24" cy="18" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 12l1.8 3.7 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z" fill="#e1181e"/><path d="M17 27l-4 13 6-2.5 3 5 3-8M31 27l4 13-6-2.5-3 5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/></symbol>
+  <symbol id="i-box-return" viewBox="0 0 48 48"><path d="M8 16l16-8 16 8v16l-16 8-16-8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M8 16l16 8 16-8M24 24v16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="36" cy="34" r="8" fill="#fff" stroke="currentColor" stroke-width="2"/><path d="M33 34h6M36 31l-3 3 3 3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-engine2" viewBox="0 0 56 48"><path d="M14 16h8l3-4h10v6h5l4 5v9h-4l-4 5H18l-4-5H8v-9h6z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M3 20v14M53 24v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M25 22h8M29 18v8" stroke="#e1181e" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 7a17 17 0 0 1 15 9" fill="none" stroke="#e1181e" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 48 48"><rect x="12" y="8" width="24" height="32" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 12v24M20 12v24M24 12v24M28 12v24M32 12v24" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-suspension" viewBox="0 0 48 48"><path d="M24 4v6M24 38v6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M16 12h16M18 36h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M17 14l14 3-14 4 14 3-14 4 14 3" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-battery2" viewBox="0 0 56 48"><rect x="6" y="14" width="44" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 14v-5M42 14v-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M12 24h8M16 20v8" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round"/><path d="M36 24h8" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-door" viewBox="0 0 48 48"><path d="M14 6h24a3 3 0 0 1 3 3v30a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V19z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M7 19L20 6" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M14 26h8" stroke="#e1181e" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-check-g" viewBox="0 0 24 24"><path d="M12 2l7 2.6v5c0 4.4-3 8-7 9.4-4-1.4-7-5-7-9.4v-5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8.5 11.5l2.5 2.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gauge2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-dasharray="40 8" stroke-linecap="round"/><path d="M12 12l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-clock2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 7v5l3.5 2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user-shield" viewBox="0 0 24 24"><circle cx="12" cy="9" r="3.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-alert2" viewBox="0 0 24 24"><path d="M12 3L23 21H1z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 10v5M12 18v.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-graph-down" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 9l4.5 5 3-3 4.5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 13v3h-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock-back" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 7v5l3.5 2.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M3 12l-1.8-1.8M3 12l1.8-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-x-shield" viewBox="0 0 24 24"><path d="M12 2l7 2.6v5c0 4.4-3 8-7 9.4-4-1.4-7-5-7-9.4v-5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.5 9.5l5 5M14.5 9.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-target2" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="24" r="2" fill="currentColor"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc-search" viewBox="0 0 48 48"><rect x="9" y="6" width="27" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15 15h14M15 22h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="29" cy="30" r="6.5" fill="none" stroke="#e1181e" stroke-width="2.5"/><path d="M34 35l6 6" stroke="#e1181e" stroke-width="2.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-headset3" viewBox="0 0 48 48"><path d="M10 26v-4a14 14 0 0 1 28 0v4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><rect x="6" y="24" width="8" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="34" y="24" width="8" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M38 36c0 4-4 6-9 6" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-car-front" viewBox="0 0 48 48"><path d="M10 26l3.5-9a4 4 0 0 1 3.7-2.6h13.6a4 4 0 0 1 3.7 2.6L38 26" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><rect x="8" y="25" width="32" height="9" rx="3" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="15" cy="29.5" r="1.8" fill="#e1181e"/><circle cx="33" cy="29.5" r="1.8" fill="#e1181e"/><path d="M12 34v4M36 34v4" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-wrench2" viewBox="0 0 48 48"><path d="M30 8a8 8 0 0 0-9 11L7 33a4 4 0 1 0 6 6l14-14a8 8 0 0 0 11-9l-6 6-5-1-1-5z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+  <symbol id="i-truck2" viewBox="0 0 56 48"><path d="M14 12h26v22H14z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M40 18h8l5 7v9h-5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><circle cx="22" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="45" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M2 16h8M4 22h6M6 28h4" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-calendar2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="72 12" stroke-linecap="round"/><path d="M24 24l8-8" stroke="#e1181e" stroke-width="2.6" stroke-linecap="round"/><circle cx="24" cy="24" r="2.4" fill="currentColor"/></symbol>
+  <symbol id="i-clock-o" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 14v10l7 5" fill="none" stroke="#e1181e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-rupee-c" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M17 15h14M17 21h14M17 15c5.5 0 8 2.4 8 5.5S22.5 26 17 26l9.5 9" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat2" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="11" r="1.1" fill="#e1181e"/><circle cx="12" cy="11" r="1.1" fill="#e1181e"/><circle cx="15.5" cy="11" r="1.1" fill="#e1181e"/></symbol>
+  <symbol id="i-plus-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin-dot" viewBox="0 0 48 48"><path d="M24 4c8.3 0 15 6.7 15 15 0 10.5-15 25-15 25S9 29.5 9 19C9 10.7 15.7 4 24 4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5.5" fill="#e1181e"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4.5 2-4.5 4.5v2.5H7V15h2.5v6.5H13V15h3l.5-3.5H13V9c0-.6.4-1 1-1z" fill="currentColor"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-tw" viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.5 12 5.5 12 5.5s-6.2 0-8 .6a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.6 8 .6 8 .6s6.2 0 8-.6a3 3 0 0 0 2-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header svc-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo svc-logo"><img src="assets/img/svc-logo.png" alt="FixorAssist — Trusted Automotive Support"></a>
+    <nav class="main-nav svc-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services <svg class="ic"><use href="#i-chevron"/></svg></a>
+      <a href="become-partner.html">For Partners</a>
+      <a href="#">Blogs</a>
+      <a href="#footer">Contact Us</a>
+    </nav>
+    <a href="tel:+918884412345" class="btn btn-red header-cta"><svg class="ic"><use href="#i-phone-call"/></svg> 24/7 Emergency</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero parts-hero">
+  <img class="hero-visual" src="assets/img/parts-hero.png" alt="FixorAssist genuine parts — brake disc, caliper, filters and spark plug">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="gp-label">GENUINE PARTS <span class="gp-dash"></span></span>
+      <h1>THE RIGHT PART.<br><span class="red">THE RIGHT<br>PERFORMANCE.</span></h1>
+      <p>Keep your vehicle 100% performance ready<br>with 100% genuine parts.</p>
+      <div class="hero-feats parts-feats">
+        <div><span class="pf-ic"><svg><use href="#i-shield-tick2"/></svg></span><p>100%<br>Genuine</p></div>
+        <div><span class="pf-ic"><svg><use href="#i-ribbon"/></svg></span><p>OEM<br>Quality</p></div>
+        <div><span class="pf-ic"><svg><use href="#i-gear-o2"/></svg></span><p>Perfect<br>Fitment</p></div>
+        <div><span class="pf-ic"><svg><use href="#i-tick-badge"/></svg></span><p>Longer<br>Life</p></div>
+      </div>
+      <div class="hero-actions">
+        <a href="#finder" class="btn btn-red"><svg class="ic"><use href="#i-cart"/></svg> FIND GENUINE PARTS <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DARK STRIP ═══════════════ -->
+<section class="gp-strip">
+  <div class="container">
+    <div class="gp-strip-in">
+      <div class="gs-item"><svg class="gs-ic"><use href="#i-shield-tick2"/></svg><div><h5>TRUSTED SOURCING</h5><p>Parts from verified OEMs<br>and authorized partners.</p></div></div>
+      <div class="gs-item"><svg class="gs-ic"><use href="#i-search-badge"/></svg><div><h5>EXACT COMPATIBILITY</h5><p>100% fitment guarantee<br>for your vehicle.</p></div></div>
+      <div class="gs-item"><svg class="gs-ic"><use href="#i-medal2"/></svg><div><h5>RELIABLE PERFORMANCE</h5><p>Built to deliver the performance<br>you expect.</p></div></div>
+      <div class="gs-item"><svg class="gs-ic"><use href="#i-box-return"/></svg><div><h5>EASY RETURNS</h5><p>Hassle-free returns on<br>eligible orders.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY GENUINE PARTS MATTER ═══════════════ -->
+<section class="gp-why">
+  <div class="container gpwhy-grid">
+    <div class="gpwhy-copy">
+      <span class="gp-label">GENUINE PARTS <span class="pl-div"></span> <span class="gray">WHY IT MATTERS</span></span>
+      <h2>Why Genuine<br>Parts <span class="red">Matter</span></h2>
+      <span class="red-rule"></span>
+      <p>Your vehicle is built with precision.<br>It deserves parts that are engineered<br>to the same standards.</p>
+    </div>
+    <div class="gpwhy-photo"><img src="assets/img/parts-why.png" alt="FixorAssist genuine parts box with brake disc, oil filter and spark plug"></div>
+  </div>
+  <div class="container">
+    <div class="gpwhy-card">
+      <div><svg class="gw-ic"><use href="#i-shield-tick2"/></svg><h5>SAFETY FIRST</h5><p>Genuine parts meet strict safety standards to keep you and your loved ones safe.</p><span class="gw-rule"></span></div>
+      <div><svg class="gw-ic"><use href="#i-gauge"/></svg><h5>PEAK PERFORMANCE</h5><p>Engineered for the perfect fit and smooth performance every day.</p><span class="gw-rule"></span></div>
+      <div><svg class="gw-ic"><use href="#i-clock-o"/></svg><h5>LONGER LIFE</h5><p>Built to last longer, reducing wear and the need for frequent replacements.</p><span class="gw-rule"></span></div>
+      <div><svg class="gw-ic"><use href="#i-rupee-c"/></svg><h5>BETTER VALUE</h5><p>Reliable performance today means lower repair costs tomorrow.</p><span class="gw-rule"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PARTS WE PROVIDE ═══════════════ -->
+<section class="provide">
+  <div class="container">
+    <span class="eyebrow center dashes">GENUINE PARTS</span>
+    <h2 class="h2-center">Parts We Provide</h2>
+    <p class="section-sub">From engine to electronics, we offer a wide range of genuine parts<br>for all major vehicle makes and models.</p>
+    <div class="mini-divider"><span></span></div>
+    <div class="provide-grid">
+      <div class="provide-col">
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-engine2"/></svg></span><div><h5>Engine Parts</h5><span class="red-rule sm"></span><p>High-quality components for optimal engine performance.</p></div></div>
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-brake"/></svg></span><div><h5>Brake Components</h5><span class="red-rule sm"></span><p>Reliable braking parts that keep you safe on every drive.</p></div></div>
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-filter"/></svg></span><div><h5>Filters</h5><span class="red-rule sm"></span><p>Premium filters for cleaner air, better mileage and longer engine life.</p></div></div>
+      </div>
+      <div class="provide-car"><img src="assets/img/parts-car.png" alt="Transparent car showing internal genuine parts"></div>
+      <div class="provide-col">
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-suspension"/></svg></span><div><h5>Suspension Parts</h5><span class="red-rule sm"></span><p>Engineered for stability, comfort and better road handling.</p></div></div>
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-battery2"/></svg></span><div><h5>Electrical Parts</h5><span class="red-rule sm"></span><p>High-performance electrical components for reliable operation.</p></div></div>
+        <div class="pv-card"><span class="pv-ic"><svg><use href="#i-door"/></svg></span><div><h5>Body Components</h5><span class="red-rule sm"></span><p>Genuine body parts for perfect fit, finish and long-lasting strength.</p></div></div>
+      </div>
+    </div>
+    <div class="provide-band">
+      <div><svg class="pb-ic2"><use href="#i-shield-tick2"/></svg><div><h5>100% Genuine. 100% Reliable.</h5><p>Every part we provide is sourced from authorized manufacturers and built to meet exact OEM standards.</p></div></div>
+      <span class="pb-div2"></span>
+      <div><svg class="pb-ic2"><use href="#i-medal2"/></svg><div><h5>Perfect Fit. Guaranteed Performance.</h5><p>Designed for your vehicle. Tested for reliability. Trusted for your safety.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GENUINE VS COUNTERFEIT ═══════════════ -->
+<section class="versus">
+  <div class="vs-topline"></div>
+  <div class="container">
+    <span class="gp-label">GENUINE PARTS <span class="gp-dash"></span></span>
+    <h2 class="vs-title">Genuine vs <span class="red">Counterfeit</span></h2>
+    <span class="red-rule"></span>
+    <p class="vs-sub">They may look the same, but the difference<br>is in what you can't see. Choose genuine parts<br>for safety, reliability and long-term performance.</p>
+    <div class="vs-card">
+      <div class="vs-col good">
+        <div class="vs-head"><svg class="vsh-ic"><use href="#i-check-g"/></svg><div><h4>GENUINE PARTS</h4><p>Built to perform. Built to last.</p></div></div>
+        <div class="vs-item"><span class="vs-ic g"><svg><use href="#i-check-g"/></svg></span><div><h6>Verified Quality</h6><p>Manufactured to strict OEM standards with precise quality checks.</p></div></div>
+        <div class="vs-item"><span class="vs-ic g"><svg><use href="#i-gauge2"/></svg></span><div><h6>Reliable Performance</h6><p>Delivers optimal performance in all driving conditions.</p></div></div>
+        <div class="vs-item"><span class="vs-ic g"><svg><use href="#i-clock2"/></svg></span><div><h6>Longer Life</h6><p>Engineered with superior materials for extended durability.</p></div></div>
+        <div class="vs-item"><span class="vs-ic g"><svg><use href="#i-user-shield"/></svg></span><div><h6>Safe &amp; Trusted</h6><p>Ensures the safety of you and your loved ones on every drive.</p></div></div>
+      </div>
+      <div class="vs-photo"><img src="assets/img/parts-disc.png" alt="Split comparison of a genuine brake disc versus a corroded counterfeit"></div>
+      <div class="vs-col bad">
+        <div class="vs-head"><svg class="vsh-ic red-ic"><use href="#i-x-shield"/></svg><div><h4>COUNTERFEIT PARTS</h4><p>Risks you don't want to take.</p></div></div>
+        <div class="vs-item"><span class="vs-ic r"><svg><use href="#i-alert2"/></svg></span><div><h6>Unverified Quality</h6><p>No quality assurance. Made with inferior and unknown materials.</p></div></div>
+        <div class="vs-item"><span class="vs-ic r"><svg><use href="#i-graph-down"/></svg></span><div><h6>Poor Performance</h6><p>Inconsistent performance that puts you at risk.</p></div></div>
+        <div class="vs-item"><span class="vs-ic r"><svg><use href="#i-clock-back"/></svg></span><div><h6>Shorter Life</h6><p>Prone to early wear and frequent failures.</p></div></div>
+        <div class="vs-item"><span class="vs-ic r"><svg><use href="#i-x-shield"/></svg></span><div><h6>Safety Compromise</h6><p>Higher chances of breakdowns and serious accidents.</p></div></div>
+      </div>
+    </div>
+    <div class="vs-banner">
+      <div><svg class="vsb-ic"><use href="#i-shield-tick2"/></svg><div><h5>Don't compromise on what keeps you moving.</h5><p>Choose genuine parts for peace of mind and miles of confidence.</p></div></div>
+      <a href="#finder" class="btn btn-red btn-lg">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY CHOOSE FIXORASSIST ═══════════════ -->
+<section class="gp-choose">
+  <div class="container">
+    <span class="gp-label">WHY FIXORASSIST <span class="gp-dash"></span></span>
+    <h2 class="vs-title">Why Choose <span class="red">FixorAssist</span></h2>
+    <span class="red-rule"></span>
+    <p class="vs-sub">We don't just sell parts. We deliver confidence.<br>Here's what makes FixorAssist your trusted parts partner.</p>
+    <div class="choose-grid">
+      <div class="choose-photo"><img src="assets/img/parts-group.png" alt="FixorAssist genuine parts — box, disc, shock absorber, filters and spark plug"></div>
+      <div class="choose-list">
+        <div class="ch-item"><span class="ch-ic"><svg><use href="#i-ribbon"/></svg></span><div><h5>100% Genuine Parts</h5><p>Every part is sourced from authorized manufacturers and is 100% genuine.</p></div></div>
+        <div class="ch-item"><span class="ch-ic"><svg><use href="#i-target2"/></svg></span><div><h5>Perfect Fitment</h5><p>Parts designed for your vehicle for exact fit, seamless performance and long life.</p></div></div>
+        <div class="ch-item"><span class="ch-ic"><svg><use href="#i-shield-tick2"/></svg></span><div><h5>Trusted Quality</h5><p>Rigorous quality checks ensure every part meets the highest standards.</p></div></div>
+        <div class="ch-item"><span class="ch-ic"><svg><use href="#i-doc-search"/></svg></span><div><h5>Transparent Process</h5><p>Clear part details, pricing and support at every step.</p></div></div>
+        <div class="ch-item"><span class="ch-ic"><svg><use href="#i-headset3"/></svg></span><div><h5>Expert Support</h5><p>Our team is here to help you find the right part and the right solution.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="gp-steps">
+  <div class="container">
+    <span class="gp-label">HOW IT WORKS <span class="gp-dash"></span></span>
+    <div class="gpsteps-head">
+      <h2>Getting the Right Part<br><span class="red">is Simple.</span></h2>
+      <span class="gh-div"></span>
+      <p>We make it easy to find, verify and get the perfect genuine part for your vehicle.<br>Fast, reliable and hassle-free.</p>
+    </div>
+    <div class="gpsteps-grid">
+      <div class="gstep">
+        <span class="ghost-num">01</span>
+        <span class="gstep-ic"><svg><use href="#i-car-front"/></svg></span>
+        <div class="gstep-photo"><img src="assets/img/parts-step1.png" alt="White car"></div>
+        <h4>Tell Us Your Vehicle</h4><span class="red-rule sm center"></span>
+        <p>Enter your vehicle details or part requirement. We'll identify exactly what you need.</p>
+      </div>
+      <span class="gstep-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="gstep">
+        <span class="ghost-num">02</span>
+        <span class="gstep-ic"><svg><use href="#i-search"/></svg></span>
+        <div class="gstep-photo"><img src="assets/img/parts-step2.png" alt="Genuine parts with box"></div>
+        <h4>Find the Right Part</h4><span class="red-rule sm center"></span>
+        <p>We source the correct genuine part for your vehicle from trusted manufacturers.</p>
+      </div>
+      <span class="gstep-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="gstep">
+        <span class="ghost-num">03</span>
+        <span class="gstep-ic"><svg><use href="#i-shield-tick2"/></svg></span>
+        <div class="gstep-photo"><img src="assets/img/parts-step3.png" alt="FixorAssist genuine parts box with QR verification"></div>
+        <h4>Verify Genuine</h4><span class="red-rule sm center"></span>
+        <p>Every part is 100% genuine and quality-checked for complete peace of mind.</p>
+      </div>
+      <span class="gstep-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="gstep">
+        <span class="ghost-num">04</span>
+        <span class="gstep-ic"><svg><use href="#i-wrench2"/></svg></span>
+        <div class="gstep-photo"><img src="assets/img/parts-step4.png" alt="Part being installed with a ratchet"></div>
+        <h4>Get It Installed</h4><span class="red-rule sm center"></span>
+        <p>We deliver it fast or get it installed at your nearest FixorAssist service center.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PART FINDER ═══════════════ -->
+<section class="finder" id="finder">
+  <div class="container">
+    <div class="finder-card">
+      <div class="finder-copy">
+        <span class="gp-label">FIND YOUR PART <span class="gp-dash"></span></span>
+        <h2>Your Car.<br><span class="red">Its Exact Part.</span></h2>
+        <p>Enter your vehicle details and find the genuine<br>part that fits perfectly.</p>
+        <form class="finder-form" onsubmit="return false">
+          <div class="fsel"><svg class="ic"><use href="#i-car-front"/></svg><select><option>Select Brand</option><option>Maruti Suzuki</option><option>Hyundai</option><option>Tata</option><option>Mahindra</option><option>Honda</option><option>Toyota</option><option>Kia</option></select></div>
+          <div class="fsel"><svg class="ic"><use href="#i-car-front"/></svg><select><option>Select Model</option></select></div>
+          <div class="fsel"><svg class="ic"><use href="#i-calendar2"/></svg><select><option>Select Year</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option></select></div>
+        </form>
+        <div class="finder-actions">
+          <button class="btn btn-red"><svg class="ic"><use href="#i-search"/></svg> FIND MY PART</button>
+          <p class="finder-tags"><svg class="ic red-ic"><use href="#i-shield-tick2"/></svg> 100% Genuine Parts <span class="dot"></span> Perfect Fitment <span class="dot"></span> Reliable Performance</p>
+        </div>
+      </div>
+      <div class="finder-photo"><img src="assets/img/parts-finder.png" alt="FixorAssist genuine parts with brake disc and filters"></div>
+    </div>
+    <div class="finder-band">
+      <div><svg class="fb2-ic"><use href="#i-shield-tick2"/></svg><h5>Exact Fit Guarantee</h5><p>Parts that match your<br>vehicle perfectly.</p></div>
+      <div><svg class="fb2-ic"><use href="#i-ribbon"/></svg><h5>100% Genuine</h5><p>Sourced from authorized<br>manufacturers.</p></div>
+      <div><svg class="fb2-ic"><use href="#i-truck2"/></svg><h5>Fast Delivery</h5><p>Quick and reliable delivery<br>to your doorstep.</p></div>
+      <div><svg class="fb2-ic"><use href="#i-headset3"/></svg><h5>Expert Support</h5><p>We're here to help you<br>every step of the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="gp-faq">
+  <div class="container">
+    <span class="eyebrow center dashes">FAQ</span>
+    <h2 class="h2-center">Frequently Asked Questions</h2>
+    <p class="section-sub">Find quick answers to common questions about FixorAssist and our genuine parts.</p>
+    <div class="mini-divider"><span></span></div>
+    <div class="gpfaq-grid">
+      <div class="faq-list gp-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span class="qt"><span class="qn2">1.</span> How do I know if the part is genuine?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>All parts at FixorAssist are 100% genuine and sourced from authorized manufacturers. Each part comes with quality checks and packaging to ensure authenticity.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">2.</span> How can I find the right part for my vehicle?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Just share your vehicle's brand, model and year — or use our part finder above. Our team will identify the exact genuine part that fits your vehicle.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">3.</span> Do you offer installation services?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Yes. You can get your part installed at the nearest FixorAssist partner garage by certified professionals, or have it delivered to your doorstep.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">4.</span> What is your return or replacement policy?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Eligible parts can be returned or replaced hassle-free within the return window, provided they are unused and in original packaging.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">5.</span> How long does delivery take?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Most parts are delivered within 2–5 business days depending on your location and part availability. Express options are available in major cities.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">6.</span> Do you ship across India?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Yes, we deliver genuine parts across India through our trusted logistics partners — from metros to smaller towns.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qt"><span class="qn2">7.</span> Can I track my order?</span><svg class="pm"><use href="#i-plus-c"/></svg></button>
+          <div class="faq-a"><div><p>Absolutely. Once your order ships, you'll receive a tracking link on the FixorAssist app, SMS and email to follow it in real time.</p></div></div>
+        </div>
+      </div>
+      <aside class="gpfaq-side">
+        <span class="side-circle"><svg><use href="#i-headset3"/></svg></span>
+        <h4>Still have questions?</h4>
+        <p>Our support team is here to help<br>you find the right part.</p>
+        <span class="side-div"></span>
+        <div class="side-item"><span class="si-circle"><svg><use href="#i-phone-call"/></svg></span><div><h6>Call Us</h6><a href="tel:+919876543210" class="red">+91 98765 43210</a></div></div>
+        <div class="side-item"><span class="si-circle"><svg><use href="#i-mail"/></svg></span><div><h6>Email Us</h6><a href="mailto:support@fixorassist.com" class="red">support@fixorassist.com</a></div></div>
+        <div class="side-item"><span class="si-circle"><svg><use href="#i-chat2"/></svg></span><div><h6>Live Chat (whatsap)</h6><span class="red bold">24 × 7</span></div></div>
+        <a href="#footer" class="btn btn-red side-btn">CONTACT US <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <div class="f-logo"><img src="assets/img/logo-mark-footer.png" alt="FixorAssist logo"><div><strong>Fixor<span class="white">Assist</span></strong><span class="tag">Trusted Automotive Support</span></div></div>
+      <p>FixorAssist is your trusted partner for roadside assistance, car repairs, maintenance and more.<br><span class="red">We're here anytime, anywhere.</span></p>
+      <div class="f-social">
+        <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg><use href="#i-tw"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>COMPANY</h5><span class="f-rule"></span>
+      <a href="about.html">About Us</a><a href="index.html#mission">Our Mission &amp; Vision</a><a href="index.html#why">Why Choose Us</a><a href="careers.html">Careers</a><a href="#">Blog</a><a href="#">Contact Us</a>
+    </div>
+    <div class="f-col">
+      <h5>SERVICES</h5><span class="f-rule"></span>
+      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="#">Extended Warranty</a><a href="#">Customer Support</a>
+    </div>
+    <div class="f-col">
+      <h5>SUPPORT</h5><span class="f-rule"></span>
+      <a href="#">Help Center</a><a href="#">FAQs</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Sitemap</a>
+    </div>
+    <div class="f-col f-connect">
+      <h5>STAY CONNECTED</h5><span class="f-rule"></span>
+      <p>Subscribe to get latest updates, offers and car care tips.</p>
+      <form class="f-subscribe" onsubmit="return false">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" aria-label="Subscribe"><svg><use href="#i-send"/></svg></button>
+      </form>
+      <p class="f-app">Download the <span class="red">FixorAssist</span> App</p>
+      <div class="f-badges">
+        <a href="#"><img src="assets/img/badge-gplay.png" alt="Get it on Google Play"></a>
+        <a href="#"><img src="assets/img/badge-appstore.png" alt="Download on the App Store"></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="container f-bottom-in">
+      <p>© 2025 <span class="red">FixorAssist</span>. All rights reserved.</p>
+      <span class="f-sep"></span>
+      <a href="tel:+919876543210"><svg class="fb-ic"><use href="#i-phone-call"/></svg> +91 98765 43210</a>
+      <span class="f-sep"></span>
+      <a href="mailto:support@fixorassist.com"><svg class="fb-ic"><use href="#i-mail"/></svg> support@fixorassist.com</a>
+      <span class="f-sep"></span>
+      <p><svg class="fb-ic"><use href="#i-pin-dot"/></svg> New Delhi, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

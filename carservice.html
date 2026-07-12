@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Service &amp; Maintenance — FixorAssist</title>
+<meta name="description" content="Care that keeps you moving. Expert care, genuine parts, lasting performance — from routine maintenance to advanced diagnostics, we keep your car running at its best.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/carservice.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body class="svc-page cs-page">
+
+<!-- ═══════════════ SVG ICON SPRITE ═══════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V21h13V9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 21v-6h4v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 48 48"><path d="M24 5l15 5.5v11c0 9.5-6.4 17.4-15 20.5-8.6-3.1-15-11-15-20.5v-11z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M16.5 23.5l5 5 10-10" fill="none" stroke="#e1181e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-technician" viewBox="0 0 48 48"><path d="M16 13a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M14 13h20" stroke="#e1181e" stroke-width="2.6" stroke-linecap="round"/><path d="M24 6v-2" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round"/><path d="M17 17c0 5 3 9 7 9s7-4 7-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M9 43a15 15 0 0 1 30 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M19 34l5 4 5-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gear-wrench" viewBox="0 0 48 48"><path d="M24 6l2.4 4.4 5-.8 1.6 4.8 4.8 1.6-.8 5L41.4 24 37 26.4l.8 5-4.8 1.6-1.6 4.8-5-.8L24 41.4 21.6 37l-5 .8-1.6-4.8-4.8-1.6.8-5L6.6 24 11 21.6l-.8-5 4.8-1.6 1.6-4.8 5 .8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M28.5 19.5a6 6 0 0 0-8.3 7.2l-3 3 2.6 2.6 3-3a6 6 0 0 0 7.2-8.3l-3.3 3.3-2.6-.9-.9-2.6z" fill="none" stroke="#e1181e" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clip-check" viewBox="0 0 48 48"><rect x="9" y="8" width="26" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M17 8a5 5 0 0 1 10 0h3v4H14V8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M15 20h14M15 26h10M15 32h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="35" cy="34" r="8" fill="none" stroke="#e1181e" stroke-width="2.3"/><path d="M31.5 34l2.5 2.5 5-5" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-car-front" viewBox="0 0 48 48"><path d="M10 20l3.5-8.5A4 4 0 0 1 17.2 9h13.6a4 4 0 0 1 3.7 2.5L38 20" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linejoin="round"/><rect x="6" y="19.5" width="36" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M9 33v4M39 33v4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M12 26h5M31 26h5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M20 29h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-oilcan" viewBox="0 0 48 48"><path d="M14 20h14l7-6 5 4-6 7v9a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3V23a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M18 20v-5h8v5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M14 15h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M11 26H5l-2 5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 30c-1.5 2-2.2 3.2-2.2 4.2a2.2 2.2 0 0 0 4.4 0c0-1-.7-2.2-2.2-4.2z" fill="currentColor"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="24" r="2.6" fill="currentColor"/><path d="M24 12.5v3M24 32.5v3M12.5 24h3M32.5 24h3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 15a19.5 19.5 0 0 1 7-7M42 33a19.5 19.5 0 0 1-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-tyre2" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="4.5 4"/><circle cx="24" cy="24" r="3.4" fill="currentColor"/></symbol>
+  <symbol id="i-award" viewBox="0 0 48 48"><circle cx="24" cy="18" r="12" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 12l1.9 3.8 4.2.6-3 3 .7 4.2-3.8-2-3.8 2 .7-4.2-3-3 4.2-.6z" fill="none" stroke="#e1181e" stroke-width="1.9" stroke-linejoin="round"/><path d="M17 28l-4 14 11-6 11 6-4-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock-dial" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="70 12" stroke-linecap="round"/><path d="M24 14v10l7 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2" fill="#e1181e"/><path d="M24 7v3M41 24h-3" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-car-check" viewBox="0 0 48 48"><path d="M8 32l3.5-9a4 4 0 0 1 3.7-2.6h17.6a4 4 0 0 1 3.7 2.6L40 32" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><rect x="5" y="31" width="38" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="12" cy="36" r="1.8" fill="currentColor"/><circle cx="36" cy="36" r="1.8" fill="currentColor"/><circle cx="24" cy="12" r="8" fill="none" stroke="#e1181e" stroke-width="2.3"/><path d="M20.5 12l2.5 2.5 4.7-4.7" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-headset-agent" viewBox="0 0 48 48"><path d="M10 26v-4a14 14 0 0 1 28 0v4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><rect x="6" y="24" width="8" height="12" rx="3" fill="none" stroke="#e1181e" stroke-width="2.4"/><rect x="34" y="24" width="8" height="12" rx="3" fill="none" stroke="#e1181e" stroke-width="2.4"/><path d="M38 36c0 4-4 6-9 6" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-headset-red" viewBox="0 0 48 48"><path d="M10 27v-5a14 14 0 0 1 28 0v5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><rect x="6" y="25" width="9" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="33" y="25" width="9" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M37 38c0 4-4 6.5-9 6.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="26" cy="44.5" r="2" fill="currentColor"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="33" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M6 19h36" stroke="currentColor" stroke-width="2.5"/><path d="M15 5v8M33 5v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 27h4M22 27h4M30 27h4M14 34h4M22 34h4M30 34h4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-magnify" viewBox="0 0 48 48"><circle cx="21" cy="21" r="13" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M31 31l11 11" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M21 14a7 7 0 0 0-7 7" fill="none" stroke="#e1181e" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 48 48"><path d="M39 9l-9 9m0 0a7 7 0 0 1-9.4 9.3L11 37a3.2 3.2 0 0 1-4.5-4.5l9.6-9.6A7 7 0 0 1 25.5 13.5L30 18z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M33 27l8 8a3.2 3.2 0 0 1-4.5 4.5l-8-8" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linejoin="round"/><path d="M12 12l6 6" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-steering" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="5" fill="none" stroke="#e1181e" stroke-width="2.3"/><path d="M7.5 21c5-2.5 28-2.5 33 0M24 29v11.5M19.5 27.5L9 35M28.5 27.5L39 35" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-shield-person" viewBox="0 0 48 48"><path d="M24 5l15 5.5v11c0 9.5-6.4 17.4-15 20.5-8.6-3.1-15-11-15-20.5v-11z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="4.5" fill="none" stroke="#e1181e" stroke-width="2.2"/><path d="M16.5 32a7.5 7.5 0 0 1 15 0" fill="none" stroke="#e1181e" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-stopwatch" viewBox="0 0 48 48"><circle cx="26" cy="28" r="15" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M26 13V8M22 8h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M38 15l3-3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M26 28l6-6" stroke="#e1181e" stroke-width="2.8" stroke-linecap="round"/><circle cx="26" cy="28" r="2.2" fill="#e1181e"/><path d="M8 22H2M9 28H4M8 34H3" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 48 48"><rect x="5" y="14" width="38" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 14v-4M36 14v-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M11 24h8M15 20v8" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><path d="M29 24h8" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-airfilter" viewBox="0 0 48 48"><rect x="6" y="12" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 16v16M18 16v16M24 16v16M30 16v16M36 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 42h44" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 48 48"><path d="M24 4v40M6.7 14v20M41.3 14V34" stroke="none"/><path d="M24 4v40M8 12l32 24M40 12L8 36" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M24 4l-5 5M24 4l5 5M24 44l-5-5M24 44l5-5M8 12l6.8 1.8M8 12l1.8 6.8M40 36l-6.8-1.8M40 36l-1.8-6.8M40 12l-6.8 1.8M40 12l-1.8 6.8M8 36l6.8-1.8M8 36l1.8-6.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-cardiag" viewBox="0 0 48 48"><path d="M9 27l3-8a4 4 0 0 1 3.7-2.6h16.6A4 4 0 0 1 36 19l3 8" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><rect x="6" y="26" width="36" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="13" cy="31.5" r="1.8" fill="currentColor"/><circle cx="35" cy="31.5" r="1.8" fill="currentColor"/><path d="M18 31.5h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 3"/></symbol>
+  <symbol id="i-check-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m7.4 12.4 3 3L17 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin-dot" viewBox="0 0 48 48"><path d="M24 4c8.3 0 15 6.7 15 15 0 10.5-15 25-15 25S9 29.5 9 19C9 10.7 15.7 4 24 4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5.5" fill="#e1181e"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4.5 2-4.5 4.5v2.5H7V15h2.5v6.5H13V15h3l.5-3.5H13V9c0-.6.4-1 1-1z" fill="currentColor"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-tw" viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.5 12 5.5 12 5.5s-6.2 0-8 .6a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.6 8 .6 8 .6s6.2 0 8-.6a3 3 0 0 0 2-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header svc-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo svc-logo"><img src="assets/img/svc-logo.png" alt="FixorAssist — Trusted Automotive Support"></a>
+    <nav class="main-nav svc-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services <svg class="ic"><use href="#i-chevron"/></svg></a>
+      <a href="become-partner.html">For Partners</a>
+      <a href="#">Blogs</a>
+      <a href="#footer">Contact Us</a>
+    </nav>
+    <a href="tel:+918884412345" class="btn btn-red header-cta"><svg class="ic"><use href="#i-phone-call"/></svg> 24/7 Emergency</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero cs-hero">
+  <img class="hero-visual" src="assets/img/cs-hero.png" alt="FixorAssist service expert working under the hood">
+  <div class="container hero-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <svg class="ic-home"><use href="#i-home"/></svg>
+      <a href="index.html">Home</a>
+      <span class="sep">&#8250;</span>
+      <span class="cur">Service &amp; Maintenance</span>
+    </nav>
+    <div class="hero-copy">
+      <span class="eyebrow svc-eyebrow">SERVICE &amp; MAINTENANCE <span class="dash"></span></span>
+      <h1>Care That<br>Keeps You<br><span class="red">Moving.</span></h1>
+      <p class="lead-strong">Expert care. Genuine parts. Lasting performance.</p>
+      <p class="lead-sub">From routine maintenance to advanced diagnostics,<br>we keep your car running at its best.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-red"><svg class="ic ic-cal"><use href="#i-calendar"/></svg> BOOK YOUR SERVICE <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+        <a href="#mserv" class="explore-link">EXPLORE SERVICES <svg class="chev-r"><use href="#i-chevron"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHITE FEATURES STRIP ═══════════════ -->
+<section class="cs-strip">
+  <div class="container">
+    <div class="cs-strip-in">
+      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-technician"/></svg></span><h5>Expert Technicians</h5><p>Skilled. Trained. Trusted<br>professionals.</p></div>
+      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-gear-wrench"/></svg></span><h5>Advanced Equipment</h5><p>Modern tools for<br>accurate service.</p></div>
+      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-clip-check"/></svg></span><h5>Transparent Process</h5><p>Clear checks. Honest<br>recommendations.</p></div>
+      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-shield-check"/></svg></span><h5>Genuine Parts</h5><p>100% genuine parts for<br>reliable performance.</p></div>
+      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-car-front"/></svg></span><h5>Better Performance</h5><p>Smoother ride. Better mileage.<br>Longer vehicle life.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GOOD CARS STAY BETTER — TIMELINE ═══════════════ -->
+<section class="regular">
+  <img class="gear-mark" src="assets/img/cs-gear.png" alt="" aria-hidden="true">
+  <div class="container">
+    <span class="eyebrow">SERVICE &amp; MAINTENANCE <span class="dash"></span></span>
+    <h2>Good Cars Stay Better<br><span class="red">With Regular Care.</span></h2>
+    <p class="reg-sub">Timely maintenance keeps your car reliable, safe and<br>performing at its best—every single day.</p>
+    <div class="reg-car reveal-zoom"><img src="assets/img/cs-car.png" alt="White sedan side profile"></div>
+    <div class="timeline">
+      <span class="tl-line"></span>
+      <div class="tl-grid">
+        <div class="tl-item">
+          <p class="tl-km">5,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
+          <span class="tl-circle"><svg><use href="#i-oilcan"/></svg></span>
+          <h4>Oil &amp; Filter Change</h4><p>Keeps engine clean<br>and performance high.</p>
+        </div>
+        <div class="tl-item">
+          <p class="tl-km">10,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
+          <span class="tl-circle"><svg><use href="#i-brake"/></svg></span>
+          <h4>Brake Check</h4><p>Ensures your safety<br>with every stop.</p>
+        </div>
+        <div class="tl-item">
+          <p class="tl-km">20,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
+          <span class="tl-circle"><svg><use href="#i-tyre2"/></svg></span>
+          <h4>Wheel &amp; Tyre Care</h4><p>Better grip. Smoother<br>ride. Longer tyre life.</p>
+        </div>
+        <div class="tl-item">
+          <p class="tl-km">40,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
+          <span class="tl-circle"><svg><use href="#i-clip-check"/></svg></span>
+          <h4>Comprehensive Inspection</h4><p>Complete check-up for peak<br>performance and reliability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY FIXORASSIST ═══════════════ -->
+<section class="cswhy">
+  <div class="container">
+    <p class="eyebrow center dashes">WHY FIXORASSIST</p>
+    <h2 class="h2-center" style="font-size:54px">Why <span class="red">FixorAssist</span></h2>
+    <p class="section-sub">Expert care you can trust. Service that goes the extra mile.</p>
+    <div class="cswhy-grid">
+      <div class="cswhy-photo reveal-left"><img src="assets/img/cs-why.png" alt="FixorAssist technician inspecting a car — Your car. Our responsibility."></div>
+      <div class="cswhy-cards">
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-shield-check"/></svg></span><h4>Expert Technicians</h4><span class="wf-rule"></span><p>Trained professionals with deep knowledge and hands-on experience.</p></div>
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-award"/></svg></span><h4>Genuine Parts</h4><span class="wf-rule"></span><p>We use 100% genuine parts for reliable performance and long life.</p></div>
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-clip-check"/></svg></span><h4>Transparent Process</h4><span class="wf-rule"></span><p>Clear checks, honest recommendations and no hidden costs.</p></div>
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-clock-dial"/></svg></span><h4>On-Time Service</h4><span class="wf-rule"></span><p>We respect your time with efficient service and quick turnaround.</p></div>
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-car-check"/></svg></span><h4>Advanced Equipment</h4><span class="wf-rule"></span><p>Modern tools and technology for accurate diagnostics and quality service.</p></div>
+        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-headset-agent"/></svg></span><h4>Customer First</h4><span class="wf-rule"></span><p>Friendly support, easy booking and a seamless experience every time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MAINTENANCE SERVICES ═══════════════ -->
+<section class="mserv" id="mserv">
+  <div class="container">
+    <p class="eyebrow center dashes">OUR MAINTENANCE SERVICES</p>
+    <h2 class="h2-center" style="font-size:54px">Complete Care for <span class="red">Every Kilometer.</span></h2>
+    <p class="section-sub">From routine checks to advanced care, we keep your car in the best condition, every day.</p>
+    <div class="mserv-grid">
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-oilcan"/></svg></span><img src="assets/img/cs-svc1.png" alt="Oil being poured into an engine"></div><div class="ms-body"><h4>Oil &amp; Filter Change</h4><span class="ms-rule"></span><p>Keep your engine clean and running smoothly with high-quality oil and genuine filters.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-brake"/></svg></span><img src="assets/img/cs-svc2.png" alt="Brake disc and caliper"></div><div class="ms-body"><h4>Brake System Check</h4><span class="ms-rule"></span><p>Complete inspection and servicing for maximum safety and reliable stopping power.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-tyre2"/></svg></span><img src="assets/img/cs-svc3.png" alt="Technician working on a wheel"></div><div class="ms-body"><h4>Wheel &amp; Tyre Care</h4><span class="ms-rule"></span><p>Alignment, balancing, rotation and tyre checks for better grip, comfort and safety.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-airfilter"/></svg></span><img src="assets/img/cs-svc4.png" alt="Clean air filter"></div><div class="ms-body"><h4>Air Filter Replacement</h4><span class="ms-rule"></span><p>Clean air means better performance and improved fuel efficiency for your car.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-battery"/></svg></span><img src="assets/img/cs-svc5.png" alt="Car battery"></div><div class="ms-body"><h4>Battery Check &amp; Care</h4><span class="ms-rule"></span><p>Testing, top-up and replacement services to ensure a strong start every time.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-snow"/></svg></span><img src="assets/img/cs-svc6.png" alt="Car AC vents"></div><div class="ms-body"><h4>AC Service</h4><span class="ms-rule"></span><p>Keep your cabin cool and fresh with professional AC inspection and servicing.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-cardiag"/></svg></span><img src="assets/img/cs-svc7.png" alt="Diagnostics tablet scanning a car"></div><div class="ms-body"><h4>Diagnostics Check</h4><span class="ms-rule"></span><p>Advanced scanning to detect issues early and prevent costly repairs later.</p></div></div>
+      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-clip-check"/></svg></span><img src="assets/img/cs-svc8.png" alt="Technician performing a general inspection"></div><div class="ms-body"><h4>General Inspection</h4><span class="ms-rule"></span><p>Comprehensive multi-point check to keep your car reliable, safe and road-ready.</p></div></div>
+    </div>
+    <div class="mserv-divider"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="cshow">
+  <div class="container">
+    <p class="eyebrow center dashes">HOW IT WORKS</p>
+    <h2 class="h2-center" style="font-size:54px">Simple Steps. <span class="red">Complete Care.</span></h2>
+    <p class="section-sub">From booking to the best drive – we make car care easy and hassle-free.</p>
+    <div class="cshow-steps">
+      <div class="cstep"><span class="cst-num">01</span><svg class="cst-ic"><use href="#i-calendar"/></svg><div class="cst-body"><h4>Book</h4><p>Schedule your service in minutes.</p></div></div>
+      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
+      <div class="cstep"><span class="cst-num">02</span><svg class="cst-ic"><use href="#i-magnify"/></svg><div class="cst-body"><h4>Inspect</h4><p>Thorough check by our experts.</p></div></div>
+      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
+      <div class="cstep"><span class="cst-num">03</span><svg class="cst-ic"><use href="#i-tools"/></svg><div class="cst-body"><h4>Service</h4><p>Quality service using genuine parts.</p></div></div>
+      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
+      <div class="cstep"><span class="cst-num">04</span><svg class="cst-ic"><use href="#i-car-front"/></svg><div class="cst-body"><h4>Drive</h4><p>Hit the road with confidence and peace of mind.</p></div></div>
+    </div>
+    <div class="cshow-cards">
+      <div class="hw-card"><img src="assets/img/cs-step1.png" alt="Booking a service on the FixorAssist app"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Choose your service, pick a time that suits you, and we'll take care of the rest.</p></div></div>
+      <div class="hw-card"><img src="assets/img/cs-step2.png" alt="Technician reviewing an inspection report on a tablet"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>We inspect your vehicle with advanced tools and share a transparent report with you.</p></div></div>
+      <div class="hw-card"><img src="assets/img/cs-step3.png" alt="Expert technician servicing a car engine"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Our expert technicians service your car using genuine parts and follow global standards.</p></div></div>
+      <div class="hw-card"><img src="assets/img/cs-step4.png" alt="Car driving on a city road"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Your car is ready. Enjoy a smoother, safer and better drive every day.</p></div></div>
+    </div>
+    <div class="cshow-band">
+      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-shield-check"/></svg></span><div><h5>Easy Booking</h5><p>Quick and convenient<br>online booking.</p></div></div>
+      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-shield-person"/></svg></span><div><h5>Transparent Process</h5><p>Clear updates at every<br>step of the way.</p></div></div>
+      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-clock-dial"/></svg></span><div><h5>Save Time</h5><p>Fast turnaround without<br>compromising quality.</p></div></div>
+      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-steering"/></svg></span><div><h5>Better Drive</h5><p>Well-maintained cars<br>deliver better journeys.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BOOK YOUR SERVICE ═══════════════ -->
+<section class="csbook" id="book">
+  <img class="book-visual" src="assets/img/cs-book.png" alt="White SUV inside a FixorAssist Service & Maintenance workshop">
+  <div class="container csbook-in">
+    <span class="eyebrow dashes">BOOK YOUR SERVICE</span>
+    <h2>Your Car Deserves<br><span class="red">Better Care.</span></h2>
+    <span class="red-rule"></span>
+    <p class="bk-sub">Expert service, genuine parts and complete care—<br>all in one place. Book your service today.</p>
+    <div class="bk-minis">
+      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-calendar"/></svg></span><h5>Easy Booking</h5><p>Book in minutes<br>online or by call</p></div>
+      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-shield-check"/></svg></span><h5>Trusted Experts</h5><p>Skilled technicians<br>you can rely on</p></div>
+      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-award"/></svg></span><h5>Genuine Parts</h5><p>100% genuine for<br>longer performance</p></div>
+      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-stopwatch"/></svg></span><h5>On-Time Service</h5><p>Quick turnaround,<br>zero compromise</p></div>
+    </div>
+    <div class="ready-bar">
+      <span class="rb-cal"><svg><use href="#i-calendar"/></svg></span>
+      <div class="rb-copy">
+        <h3>Ready to Book?</h3>
+        <p>Get expert care for your car in just a few clicks.</p>
+      </div>
+      <a href="#" class="btn btn-red">BOOK MY SERVICE <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+      <div class="rb-secure"><svg><use href="#i-shield-check"/></svg><p>Secure booking.<br>No hidden charges.</p></div>
+    </div>
+    <div class="prefer">
+      <span class="pf-ic"><svg><use href="#i-phone-call"/></svg></span>
+      <p><strong>Prefer to talk?</strong> &nbsp;Call us at&nbsp; <a href="tel:+919876543210">+91 98765 43210</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="csfaq">
+  <div class="container">
+    <p class="eyebrow center dashes">FAQ</p>
+    <h2 class="h2-center" style="font-size:54px">Frequently Asked <span class="red">Questions</span></h2>
+    <p class="section-sub">Find quick answers to the most common questions about our car care services.</p>
+    <div class="csfaq-grid">
+      <div class="csfaq-side">
+        <div class="csfaq-photo reveal-left"><img src="assets/img/cs-faq.png" alt="Car inside a FixorAssist Service & Maintenance workshop"></div>
+        <div class="still-card">
+          <span class="st-ic"><svg><use href="#i-headset-red"/></svg></span>
+          <div>
+            <h4>Still have questions?</h4>
+            <p>We're here to help you with<br>any questions you may have.</p>
+            <a href="tel:+919876543210" class="btn btn-red"><svg class="ic"><use href="#i-phone-call"/></svg> Call Us: +91 98765 43210</a>
+          </div>
+        </div>
+      </div>
+      <div class="csfaq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span class="qnum">01</span><span class="qt">How do I book a service with FixorAssist?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>You can book a service through our website by clicking on "Book Your Service" or call us directly. Choose your preferred date, time and service, and we'll take care of the rest.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qnum">02</span><span class="qt">What types of vehicles do you service?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>We service all makes and models of cars — hatchbacks, sedans, SUVs and premium vehicles, across both petrol and diesel variants.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qnum">03</span><span class="qt">Do you use genuine parts?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>Yes. We use 100% genuine parts sourced from verified OEMs and authorized partners, so your car performs reliably for longer.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qnum">04</span><span class="qt">How long does a typical service take?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>A routine service usually takes 3–4 hours. For advanced repairs, our team shares a clear timeline upfront and keeps you updated at every step.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qnum">05</span><span class="qt">Do you offer a warranty on your services?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>Yes. All our services and genuine parts come with a service warranty, so you can drive with complete peace of mind.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qnum">06</span><span class="qt">Can I track the status of my service?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
+          <div class="faq-a"><div><p>Absolutely. You receive transparent updates at every stage — from inspection to completion — via SMS, WhatsApp and the FixorAssist app.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CLOSING LINE ═══════════════ -->
+<section class="cs-close">
+  <div class="container">
+    <div class="cl-row">
+      <span class="cl-rule"></span>
+      <h3>Your Car. <svg class="cl-shield"><use href="#i-shield-check"/></svg> Responsibility.</h3>
+      <span class="cl-rule r"></span>
+    </div>
+    <p>Reliable service. Transparent process. Complete peace of mind.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <div class="f-logo"><img src="assets/img/logo-mark-footer.png" alt="FixorAssist logo"><div><strong>Fixor<span class="white">Assist</span></strong><span class="tag">Trusted Automotive Support</span></div></div>
+      <p>FixorAssist is your trusted partner for roadside assistance, car repairs, maintenance and more.<br><span class="red">We're here anytime, anywhere.</span></p>
+      <div class="f-social">
+        <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg><use href="#i-tw"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>COMPANY</h5><span class="f-rule"></span>
+      <a href="about.html">About Us</a><a href="index.html#mission">Our Mission &amp; Vision</a><a href="index.html#why">Why Choose Us</a><a href="careers.html">Careers</a><a href="#">Blog</a><a href="#">Contact Us</a>
+    </div>
+    <div class="f-col">
+      <h5>SERVICES</h5><span class="f-rule"></span>
+      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="#">Extended Warranty</a><a href="#">Customer Support</a>
+    </div>
+    <div class="f-col">
+      <h5>SUPPORT</h5><span class="f-rule"></span>
+      <a href="#">Help Center</a><a href="#">FAQs</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Sitemap</a>
+    </div>
+    <div class="f-col f-connect">
+      <h5>STAY CONNECTED</h5><span class="f-rule"></span>
+      <p>Subscribe to get latest updates, offers and car care tips.</p>
+      <form class="f-subscribe" onsubmit="return false">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" aria-label="Subscribe"><svg><use href="#i-send"/></svg></button>
+      </form>
+      <p class="f-app">Download the <span class="red">FixorAssist</span> App</p>
+      <div class="f-badges">
+        <a href="#"><img src="assets/img/badge-gplay.png" alt="Get it on Google Play"></a>
+        <a href="#"><img src="assets/img/badge-appstore.png" alt="Download on the App Store"></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="container f-bottom-in">
+      <p>© 2025 <span class="red">FixorAssist</span>. All rights reserved.</p>
+      <span class="f-sep"></span>
+      <a href="tel:+919876543210"><svg class="fb-ic"><use href="#i-phone-call"/></svg> +91 98765 43210</a>
+      <span class="f-sep"></span>
+      <a href="mailto:support@fixorassist.com"><svg class="fb-ic"><use href="#i-mail"/></svg> support@fixorassist.com</a>
+      <span class="f-sep"></span>
+      <p><svg class="fb-ic"><use href="#i-pin-dot"/></svg> New Delhi, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

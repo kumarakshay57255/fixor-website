@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — FixorAssist</title>
+<meta name="description" content="Building India's most trusted automotive services network. FixorAssist is a Pan-India, technology-led automotive services platform delivering transparency, speed, and reliability at every mile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body class="svc-page au-page">
+
+<!-- ═══════════════ SVG ICON SPRITE ═══════════════ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 48 48"><path d="M24 5l15 5.5v11c0 9.5-6.4 17.4-15 20.5-8.6-3.1-15-11-15-20.5v-11z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M16.5 23.5l5 5 10-10" fill="none" stroke="#e1181e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield-check-red" viewBox="0 0 48 48"><path d="M24 5l15 5.5v11c0 9.5-6.4 17.4-15 20.5-8.6-3.1-15-11-15-20.5v-11z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M16.5 23.5l5 5 10-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-speedo" viewBox="0 0 48 48"><circle cx="24" cy="26" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 26l8-8" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/><circle cx="24" cy="26" r="2.4" fill="currentColor"/><path d="M24 12v3M10 26h3M35 26h3M14 16l2 2M34 16l-2 2" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-hub" viewBox="0 0 48 48"><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="6.5" r="2.6" fill="currentColor"/><circle cx="24" cy="41.5" r="2.6" fill="currentColor"/><circle cx="6.5" cy="24" r="2.6" fill="currentColor"/><circle cx="41.5" cy="24" r="2.6" fill="currentColor"/><circle cx="11.5" cy="11.5" r="2.4" fill="currentColor"/><circle cx="36.5" cy="11.5" r="2.4" fill="currentColor"/><circle cx="11.5" cy="36.5" r="2.4" fill="currentColor"/><circle cx="36.5" cy="36.5" r="2.4" fill="currentColor"/><path d="M24 9.5v9.5M24 29v9.5M9.5 24H19M29 24h9.5M13.2 13.2l7.3 7.3M34.8 13.2l-7.3 7.3M13.2 34.8l7.3-7.3M34.8 34.8l-7.3-7.3" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-gear-wrench" viewBox="0 0 48 48"><path d="M24 6l2.4 4.4 5-.8 1.6 4.8 4.8 1.6-.8 5L41.4 24 37 26.4l.8 5-4.8 1.6-1.6 4.8-5-.8L24 41.4 21.6 37l-5 .8-1.6-4.8-4.8-1.6.8-5L6.6 24 11 21.6l-.8-5 4.8-1.6 1.6-4.8 5 .8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M28.5 19.5a6 6 0 0 0-8.3 7.2l-3 3 2.6 2.6 3-3a6 6 0 0 0 7.2-8.3l-3.3 3.3-2.6-.9-.9-2.6z" fill="none" stroke="#e1181e" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clip-check" viewBox="0 0 48 48"><rect x="9" y="8" width="26" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M17 8a5 5 0 0 1 10 0h3v4H14V8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M15 20h14M15 26h10M15 32h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="35" cy="34" r="8" fill="none" stroke="#e1181e" stroke-width="2.3"/><path d="M31.5 34l2.5 2.5 5-5" fill="none" stroke="#e1181e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shake" viewBox="0 0 56 48"><path d="M4 14l10-4 12 4 12-4 10 4" fill="none" stroke="none"/><path d="M14 30l-9-4 8-13 10 3 10-3 8 13-9 4" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M23 16l-8 8 3 3 6-5 4 4-3 4 3 3 4-4 5-5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M20 33l4 4M25 36l3 3" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-chipset" viewBox="0 0 48 48"><rect x="14" y="14" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.3"/><rect x="20" y="20" width="8" height="8" fill="#e1181e"/><path d="M19 14V7M24 14V7M29 14V7M19 41v-7M24 41v-7M29 41v-7M14 19H7M14 24H7M14 29H7M41 19h-7M41 24h-7M41 29h-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="19" cy="7" r="1.6" fill="currentColor"/><circle cx="29" cy="7" r="1.6" fill="currentColor"/><circle cx="7" cy="19" r="1.6" fill="currentColor"/><circle cx="7" cy="29" r="1.6" fill="currentColor"/><circle cx="41" cy="19" r="1.6" fill="currentColor"/><circle cx="41" cy="29" r="1.6" fill="currentColor"/><circle cx="19" cy="41" r="1.6" fill="currentColor"/><circle cx="29" cy="41" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-invoice" viewBox="0 0 48 48"><path d="M12 6h18l8 8v26H12z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M18 18h8M18 24h6M18 30h5" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><circle cx="32" cy="30" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M29.5 27h5M29.5 30h5M29.5 27c2 0 3 .8 3 2s-1 2-3 2l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M37 35l4 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-truck-fast" viewBox="0 0 64 48"><path d="M14 14h26v20H14z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M40 20h8l6 7v7h-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="22" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="46" cy="36" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M2 18h8M4 24h6M6 30h4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="22" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M4 38h40l-3-6H7z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M15 26v-4M21 26v-7M27 26v-5M33 26v-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M14 15l7 4 6-5 7 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-user-star" viewBox="0 0 48 48"><circle cx="24" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M10 42a14 14 0 0 1 28 0z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 28l1.5 3 3.3.5-2.4 2.3.6 3.3-3-1.6-3 1.6.6-3.3-2.4-2.3 3.3-.5z" fill="#e1181e"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 48 48"><path d="M8 8v32h32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 34v-8M24 34V16M32 34V22" stroke="#e1181e" stroke-width="3.4" stroke-linecap="round"/><path d="M14 18l9-7 7 4 8-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 7h4v4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tow2" viewBox="0 0 64 48"><path d="M4 32V14h18v18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M22 20h9l5 7v5H4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="12" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="30" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M26 12l10 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M48 34h12M50 30l3.5-5h5l3.5 5" fill="none" stroke="#e1181e" stroke-width="2.2" stroke-linejoin="round"/><circle cx="53" cy="37" r="3" fill="none" stroke="#e1181e" stroke-width="2.2"/></symbol>
+  <symbol id="i-pin-dot" viewBox="0 0 48 48"><path d="M24 4c8.3 0 15 6.7 15 15 0 10.5-15 25-15 25S9 29.5 9 19C9 10.7 15.7 4 24 4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5.5" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="i-users3" viewBox="0 0 48 48"><circle cx="24" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M14 36a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><circle cx="10" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="2.1"/><path d="M2 36a8 8 0 0 1 9-7" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><circle cx="38" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="2.1"/><path d="M46 36a8 8 0 0 0-9-7" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></symbol>
+  <symbol id="i-city" viewBox="0 0 48 48"><path d="M8 42V16h12v26M20 42V8h12v34M32 42V22h9v20" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M12 22h4M12 28h4M12 34h4M24 14h4M24 20h4M24 26h4M24 32h4M35.5 28h2M35.5 34h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 42h40" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-mech2" viewBox="0 0 48 48"><circle cx="21" cy="14" r="7" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M13 12h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M8 41a13 13 0 0 1 20-9.5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><path d="M40 30a5.5 5.5 0 0 1-7.5 5.1l-4 4-3-3 4-4A5.5 5.5 0 0 1 36.6 25l-2.3 2.3 2.4 2.4z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+  <symbol id="i-india" viewBox="0 0 48 48"><path d="M15 4l4 3 5-2 6 3 7-1 3 5-3 4 2 4-4 3 1 5-5 3-1 6-4 7-4-2-1-5-5-3-3-6 2-4-4-4 1-5-2-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 22v3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 48 48"><path d="M6 26s7-11 18-11 18 11 18 11-7 11-18 11S6 26 6 26z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="26" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 8v3M12 10l2 3M36 10l-2 3" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-target" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="24" cy="24" r="8.5" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="24" cy="24" r="2.6" fill="currentColor"/><path d="M24 24l10-10M34 9v5h5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 48 48"><path d="M8 15l16-7 16 7v18l-16 7-16-7z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M8 15l16 7 16-7M24 22v18" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M31 11.5l-14 6.5v5" fill="none" stroke="#e1181e" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-garage" viewBox="0 0 48 48"><path d="M6 42V16L24 6l18 10v26" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M13 42V24h22v18" fill="none" stroke="#e1181e" stroke-width="2.2" stroke-linejoin="round"/><path d="M13 30h22M13 36h22" stroke="#e1181e" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4.5 2-4.5 4.5v2.5H7V15h2.5v6.5H13V15h3l.5-3.5H13V9c0-.6.4-1 1-1z" fill="currentColor"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-tw" viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.5 12 5.5 12 5.5s-6.2 0-8 .6a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.6 8 .6 8 .6s6.2 0 8-.6a3 3 0 0 0 2-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header svc-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo svc-logo"><img src="assets/img/svc-logo.png" alt="FixorAssist — Trusted Automotive Support"></a>
+    <nav class="main-nav svc-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="services.html">Services <svg class="ic"><use href="#i-chevron"/></svg></a>
+      <a href="become-partner.html">For Partners</a>
+      <a href="#">Blogs</a>
+      <a href="#footer">Contact Us</a>
+    </nav>
+    <a href="tel:+918884412345" class="btn btn-red header-cta"><svg class="ic"><use href="#i-phone-call"/></svg> 24/7 Emergency</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero au-hero">
+  <img class="hero-visual" src="assets/img/au-hero.png" alt="FixorAssist SUV with Pan-India network map">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">ABOUT US</span>
+      <h1>Building India&rsquo;s<br>Most Trusted<br><span class="red">Automotive Services</span><br>Network.</h1>
+      <p>FixorAssist is a Pan-India, technology-led automotive services platform delivering transparency, speed, and reliability at every mile.</p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-red">EXPLORE OUR SERVICES <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+        <a href="index.html#network" class="btn-ghost">PARTNER WITH US <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST STRIP ═══════════════ -->
+<section class="au-strip">
+  <div class="container">
+    <div class="au-strip-in">
+      <div class="aus-item"><svg><use href="#i-shield-check-red"/></svg><div><h5>Transparent</h5><span>Processes</span></div></div>
+      <div class="aus-item"><svg><use href="#i-speedo"/></svg><div><h5>Faster</h5><span>Response</span></div></div>
+      <div class="aus-item"><svg><use href="#i-shield-check-red"/></svg><div><h5>Trusted</h5><span>Network</span></div></div>
+      <div class="aus-item"><svg><use href="#i-hub"/></svg><div><h5>Smart</h5><span>Technology</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ONE PLATFORM ═══════════════ -->
+<section class="platform" id="platform">
+  <div class="container">
+    <span class="au-label">ABOUT FIXORASSIST</span>
+    <div class="plat-grid">
+      <div class="plat-copy">
+        <h2>One Platform.<br>Complete <span class="red">Automotive Care.</span></h2>
+        <span class="gray-rule"></span>
+        <p>FixorAssist is the flagship brand of Fixorauto Private Limited, a Pan-India multi-vertical automotive services platform.</p>
+        <p>From roadside breakdowns to pre-delivery inspections, genuine spare parts to authorised engine oil, and a network of certified bodyshops — we connect vehicle owners, corporates, insurers, and workshop partners on a single, technology-led platform.</p>
+        <div class="plat-trust">
+          <svg><use href="#i-shield-check-red"/></svg>
+          <div>
+            <h5>Built on Trust. Driven by Technology.</h5>
+            <p>Delivering transparency, speed and reliability at every mile.</p>
+          </div>
+        </div>
+      </div>
+      <div class="plat-visual reveal-zoom">
+        <img src="assets/img/au-platform.png" alt="FixorAssist service verticals around a Pan-India platform">
+        <div class="plat-item" style="left:545px;top:6px"><h5>Roadside Assistance (RSA)</h5><span class="pi-rule"></span><p>24x7 breakdown and<br>emergency support.</p></div>
+        <div class="plat-item" style="left:649px;top:150px"><h5>Pre-Delivery Inspection (PDI)</h5><span class="pi-rule"></span><p>Rigorous multi-point<br>vehicle checks.</p></div>
+        <div class="plat-item" style="left:695px;top:295px"><h5>Service &amp; Maintenance</h5><span class="pi-rule"></span><p>Scheduled and<br>AMC-based servicing.</p></div>
+        <div class="plat-item" style="left:681px;top:436px"><h5>Spare Parts</h5><span class="pi-rule"></span><p>Genuine and quality-graded<br>parts distribution.</p></div>
+        <div class="plat-item" style="left:651px;top:567px"><h5>Bodyshop Network</h5><span class="pi-rule"></span><p>Fixor Listed, Fixor Certified,<br>and Fixor Elite tiers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OUR VALUES ═══════════════ -->
+<section class="values">
+  <img class="values-visual" src="assets/img/au-values-car.png" alt="">
+  <div class="container">
+    <span class="au-label">OUR VALUES</span>
+    <h2>What <span class="red">We Stand For</span></h2>
+    <span class="gray-rule"></span>
+    <p class="v-sub">At FixorAssist, our values are the engine behind everything we do. They guide every service, every partner, and every promise we make.</p>
+    <div class="values-cards">
+      <div class="vcard"><span class="vc-ic"><svg><use href="#i-shield-check"/></svg></span><h4>Transparency</h4><span class="vc-rule"></span><p>Upfront pricing, verified parts, and honest diagnostics.</p><span class="vc-foot"><svg><use href="#i-invoice"/></svg></span></div>
+      <div class="vcard"><span class="vc-ic"><svg><use href="#i-speedo"/></svg></span><h4>Speed</h4><span class="vc-rule"></span><p>Rapid response through our Pan-India RSA and workshop network.</p><span class="vc-foot"><svg><use href="#i-truck-fast"/></svg></span></div>
+      <div class="vcard"><span class="vc-ic"><svg><use href="#i-shake"/></svg></span><h4>Trust</h4><span class="vc-rule"></span><p>Certified partner garages held to strict quality standards.</p><span class="vc-foot"><svg><use href="#i-shield-check-red"/></svg></span></div>
+      <div class="vcard"><span class="vc-ic"><svg><use href="#i-chipset"/></svg></span><h4>Technology</h4><span class="vc-rule"></span><p>A digital backbone connecting customers, workshops, and insurers.</p><span class="vc-foot"><svg><use href="#i-laptop"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OUR MISSION ═══════════════ -->
+<section class="mission">
+  <img class="mission-visual" src="assets/img/au-mission-car.png" alt="">
+  <div class="container">
+    <span class="au-label">OUR MISSION</span>
+    <h2>Making Automotive Care<br><span class="red">Simple, Honest &amp; Dependable.</span></h2>
+    <span class="gray-rule"></span>
+    <blockquote>
+      <span class="q">&ldquo;</span>
+      <p>&ldquo;To deliver fast, transparent, and reliable automotive services to every vehicle owner in India through a technology-enabled network of certified partners.&rdquo;</p>
+    </blockquote>
+    <div class="committed">
+      <h3>We are committed to:</h3>
+      <div class="commit-grid">
+        <div class="cm-item"><span class="cm-ic"><svg><use href="#i-user-star"/></svg></span><h5>Serving Customers First</h5><p>Building every process around speed, honesty, and convenience for the vehicle owner.</p></div>
+        <div class="cm-item"><span class="cm-ic"><svg><use href="#i-shake"/></svg></span><h5>Empowering Partners</h5><p>Giving garages across India the tools, training, and business volume to grow under a trusted brand.</p></div>
+        <div class="cm-item"><span class="cm-ic"><svg><use href="#i-shield-check-red"/></svg></span><h5>Enabling Partners</h5><p>Offering cashless, technology-driven service integration that reduces claims turnaround and cost.</p></div>
+        <div class="cm-item"><span class="cm-ic"><svg><use href="#i-clip-check"/></svg></span><h5>Standardising Quality</h5><p>Through structured checklists, certified processes, and quality-graded parts across every vertical.</p></div>
+        <div class="cm-item"><span class="cm-ic"><svg><use href="#i-chart"/></svg></span><h5>Growing Responsibly</h5><p>Expanding the FixorAssist network city by city, without compromising on service standards.</p></div>
+      </div>
+    </div>
+    <div class="mission-banner">
+      <span class="mb-ic"><svg><use href="#i-target"/></svg></span>
+      <span class="mb-sep"></span>
+      <p>Every FixorAssist vertical — RSA, PDI, Service &amp; Maintenance, Spare Parts, and our Bodyshop Network — works in service of one mission: <span class="red">Making automotive care simple, honest, and dependable for everyone involved.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OUR VISION ═══════════════ -->
+<section class="vision">
+  <img class="vision-visual" src="assets/img/au-vision.png" alt="">
+  <div class="container">
+    <span class="au-label">OUR VISION</span>
+    <h2>One Tap Away<br>From <span class="red">Reliable Help.</span></h2>
+    <span class="gray-rule"></span>
+    <p class="vi-sub">We envision a Pan-India network that brings trusted automotive care within everyone&rsquo;s reach — anytime, anywhere.</p>
+    <div class="vi-items">
+      <div class="vi-item"><span class="vi-ic"><svg><use href="#i-pin-dot"/></svg></span><div><h5>Pan-India Presence</h5><p>Building a strong and reliable network across every region.</p></div></div>
+      <div class="vi-item"><span class="vi-ic"><svg><use href="#i-users3"/></svg></span><div><h5>Trusted by Thousands</h5><p>Empowering service providers and delighting vehicle owners.</p></div></div>
+      <div class="vi-item"><span class="vi-ic"><svg><use href="#i-shield-check-red"/></svg></span><div><h5>Future-Ready Solutions</h5><p>Leveraging technology and innovation to set new standards in automotive care.</p></div></div>
+    </div>
+    <div class="vision-stats">
+      <div class="vs-item"><svg><use href="#i-city"/></svg><strong data-count="55" data-suffix="+">55+</strong><span>Cities</span></div>
+      <div class="vs-item"><svg><use href="#i-mech2"/></svg><strong data-count="900" data-suffix="+">900+</strong><span>Service Providers</span></div>
+      <div class="vs-item"><svg><use href="#i-india"/></svg><strong>Pan-India</strong><span>Expanding Every Day</span></div>
+    </div>
+    <div class="vision-banner">
+      <span class="vb-ic"><svg><use href="#i-target"/></svg></span>
+      <span class="mb-sep"></span>
+      <p>Our vision is simple — <span class="red">a safer, smoother, and more reliable</span> road experience for every vehicle owner in India.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ THE ROAD AHEAD ═══════════════ -->
+<section class="road">
+  <img class="road-visual" src="assets/img/au-road.png" alt="">
+  <div class="container">
+    <span class="au-label">6. OUR VISION</span>
+    <h2>One Tap Away<br>From <span class="red">Reliable Help.</span></h2>
+    <span class="red-rule"></span>
+    <p class="rd-sub">To become India&rsquo;s most trusted and accessible automotive services ecosystem — where every vehicle owner, in every city and town, is one tap away from reliable help.</p>
+    <div class="road-close">
+      <div class="rc-row">
+        <span class="rc-rule"></span>
+        <span class="rc-eye"><svg><use href="#i-eye"/></svg></span>
+        <span class="rc-rule"></span>
+      </div>
+      <h4>OUR VISION IS THE ROAD AHEAD —</h4>
+      <p>Building a future where quality care is always within reach.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <div class="f-logo"><img src="assets/img/logo-mark-footer.png" alt="FixorAssist logo"><div><strong>Fixor<span class="white">Assist</span></strong><span class="tag">Trusted Automotive Support</span></div></div>
+      <p>FixorAssist is your trusted partner for roadside assistance, car repairs, maintenance and more.<br><span class="red">We're here anytime, anywhere.</span></p>
+      <div class="f-social">
+        <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg><use href="#i-tw"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>COMPANY</h5><span class="f-rule"></span>
+      <a href="about.html">About Us</a><a href="index.html#mission">Our Mission &amp; Vision</a><a href="index.html#why">Why Choose Us</a><a href="careers.html">Careers</a><a href="#">Blog</a><a href="#">Contact Us</a>
+    </div>
+    <div class="f-col">
+      <h5>SERVICES</h5><span class="f-rule"></span>
+      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="#">Extended Warranty</a><a href="#">Customer Support</a>
+    </div>
+    <div class="f-col">
+      <h5>SUPPORT</h5><span class="f-rule"></span>
+      <a href="#">Help Center</a><a href="#">FAQs</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Sitemap</a>
+    </div>
+    <div class="f-col f-connect">
+      <h5>STAY CONNECTED</h5><span class="f-rule"></span>
+      <p>Subscribe to get latest updates, offers and car care tips.</p>
+      <form class="f-subscribe" onsubmit="return false">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" aria-label="Subscribe"><svg><use href="#i-send"/></svg></button>
+      </form>
+      <p class="f-app">Download the <span class="red">FixorAssist</span> App</p>
+      <div class="f-badges">
+        <a href="#"><img src="assets/img/badge-gplay.png" alt="Get it on Google Play"></a>
+        <a href="#"><img src="assets/img/badge-appstore.png" alt="Download on the App Store"></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="container f-bottom-in">
+      <p>© 2025 <span class="red">FixorAssist</span>. All rights reserved.</p>
+      <span class="f-sep"></span>
+      <a href="tel:+919876543210"><svg class="fb-ic"><use href="#i-phone-call"/></svg> +91 98765 43210</a>
+      <span class="f-sep"></span>
+      <a href="mailto:support@fixorassist.com"><svg class="fb-ic"><use href="#i-mail"/></svg> support@fixorassist.com</a>
+      <span class="f-sep"></span>
+      <p><svg class="fb-ic"><use href="#i-pin-dot"/></svg> New Delhi, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

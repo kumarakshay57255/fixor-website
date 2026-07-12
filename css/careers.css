@@ -1,0 +1,114 @@
+/* ═══════════════ FixorAssist — Careers page ═══════════════ */
+
+.cr-page{background:#fdfdfd;--gold:#e59410}
+
+/* accent rule with gold segments */
+.cr-dashes{display:flex;align-items:center;gap:6px;margin:22px 0 0}
+.cr-dashes i{display:block;height:5px;border-radius:2px}
+.cr-dashes i:nth-child(1){width:64px;background:var(--red)}
+.cr-dashes i:nth-child(2){width:14px;background:var(--gold)}
+.cr-dashes i:nth-child(3){width:9px;background:var(--gold)}
+
+/* ─── hero ─── */
+.cr-hero{position:relative;background:#fefefe;overflow:hidden;padding-top:8px}
+.cr-hero .hero-visual{position:absolute;top:14px;right:0;width:57%;max-width:1110px;pointer-events:none}
+.cr-hero .hero-inner{position:relative;z-index:2}
+.cr-hero .hero-copy{max-width:620px;padding:58px 0 0}
+.cr-hero h1{font-size:74px;line-height:1.02;font-weight:800;letter-spacing:-.02em}
+.cr-hero h1 .red{color:var(--red)}
+.cr-hero .lead{font-size:23px;font-weight:600;color:var(--ink);line-height:1.35;margin-top:44px}
+.cr-hero .desc{font-size:16px;font-weight:300;color:#42454a;line-height:1.75;margin-top:20px;max-width:530px}
+.cr-values{display:flex;gap:0;margin-top:52px;padding-bottom:64px;max-width:660px}
+.crv-item{flex:1;padding:0 20px;position:relative}
+.crv-item:first-child{padding-left:0}
+.crv-item + .crv-item::before{content:"";position:absolute;left:0;top:2px;bottom:14px;width:1px;background:#e4e5e7}
+.crv-item svg{width:44px;height:44px;margin-bottom:16px}
+.crv-item h5{font-size:16px;font-weight:700;line-height:1.3}
+.crv-item p{font-size:13.5px;color:#5d6167;font-weight:300;line-height:1.5;margin-top:10px}
+.crv-red{color:var(--red)}
+.crv-gold{color:var(--gold)}
+
+/* ─── why fixorassist ─── */
+.cr-why{background:#fdfdfd;padding:26px 0 90px}
+.cr-why .h2-center{font-size:52px;font-weight:800;letter-spacing:-.015em}
+.cr-why .section-sub{font-size:18px;margin-top:16px}
+.crwhy-grid{display:grid;grid-template-columns:1.05fr 1.15fr;gap:56px;margin-top:56px;align-items:center}
+.crwhy-photo{position:relative}
+.crwhy-photo::before{content:"";position:absolute;left:-26px;bottom:-26px;width:190px;height:150px;border:2px solid var(--red);border-radius:0 0 0 26px;border-top:0;border-right:0;z-index:0}
+.crwhy-photo .dotgrid{position:absolute;left:-40px;top:-30px;width:120px;height:120px;z-index:0;
+  background-image:radial-gradient(var(--red) 1.6px,transparent 1.6px);background-size:18px 18px;opacity:.55}
+.crwhy-photo img{position:relative;z-index:1;border-radius:16px;width:100%}
+.crwhy-cards{display:flex;flex-direction:column;gap:16px}
+.crb-card{display:flex;gap:22px;align-items:flex-start;background:#fff;border-radius:14px;box-shadow:0 5px 20px rgba(15,15,20,.05);padding:24px 28px}
+.crb-ic{width:78px;height:78px;border-radius:50%;background:#fdecec;display:flex;align-items:center;justify-content:center;flex:none}
+.crb-ic svg{width:38px;height:38px;color:var(--red)}
+.crb-txt h4{font-size:19px;font-weight:700;line-height:1.3;padding-left:22px;position:relative}
+.crb-txt h4::before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:2px;background:#e7e8ea}
+.crb-txt p{font-size:15px;color:#54575c;font-weight:300;line-height:1.6;margin-top:8px;padding-left:22px}
+
+/* ─── areas we hire for ─── */
+.cr-areas{background:#fdfdfd;padding:20px 0 90px;position:relative;overflow:hidden}
+.cr-areas .h2-center{font-size:52px;font-weight:800;letter-spacing:-.015em}
+.cr-areas .h2-center .red{color:var(--red)}
+.cr-areas .section-sub{font-size:18px;margin-top:18px}
+.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;margin-top:56px}
+.area-card{background:#fff;border-radius:16px;box-shadow:0 6px 22px rgba(15,15,20,.06);overflow:hidden;text-align:center;display:flex;flex-direction:column}
+.area-card .ac-ic{width:88px;height:88px;border-radius:50%;background:#fdecec;display:flex;align-items:center;justify-content:center;margin:30px auto 20px}
+.area-card .ac-ic svg{width:44px;height:44px;color:var(--red)}
+.area-card h4{font-size:18px;font-weight:700;line-height:1.28;padding:0 14px}
+.area-card .ac-rule{display:block;width:34px;height:2.5px;background:var(--red);border-radius:2px;margin:14px auto 14px}
+.area-card .ac-sub{font-size:14px;color:#5d6167;font-weight:300;line-height:1.5;padding:0 18px;margin-bottom:24px;flex:1}
+.area-card .ac-photo{margin-top:auto}
+.area-card .ac-photo img{width:100%;display:block}
+.areas-dots{width:230px;height:26px;margin:34px auto 0;background-image:radial-gradient(var(--red) 1.7px,transparent 1.7px);background-size:22px 13px;opacity:.5}
+
+/* ─── how to apply ─── */
+.cr-apply{background:#fefefe;padding:20px 0 96px;position:relative;overflow:hidden}
+.cr-apply::before{content:"";position:absolute;left:0;bottom:60px;width:150px;height:220px;background:radial-gradient(circle at 30% 40%,#fbe0e1,transparent 70%);border-radius:0 60% 60% 0;z-index:0}
+.apply-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:56px;align-items:start;position:relative;z-index:2}
+.apply-label{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:700;letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+.apply-label::before,.apply-label::after{content:"";width:34px;height:2px;background:var(--red)}
+.apply-label::after{flex:1;max-width:34px}
+.cr-apply h2{font-size:58px;font-weight:800;letter-spacing:-.02em;margin-top:22px}
+.cr-apply h2 .red{color:var(--red)}
+.cr-apply .apply-desc{font-size:17px;font-weight:300;color:#42454a;line-height:1.85;margin-top:40px;max-width:520px}
+.apply-steps{display:flex;gap:0;margin-top:56px}
+.as-item{flex:1;text-align:center;padding:0 16px;position:relative}
+.as-item + .as-item::before{content:"";position:absolute;left:0;top:6px;bottom:20px;width:1px;background:#eceded}
+.as-ic{width:80px;height:80px;border-radius:50%;background:#fdecec;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.as-ic svg{width:38px;height:38px;color:var(--red)}
+.as-item h5{font-size:16.5px;font-weight:700}
+.as-item p{font-size:13.5px;color:#5d6167;font-weight:300;line-height:1.55;margin-top:8px}
+.apply-visual{position:relative}
+.apply-visual > img{width:100%;border-radius:18px;display:block}
+.careers-card{background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(15,15,20,.10);display:flex;align-items:center;gap:26px;padding:24px 30px;margin:-64px 24px 0;position:relative;z-index:3}
+.cc-ic{width:74px;height:74px;border-radius:50%;background:#fdecec;display:flex;align-items:center;justify-content:center;flex:none}
+.cc-ic svg{width:34px;height:34px;color:var(--red)}
+.cc-info{flex:1;padding-right:24px;border-right:1px solid #eceded}
+.cc-info h5{font-size:19px;font-weight:700}
+.cc-info a{font-size:16.5px;font-weight:600;color:var(--red);margin-top:4px;display:inline-block}
+.careers-card .btn-red{padding:17px 28px;font-size:15.5px;font-weight:600;letter-spacing:.02em;white-space:nowrap;flex:none}
+
+/* ═══ responsive ═══ */
+@media (max-width:1280px){
+  .cr-hero h1{font-size:56px}
+  .cr-hero .hero-visual{opacity:.9;position:static;width:100%;margin-top:24px}
+  .crwhy-grid,.apply-grid{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:repeat(3,1fr)}
+  .cr-apply h2{font-size:46px}
+}
+@media (max-width:1024px){
+  .cr-values{flex-wrap:wrap;gap:20px}
+  .crv-item{flex:1 1 45%}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .apply-steps{flex-wrap:wrap;gap:24px}
+  .as-item{flex:1 1 30%}
+}
+@media (max-width:720px){
+  .cr-hero h1{font-size:42px}
+  .areas-grid,.crv-item{grid-template-columns:1fr}
+  .crb-card{flex-direction:column;gap:14px}
+  .careers-card{flex-direction:column;text-align:center;margin:-40px 12px 0}
+  .cc-info{border-right:0;padding-right:0}
+  .cr-why .h2-center,.cr-areas .h2-center,.cr-apply h2{font-size:34px}
+}
