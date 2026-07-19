@@ -16,6 +16,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+html{overflow-x:hidden}
 body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
@@ -363,4 +364,34 @@ h1,h2,h3,h4,h5{line-height:1.18;font-weight:700}
   .tl-item{flex-direction:row}
   .f-bottom-in{flex-direction:column;align-items:flex-start}
   .f-sep{display:none}
+}
+
+/* ── mobile: partner stats wrap to 2×2 ── */
+@media (max-width:720px){
+  .pb-stats{flex-wrap:wrap;row-gap:30px}
+  .pb-stat{flex:0 0 50%;padding:0 10px;border-left:0}
+  .pb-stat:last-child{border-right:0}
+}
+
+/* ═══════════════ SERVICES DROPDOWN ═══════════════ */
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop .drop-trigger{cursor:pointer}
+.drop-panel{position:absolute;top:100%;left:-20px;min-width:344px;background:#fff;border:1px solid #eef0f2;border-radius:16px;box-shadow:0 24px 60px rgba(15,15,20,.16);padding:12px;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+.nav-drop:hover .drop-panel,.nav-drop:focus-within .drop-panel{opacity:1;visibility:visible;transform:translateY(0)}
+.drop-panel::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+.drop-link{display:flex!important;align-items:center;gap:14px;padding:12px 14px!important;border-radius:11px;transition:background .18s}
+.drop-link:hover{background:#fdecec}
+.dl-ic{width:44px;height:44px;border-radius:11px;background:#fdecec;display:flex;align-items:center;justify-content:center;flex:none}
+.dl-ic svg{width:23px;height:23px;color:var(--red)}
+.dl-txt{display:flex;flex-direction:column;line-height:1.32}
+.dl-txt strong{font-size:15px;font-weight:600;color:var(--ink)}
+.dl-txt em{font-size:12.5px;font-style:normal;color:#7a7d82;font-weight:300;margin-top:1px}
+
+@media (max-width:720px){
+  .nav-drop{flex-direction:column;align-items:stretch;width:100%}
+  .drop-panel{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-left:2px solid #f2d9da;border-radius:0;padding:2px 0 6px 10px;margin:0 0 4px 4px;min-width:0}
+  .drop-panel::before{display:none}
+  .drop-link{padding:10px 8px!important}
+  .dl-ic{width:36px;height:36px}
+  .dl-ic svg{width:19px;height:19px}
 }

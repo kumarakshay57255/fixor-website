@@ -88,3 +88,8 @@
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .reveal,.reveal-left,.reveal-right,.reveal-zoom,.hero-copy .eyebrow,.hero-copy h1,.hero-copy p,.hero-copy .hero-actions,.hero-copy .hero-feats{opacity:1;transform:none}
 }
+
+/* ── mobile: horizontal reveals → vertical, to avoid off-screen overflow ── */
+@media (max-width:820px){
+  .reveal-left,.reveal-right{transform:translateY(30px)}
+}

@@ -196,3 +196,8 @@
   .cs-close .cl-rule{width:60px}
   .regular h2,.csbook h2{font-size:36px}
 }
+
+/* ── mobile: stop timeline items inheriting index's flex-row (.tl-item collision) ── */
+@media (max-width:720px){
+  .regular .tl-item{display:block}
+}

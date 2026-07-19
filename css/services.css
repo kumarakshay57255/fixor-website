@@ -278,3 +278,10 @@
   .faq-ic{width:48px;height:48px}
   .faq-a p{padding-left:26px}
 }
+
+/* ── mobile: pricing card overflow fix ── */
+@media (max-width:720px){
+  .plans-grid{max-width:100%}
+  .plan-card{padding:30px 22px 28px}
+  .plan-specs{white-space:normal;line-height:1.7}
+}

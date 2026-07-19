@@ -112,3 +112,8 @@
   .cc-info{border-right:0;padding-right:0}
   .cr-why .h2-center,.cr-areas .h2-center,.cr-apply h2{font-size:34px}
 }
+
+/* ── mobile: stack hero so copy isn't pushed off-screen by the static visual ── */
+@media (max-width:1280px){
+  .cr-hero{display:flex;flex-direction:column-reverse;align-items:stretch;min-height:auto}
+}
