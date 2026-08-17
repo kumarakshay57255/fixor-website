@@ -223,7 +223,7 @@
 .cta-feats h5{font-size:17px;font-weight:700;margin-bottom:8px}
 .cta-feats p{font-size:13.5px;color:#c9ccd1;font-weight:300;line-height:1.6}
 .cta-callbar{border:1.5px solid rgba(225,24,30,.55);border-radius:16px;display:flex;align-items:center;margin-top:52px;padding:26px 34px;max-width:1180px;background:rgba(10,10,12,.55);backdrop-filter:blur(3px)}
-.cb-half{display:flex;align-items:center;gap:18px;flex:1}
+.cb-half{display:flex;align-items:center;gap:18px;flex:1;justify-content:center}
 .cb-circle{width:62px;height:62px;border-radius:50%;background:#5e0b0a;display:inline-flex;align-items:center;justify-content:center;flex:none}
 .cb-circle svg{width:30px;height:30px;color:#fff}
 .cb-half span{display:block;font-size:15px;color:#d6d8db;font-weight:300}
