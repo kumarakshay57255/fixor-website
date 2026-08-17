@@ -395,3 +395,9 @@ h1,h2,h3,h4,h5{line-height:1.18;font-weight:700}
   .dl-ic{width:36px;height:36px}
   .dl-ic svg{width:19px;height:19px}
 }
+
+
+/* ── unified nav: rotating Services chevron + NEW badge (added 2026-08-17) ── */
+.main-nav .cv{width:15px;height:15px;transition:transform .22s ease}
+.nav-drop:hover .cv,.nav-drop:focus-within .cv{transform:rotate(180deg)}
+.dl-new{margin-left:auto;align-self:center;background:#16a34a;color:#fff;font-size:10px;font-weight:700;letter-spacing:.03em;padding:3px 8px;border-radius:999px}

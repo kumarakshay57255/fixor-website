@@ -1,25 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Car Service &amp; Maintenance — FixorAssist</title>
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<meta name="description" content="Care that keeps you moving. Expert care, genuine parts, lasting performance — from routine maintenance to advanced diagnostics, we keep your car running at its best.">
+<title>Extended Warranty — FixorAssist</title>
+<meta name="description" content="Extend your car's protection beyond the manufacturer warranty — engine, transmission and comprehensive cover, backed by a FixorAssist inspection. 6 and 12-month plans.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=20260818a">
-<link rel="stylesheet" href="css/services.css?v=20260818a">
-<link rel="stylesheet" href="css/carservice.css?v=20260818a">
 <link rel="stylesheet" href="css/motion.css?v=20260818a">
+<style>
+.wty-hero{padding:70px 0 40px}
+.wty-hero h1{font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:18px 0 0}
+.wty-hero p{max-width:56ch;color:#4a4d55;font-size:18px;margin:20px 0 30px}
+.wty-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;padding:20px 0 70px}
+.wty-card{border:1px solid #ececee;border-radius:18px;padding:28px 26px;background:#fff;box-shadow:0 10px 30px rgba(15,15,20,.05)}
+.wty-card .wc-ic{width:58px;height:58px;border-radius:14px;background:#fdecec;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.wty-card .wc-ic svg{width:30px;height:30px}
+.wty-card h4{font-size:19px;font-weight:700;margin:0 0 8px}
+.wty-card p{font-size:14.5px;color:#6b6e76;margin:0;line-height:1.55}
+.wty-band{background:linear-gradient(150deg,#e1181e,#c40f15);border-radius:22px;padding:44px;color:#fff;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;margin:0 0 70px}
+.wty-band h3{font-size:26px;font-weight:800;margin:0}
+.wty-band .btn{background:#fff;color:#e1181e}
+</style>
 </head>
-<body class="svc-page cs-page">
-
-<!-- ═══════════════ SVG ICON SPRITE ═══════════════ -->
+<body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -59,7 +68,6 @@
   <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
 </svg>
 
-<!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="FixorAssist — Pan-India Automotive Services"></a>
@@ -84,239 +92,28 @@
   </div>
 </header>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero cs-hero">
-  <img class="hero-visual" src="assets/img/cs-hero.png" alt="FixorAssist service expert working under the hood">
-  <div class="container hero-inner">
-    <nav class="crumbs" aria-label="Breadcrumb">
-      <svg class="ic-home"><use href="#i-home"/></svg>
-      <a href="index.html">Home</a>
-      <span class="sep">&#8250;</span>
-      <span class="cur">Service &amp; Maintenance</span>
-    </nav>
-    <div class="hero-copy">
-      <span class="eyebrow svc-eyebrow">SERVICE &amp; MAINTENANCE <span class="dash"></span></span>
-      <h1>Care That<br>Keeps You<br><span class="red">Moving.</span></h1>
-      <p class="lead-strong">Expert care. Genuine parts. Lasting performance.</p>
-      <p class="lead-sub">From routine maintenance to advanced diagnostics,<br>we keep your car running at its best.</p>
-      <div class="hero-actions">
-        <a href="#book" class="btn btn-red"><svg class="ic ic-cal"><use href="#i-calendar"/></svg> BOOK YOUR SERVICE <svg class="ic"><use href="#i-arrow-r"/></svg></a>
-        <a href="#mserv" class="explore-link">EXPLORE SERVICES <svg class="chev-r"><use href="#i-chevron"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
+<main>
+  <section class="wty-hero"><div class="container">
+    <span class="eyebrow dashes"><span class="dash"></span> Extended Warranty</span>
+    <h1>Protection that goes <span class="red">beyond</span> the warranty.</h1>
+    <p>Keep your car covered after the manufacturer warranty ends — engine, transmission and comprehensive protection, activated after a quick FixorAssist inspection.</p>
+    <a href="index.html#emergency" class="btn btn-red btn-lg"><svg class="ic"><use href="#i-phone-call"/></svg> Talk to us</a>
+  </div></section>
 
-<!-- ═══════════════ WHITE FEATURES STRIP ═══════════════ -->
-<section class="cs-strip">
-  <div class="container">
-    <div class="cs-strip-in">
-      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-technician"/></svg></span><h5>Expert Technicians</h5><p>Skilled. Trained. Trusted<br>professionals.</p></div>
-      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-gear-wrench"/></svg></span><h5>Advanced Equipment</h5><p>Modern tools for<br>accurate service.</p></div>
-      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-clip-check"/></svg></span><h5>Transparent Process</h5><p>Clear checks. Honest<br>recommendations.</p></div>
-      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-shield-check"/></svg></span><h5>Genuine Parts</h5><p>100% genuine parts for<br>reliable performance.</p></div>
-      <div class="gs5-item"><span class="gs5-ic"><svg><use href="#i-car-front"/></svg></span><h5>Better Performance</h5><p>Smoother ride. Better mileage.<br>Longer vehicle life.</p></div>
+  <section><div class="container">
+    <div class="wty-cards">
+      <div class="wty-card"><span class="wc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e1181e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h6l3 3h3v5h-2"/><path d="M3 16v-3l2-4h2"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><h4>Engine &amp; Transmission</h4><p>Cover for the core mechanical and electrical assemblies that cost the most to repair.</p></div>
+      <div class="wty-card"><span class="wc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e1181e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span><h4>Comprehensive Cover</h4><p>A wider net across more components for complete peace of mind on every drive.</p></div>
+      <div class="wty-card"><span class="wc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e1181e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h4>6 or 12-month plans</h4><p>Choose the term that fits your car and how long you plan to keep it.</p></div>
+      <div class="wty-card"><span class="wc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#e1181e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="m8.5 13 2 2 4-4.3"/></svg></span><h4>Inspection-backed</h4><p>Activated after a quick vehicle inspection, so your cover is honest and hassle-free.</p></div>
     </div>
-  </div>
-</section>
+    <div class="wty-band">
+      <h3>Ready to extend your cover?</h3>
+      <a href="index.html#emergency" class="btn btn-lg">Get started <svg class="ic"><use href="#i-arrow-r"/></svg></a>
+    </div>
+  </div></section>
+</main>
 
-<!-- ═══════════════ GOOD CARS STAY BETTER — TIMELINE ═══════════════ -->
-<section class="regular">
-  <img class="gear-mark" src="assets/img/cs-gear.png" alt="" aria-hidden="true">
-  <div class="container">
-    <span class="eyebrow">SERVICE &amp; MAINTENANCE <span class="dash"></span></span>
-    <h2>Good Cars Stay Better<br><span class="red">With Regular Care.</span></h2>
-    <p class="reg-sub">Timely maintenance keeps your car reliable, safe and<br>performing at its best—every single day.</p>
-    <div class="reg-car reveal-zoom"><img src="assets/img/cs-car.png" alt="White sedan side profile"></div>
-    <div class="timeline">
-      <span class="tl-line"></span>
-      <div class="tl-grid">
-        <div class="tl-item">
-          <p class="tl-km">5,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
-          <span class="tl-circle"><svg><use href="#i-oilcan"/></svg></span>
-          <h4>Oil &amp; Filter Change</h4><p>Keeps engine clean<br>and performance high.</p>
-        </div>
-        <div class="tl-item">
-          <p class="tl-km">10,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
-          <span class="tl-circle"><svg><use href="#i-brake"/></svg></span>
-          <h4>Brake Check</h4><p>Ensures your safety<br>with every stop.</p>
-        </div>
-        <div class="tl-item">
-          <p class="tl-km">20,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
-          <span class="tl-circle"><svg><use href="#i-tyre2"/></svg></span>
-          <h4>Wheel &amp; Tyre Care</h4><p>Better grip. Smoother<br>ride. Longer tyre life.</p>
-        </div>
-        <div class="tl-item">
-          <p class="tl-km">40,000 KM</p><span class="tl-dot"></span><span class="tl-dash"></span>
-          <span class="tl-circle"><svg><use href="#i-clip-check"/></svg></span>
-          <h4>Comprehensive Inspection</h4><p>Complete check-up for peak<br>performance and reliability.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ WHY FIXORASSIST ═══════════════ -->
-<section class="cswhy">
-  <div class="container">
-    <p class="eyebrow center dashes">WHY FIXORASSIST</p>
-    <h2 class="h2-center" style="font-size:54px">Why <span class="red">FixorAssist</span></h2>
-    <p class="section-sub">Expert care you can trust. Service that goes the extra mile.</p>
-    <div class="cswhy-grid">
-      <div class="cswhy-photo reveal-left"><img src="assets/img/cs-why.png" alt="FixorAssist technician inspecting a car — Your car. Our responsibility."></div>
-      <div class="cswhy-cards">
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-shield-check"/></svg></span><h4>Expert Technicians</h4><span class="wf-rule"></span><p>Trained professionals with deep knowledge and hands-on experience.</p></div>
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-award"/></svg></span><h4>Genuine Parts</h4><span class="wf-rule"></span><p>We use 100% genuine parts for reliable performance and long life.</p></div>
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-clip-check"/></svg></span><h4>Transparent Process</h4><span class="wf-rule"></span><p>Clear checks, honest recommendations and no hidden costs.</p></div>
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-clock-dial"/></svg></span><h4>On-Time Service</h4><span class="wf-rule"></span><p>We respect your time with efficient service and quick turnaround.</p></div>
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-car-check"/></svg></span><h4>Advanced Equipment</h4><span class="wf-rule"></span><p>Modern tools and technology for accurate diagnostics and quality service.</p></div>
-        <div class="wf-card"><span class="wf-ic"><svg><use href="#i-headset-agent"/></svg></span><h4>Customer First</h4><span class="wf-rule"></span><p>Friendly support, easy booking and a seamless experience every time.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ MAINTENANCE SERVICES ═══════════════ -->
-<section class="mserv" id="mserv">
-  <div class="container">
-    <p class="eyebrow center dashes">OUR MAINTENANCE SERVICES</p>
-    <h2 class="h2-center" style="font-size:54px">Complete Care for <span class="red">Every Kilometer.</span></h2>
-    <p class="section-sub">From routine checks to advanced care, we keep your car in the best condition, every day.</p>
-    <div class="mserv-grid">
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-oilcan"/></svg></span><img src="assets/img/cs-svc1.png" alt="Oil being poured into an engine"></div><div class="ms-body"><h4>Oil &amp; Filter Change</h4><span class="ms-rule"></span><p>Keep your engine clean and running smoothly with high-quality oil and genuine filters.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-brake"/></svg></span><img src="assets/img/cs-svc2.png" alt="Brake disc and caliper"></div><div class="ms-body"><h4>Brake System Check</h4><span class="ms-rule"></span><p>Complete inspection and servicing for maximum safety and reliable stopping power.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-tyre2"/></svg></span><img src="assets/img/cs-svc3.png" alt="Technician working on a wheel"></div><div class="ms-body"><h4>Wheel &amp; Tyre Care</h4><span class="ms-rule"></span><p>Alignment, balancing, rotation and tyre checks for better grip, comfort and safety.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-airfilter"/></svg></span><img src="assets/img/cs-svc4.png" alt="Clean air filter"></div><div class="ms-body"><h4>Air Filter Replacement</h4><span class="ms-rule"></span><p>Clean air means better performance and improved fuel efficiency for your car.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-battery"/></svg></span><img src="assets/img/cs-svc5.png" alt="Car battery"></div><div class="ms-body"><h4>Battery Check &amp; Care</h4><span class="ms-rule"></span><p>Testing, top-up and replacement services to ensure a strong start every time.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-snow"/></svg></span><img src="assets/img/cs-svc6.png" alt="Car AC vents"></div><div class="ms-body"><h4>AC Service</h4><span class="ms-rule"></span><p>Keep your cabin cool and fresh with professional AC inspection and servicing.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-cardiag"/></svg></span><img src="assets/img/cs-svc7.png" alt="Diagnostics tablet scanning a car"></div><div class="ms-body"><h4>Diagnostics Check</h4><span class="ms-rule"></span><p>Advanced scanning to detect issues early and prevent costly repairs later.</p></div></div>
-      <div class="ms-card"><div class="ms-photo"><span class="ms-badge"><svg><use href="#i-clip-check"/></svg></span><img src="assets/img/cs-svc8.png" alt="Technician performing a general inspection"></div><div class="ms-body"><h4>General Inspection</h4><span class="ms-rule"></span><p>Comprehensive multi-point check to keep your car reliable, safe and road-ready.</p></div></div>
-    </div>
-    <div class="mserv-divider"></div>
-  </div>
-</section>
-
-<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
-<section class="cshow">
-  <div class="container">
-    <p class="eyebrow center dashes">HOW IT WORKS</p>
-    <h2 class="h2-center" style="font-size:54px">Simple Steps. <span class="red">Complete Care.</span></h2>
-    <p class="section-sub">From booking to the best drive – we make car care easy and hassle-free.</p>
-    <div class="cshow-steps">
-      <div class="cstep"><span class="cst-num">01</span><svg class="cst-ic"><use href="#i-calendar"/></svg><div class="cst-body"><h4>Book</h4><p>Schedule your service in minutes.</p></div></div>
-      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
-      <div class="cstep"><span class="cst-num">02</span><svg class="cst-ic"><use href="#i-magnify"/></svg><div class="cst-body"><h4>Inspect</h4><p>Thorough check by our experts.</p></div></div>
-      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
-      <div class="cstep"><span class="cst-num">03</span><svg class="cst-ic"><use href="#i-tools"/></svg><div class="cst-body"><h4>Service</h4><p>Quality service using genuine parts.</p></div></div>
-      <span class="cstep-sep"><svg><use href="#i-chevron"/></svg></span>
-      <div class="cstep"><span class="cst-num">04</span><svg class="cst-ic"><use href="#i-car-front"/></svg><div class="cst-body"><h4>Drive</h4><p>Hit the road with confidence and peace of mind.</p></div></div>
-    </div>
-    <div class="cshow-cards">
-      <div class="hw-card"><img src="assets/img/cs-step1.png" alt="Booking a service on the FixorAssist app"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Choose your service, pick a time that suits you, and we'll take care of the rest.</p></div></div>
-      <div class="hw-card"><img src="assets/img/cs-step2.png" alt="Technician reviewing an inspection report on a tablet"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>We inspect your vehicle with advanced tools and share a transparent report with you.</p></div></div>
-      <div class="hw-card"><img src="assets/img/cs-step3.png" alt="Expert technician servicing a car engine"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Our expert technicians service your car using genuine parts and follow global standards.</p></div></div>
-      <div class="hw-card"><img src="assets/img/cs-step4.png" alt="Car driving on a city road"><div class="hw-cap"><svg class="chk"><use href="#i-check-ring"/></svg><p>Your car is ready. Enjoy a smoother, safer and better drive every day.</p></div></div>
-    </div>
-    <div class="cshow-band">
-      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-shield-check"/></svg></span><div><h5>Easy Booking</h5><p>Quick and convenient<br>online booking.</p></div></div>
-      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-shield-person"/></svg></span><div><h5>Transparent Process</h5><p>Clear updates at every<br>step of the way.</p></div></div>
-      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-clock-dial"/></svg></span><div><h5>Save Time</h5><p>Fast turnaround without<br>compromising quality.</p></div></div>
-      <div class="hb-item"><span class="hb-ic2"><svg><use href="#i-steering"/></svg></span><div><h5>Better Drive</h5><p>Well-maintained cars<br>deliver better journeys.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ BOOK YOUR SERVICE ═══════════════ -->
-<section class="csbook" id="book">
-  <img class="book-visual" src="assets/img/cs-book.png" alt="White SUV inside a FixorAssist Service & Maintenance workshop">
-  <div class="container csbook-in">
-    <span class="eyebrow dashes">BOOK YOUR SERVICE</span>
-    <h2>Your Car Deserves<br><span class="red">Better Care.</span></h2>
-    <span class="red-rule"></span>
-    <p class="bk-sub">Expert service, genuine parts and complete care—<br>all in one place. Book your service today.</p>
-    <div class="bk-minis">
-      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-calendar"/></svg></span><h5>Easy Booking</h5><p>Book in minutes<br>online or by call</p></div>
-      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-shield-check"/></svg></span><h5>Trusted Experts</h5><p>Skilled technicians<br>you can rely on</p></div>
-      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-award"/></svg></span><h5>Genuine Parts</h5><p>100% genuine for<br>longer performance</p></div>
-      <div class="bk-mini"><span class="bkm-ic"><svg><use href="#i-stopwatch"/></svg></span><h5>On-Time Service</h5><p>Quick turnaround,<br>zero compromise</p></div>
-    </div>
-    <div class="ready-bar">
-      <span class="rb-cal"><svg><use href="#i-calendar"/></svg></span>
-      <div class="rb-copy">
-        <h3>Ready to Book?</h3>
-        <p>Get expert care for your car in just a few clicks.</p>
-      </div>
-      <a href="#" class="btn btn-red">BOOK MY SERVICE <svg class="ic"><use href="#i-arrow-r"/></svg></a>
-      <div class="rb-secure"><svg><use href="#i-shield-check"/></svg><p>Secure booking.<br>No hidden charges.</p></div>
-    </div>
-    <div class="prefer">
-      <span class="pf-ic"><svg><use href="#i-phone-call"/></svg></span>
-      <p><strong>Prefer to talk?</strong> &nbsp;Call us at&nbsp; <a href="tel:+919876543210">+91 98765 43210</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ FAQ ═══════════════ -->
-<section class="csfaq">
-  <div class="container">
-    <p class="eyebrow center dashes">FAQ</p>
-    <h2 class="h2-center" style="font-size:54px">Frequently Asked <span class="red">Questions</span></h2>
-    <p class="section-sub">Find quick answers to the most common questions about our car care services.</p>
-    <div class="csfaq-grid">
-      <div class="csfaq-side">
-        <div class="csfaq-photo reveal-left"><img src="assets/img/cs-faq.png" alt="Car inside a FixorAssist Service & Maintenance workshop"></div>
-        <div class="still-card">
-          <span class="st-ic"><svg><use href="#i-headset-red"/></svg></span>
-          <div>
-            <h4>Still have questions?</h4>
-            <p>We're here to help you with<br>any questions you may have.</p>
-            <a href="tel:+919876543210" class="btn btn-red"><svg class="ic"><use href="#i-phone-call"/></svg> Call Us: +91 98765 43210</a>
-          </div>
-        </div>
-      </div>
-      <div class="csfaq-list">
-        <div class="faq-item open">
-          <button class="faq-q"><span class="qnum">01</span><span class="qt">How do I book a service with FixorAssist?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>You can book a service through our website by clicking on "Book Your Service" or call us directly. Choose your preferred date, time and service, and we'll take care of the rest.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="qnum">02</span><span class="qt">What types of vehicles do you service?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>We service all makes and models of cars — hatchbacks, sedans, SUVs and premium vehicles, across both petrol and diesel variants.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="qnum">03</span><span class="qt">Do you use genuine parts?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>Yes. We use 100% genuine parts sourced from verified OEMs and authorized partners, so your car performs reliably for longer.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="qnum">04</span><span class="qt">How long does a typical service take?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>A routine service usually takes 3–4 hours. For advanced repairs, our team shares a clear timeline upfront and keeps you updated at every step.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="qnum">05</span><span class="qt">Do you offer a warranty on your services?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>Yes. All our services and genuine parts come with a service warranty, so you can drive with complete peace of mind.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span class="qnum">06</span><span class="qt">Can I track the status of my service?</span><svg class="chev"><use href="#i-chevron"/></svg></button>
-          <div class="faq-a"><div><p>Absolutely. You receive transparent updates at every stage — from inspection to completion — via SMS, WhatsApp and the FixorAssist app.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ CLOSING LINE ═══════════════ -->
-<section class="cs-close">
-  <div class="container">
-    <div class="cl-row">
-      <span class="cl-rule"></span>
-      <h3>Your Car. <svg class="cl-shield"><use href="#i-shield-check"/></svg> Responsibility.</h3>
-      <span class="cl-rule r"></span>
-    </div>
-    <p>Reliable service. Transparent process. Complete peace of mind.</p>
-  </div>
-</section>
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="footer" id="footer">
   <div class="container footer-grid">
     <div class="f-brand">
