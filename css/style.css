@@ -359,6 +359,8 @@ h1,h2,h3,h4,h5{line-height:1.18;font-weight:700}
   .h2-left{font-size:32px}
   .h2-sub{font-size:23px}
   .strip-grid,.emergency-grid,.trust-grid,.network-grid,.why-grid,.care-grid,.about-feats,.steps-heads,.how-grid,.footer-grid,.mv-feats{grid-template-columns:1fr}
+  .about-feats{gap:24px}
+  .af,.af:first-child{padding:0}
   .emergency-actions{flex-direction:column;align-items:stretch}
   .sc-items{flex-direction:column;gap:22px;align-items:flex-start}
   .sc-items>div{flex-direction:row;border-left:0;padding:0}
