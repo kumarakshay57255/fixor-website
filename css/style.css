@@ -345,7 +345,7 @@ h1,h2,h3,h4,h5{line-height:1.18;font-weight:700}
   .main-nav.open{display:flex}
   .main-nav a{padding:14px 0;width:100%}
   .main-nav a.active::after{display:none}
-  .nav-toggle{display:flex}
+  .nav-toggle{display:flex;margin-left:auto}
   .header-cta{display:none}
   .hero-copy h1{font-size:38px}
   .hero-copy p br,.section-sub br{display:none}
