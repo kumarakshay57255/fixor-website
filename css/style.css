@@ -347,6 +347,11 @@ h1,h2,h3,h4,h5{line-height:1.18;font-weight:700}
   .main-nav a.active::after{display:none}
   .nav-toggle{display:flex;margin-left:auto}
   .header-cta{display:none}
+  /* Mobile hero: stack text (readable, on white) above the car image */
+  .hero{flex-direction:column;align-items:stretch;min-height:auto;padding-top:22px}
+  .hero-inner{order:1}
+  .hero-visual{position:static;order:2;width:100%;height:auto;max-width:100%;margin-top:18px;-webkit-mask-image:none;mask-image:none;opacity:1;object-position:center}
+  .hero-copy{padding:18px 0 0;max-width:100%}
   .hero-copy h1{font-size:38px}
   .hero-copy p br,.section-sub br{display:none}
   .h2-center,.emergency-card h2{font-size:29px}
