@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two-Wheeler Roadside Assistance — FixorAssist</title>
+  <meta name="description" content="24×7 two-wheeler roadside assistance membership from FixorAssist. Flat tyre, battery, fuel, towing and more — starting ₹699/year. Pan-India network." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bike-page.css?v=20260819a" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    html, body { font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif; }
+    [x-cloak] { display: none !important; }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-ink">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
+      <a href="rsa-bike.html" class="flex items-center"><img src="assets/img/logo-header.png" alt="FixorAssist" class="h-10 w-auto" /></a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <a href="index.html" class="hover:text-brand">Home</a>
+        <a href="#reasons" class="hover:text-brand">About Us</a>
+        <a href="#services" class="hover:text-brand">Services</a>
+        <a href="#plans" class="text-brand font-semibold">Plans</a>
+        <a href="#included" class="hover:text-brand">Coverage</a>
+        <a href="#faq" class="hover:text-brand">Support</a>
+      </nav>
+      <div class="w-6" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-8 items-center pt-10 pb-6 lg:pt-14">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-red-50 text-brand text-xs font-bold tracking-wide uppercase px-4 py-1.5">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+          Two-Wheeler RSA Membership
+        </span>
+        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-[3.3rem] font-extrabold leading-[1.04] tracking-tight">
+          Ride Without Worry.<br />We've Got <span class="text-brand">Your Back.</span>
+        </h1>
+        <p class="mt-5 text-gray-600 max-w-lg">Flat tyre, battery issue, fuel shortage or a sudden breakdown — wherever you are, FixorAssist is just a call away. 24×7 roadside assistance for a worry-free ride, every day.</p>
+        <p class="mt-6 text-xs font-semibold tracking-widest text-gray-400 uppercase">Starting from</p>
+        <p class="text-4xl font-extrabold text-brand">₹699 <span class="text-base font-medium text-gray-400">/ year</span></p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <button type="button" onclick="scrollToPlans()" class="inline-flex items-center gap-2 rounded-xl bg-brand text-white font-semibold px-7 py-3.5 hover:bg-brand-deep transition">Join Membership <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          <button type="button" onclick="scrollToPlans()" class="inline-flex items-center gap-2 rounded-xl border-2 border-brand text-brand font-semibold px-7 py-3.5 hover:bg-brand hover:text-white transition">Compare Plans <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+          <div class="rounded-xl border border-gray-100 shadow-sm px-3 py-2.5"><div class="font-extrabold text-sm">365 Days</div><div class="text-gray-500">Coverage</div></div>
+          <div class="rounded-xl border border-gray-100 shadow-sm px-3 py-2.5"><div class="font-extrabold text-sm">24×7</div><div class="text-gray-500">Emergency Support</div></div>
+          <div class="rounded-xl border border-gray-100 shadow-sm px-3 py-2.5"><div class="font-extrabold text-sm">237+</div><div class="text-gray-500">Supported Bike Models</div></div>
+          <div class="rounded-xl border border-gray-100 shadow-sm px-3 py-2.5"><div class="font-extrabold text-sm">Trusted by</div><div class="text-gray-500">Thousands of Riders</div></div>
+        </div>
+      </div>
+      <div><img src="assets/img/bike/hero.jpg" alt="Two-wheeler roadside assistance" class="w-full h-auto rounded-2xl" /></div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section class="max-w-[1440px] mx-auto px-6 lg:px-10 -mt-2 mb-4">
+    <div class="rounded-2xl bg-ink text-white grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 overflow-hidden">
+      <div class="flex items-center gap-3 px-4 py-5">
+        <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+        <div><div class="font-extrabold">24×7</div><div class="text-[11px] text-gray-300 leading-tight">Round-the-clock roadside assistance</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5">
+        <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.2"/></svg></span>
+        <div><div class="font-extrabold">30-45 Min</div><div class="text-[11px] text-gray-300 leading-tight">Quick response to get you back moving</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5">
+        <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+        <div><div class="font-extrabold">India Wide</div><div class="text-[11px] text-gray-300 leading-tight">Pan India network you can rely on</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5">
+        <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+        <div><div class="font-extrabold">Expert</div><div class="text-[11px] text-gray-300 leading-tight">Trained professionals at your service</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems + flow -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Problems Can Happen Anytime.<br /><span class="text-brand">We're Always On The Way.</span></h2>
+        <p class="mt-5 text-gray-600 max-w-md">Breakdowns don't come with a warning. With FixorAssist, you're never alone on the road. Help is just a tap away.</p>
+      </div>
+      <div><img src="assets/img/bike/problems.jpg" alt="Rider and FixorAssist van" class="w-full h-auto rounded-2xl" /></div>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 mt-12 grid grid-cols-3 md:grid-cols-6 gap-4">
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">01</span></div>
+        <div class="mt-3 text-sm font-bold">Flat Tyre</div>
+      </div>
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 10v4M6 10v4M10 10v4"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">02</span></div>
+        <div class="mt-3 text-sm font-bold">Battery Down</div>
+      </div>
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h13"/><path d="M14 8h3l3 3v7a2 2 0 0 1-4 0v-6"/><path d="M7 7h4"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">03</span></div>
+        <div class="mt-3 text-sm font-bold">Fuel Empty</div>
+      </div>
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">04</span></div>
+        <div class="mt-3 text-sm font-bold">Bike Won't Start</div>
+      </div>
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">05</span></div>
+        <div class="mt-3 text-sm font-bold">Key Locked</div>
+      </div>
+      <div class="text-center">
+        <div class="mx-auto w-16 h-16 rounded-full bg-ink text-white flex items-center justify-center relative"><svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span class="absolute -top-2 -right-1 text-xs font-extrabold text-brand">06</span></div>
+        <div class="mt-3 text-sm font-bold text-brand">FixorAssist Arrives</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans heading -->
+  <section class="bg-gray-50 pt-16 pb-2">
+    <div class="text-center px-5">
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Three Plans. <span class="text-brand">Complete Peace of Mind.</span></h2>
+      <p class="mt-3 text-gray-500 max-w-2xl mx-auto">Pick the plan that suits your ride and enjoy 365 days of uninterrupted protection with India's trusted roadside assistance.</p>
+    </div>
+  </section>
+
+  <!-- Plans (LIVE two-wheeler + Razorpay) -->
+  <section id="plans" class="py-20 sm:py-24 bg-gray-50">
+    <div class="max-w-[1440px] px-6 lg:px-10 mx-auto">
+      <div id="plansMsg" class="mt-4 text-center text-gray-400">Loading plans…</div>
+      <div id="planCards" class="mt-12 flex flex-wrap justify-center gap-7 items-stretch"></div>
+    </div>
+  </section>
+
+  <!-- Black feature bar -->
+  <section class="max-w-[1440px] mx-auto px-6 lg:px-10 py-4">
+    <div class="rounded-2xl bg-ink text-white grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10 overflow-hidden">
+      <div class="flex items-center gap-3 px-4 py-5 justify-center text-center sm:text-left">
+        <span class="w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M8 12h8M8 16h6"/></svg></span>
+        <div><div class="font-extrabold text-sm">365 Days</div><div class="text-[11px] text-gray-300">Coverage</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5 justify-center text-center sm:text-left">
+        <span class="w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+        <div><div class="font-extrabold text-sm">24×7</div><div class="text-[11px] text-gray-300">Emergency Support</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5 justify-center text-center sm:text-left">
+        <span class="w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+        <div><div class="font-extrabold text-sm">Instant</div><div class="text-[11px] text-gray-300">Activation</div></div>
+      </div>
+      <div class="flex items-center gap-3 px-4 py-5 justify-center text-center sm:text-left">
+        <span class="w-10 h-10 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 6 21l6-3 6 3-2.5-8.5"/></svg></span>
+        <div><div class="font-extrabold text-sm">Trusted by</div><div class="text-[11px] text-gray-300">Thousands of Riders</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Reasons -->
+  <section id="reasons" class="py-16 sm:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">More Reasons Riders<br /><span class="text-brand">Choose FixorAssist.</span></h2>
+        <p class="mt-3 text-gray-500 max-w-2xl mx-auto">We combine technology, nationwide network and expert support to deliver the most reliable roadside assistance experience.</p>
+      </div>
+      <div class="mt-12 grid lg:grid-cols-2 gap-8 items-center">
+        <div><img src="assets/img/bike/reasons.jpg" alt="Rider with FixorAssist support van" class="w-full h-auto rounded-2xl" /></div>
+        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-8">
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6M21 20a6 6 0 0 0-4-5.7"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">Pan India Network</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">We're present in 600+ cities and towns across India.</p>
+          </div>
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">24×7 Support</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Round-the-clock assistance, every single day.</p>
+          </div>
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 6 21l6-3 6 3-2.5-8.5"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">Expert Technicians</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Trained, verified and equipped to fix it right the first time.</p>
+          </div>
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.2"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">Fast Response</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Quickest response time to get you back on the road faster.</p>
+          </div>
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M8 12h8M8 16h6"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">No Hidden Charges</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Transparent pricing. No surprises. What you see is what you pay.</p>
+          </div>
+          <div>
+            <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+            <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">Trusted by Riders</h4>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">Loved by 50K+ riders who count on us ride after ride.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison table -->
+  <section id="included" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">See <span class="text-brand">What's Included</span> in Each Plan.</h2>
+      </div>
+      <div class="mt-10 overflow-x-auto">
+        <table class="w-full min-w-[640px] bg-white rounded-2xl overflow-hidden shadow-sm">
+          <thead>
+            <tr class="text-left">
+              <th class="p-4 text-xs font-bold uppercase tracking-wide text-gray-400">Services Covered</th>
+              <th class="p-4 text-center"><div class="font-extrabold">SILVER</div><div class="text-xs text-gray-400">Essential Protection</div></th>
+              <th class="p-4 text-center bg-brand text-white"><div class="text-[10px] font-bold">★ MOST POPULAR</div><div class="font-extrabold">GOLD</div><div class="text-xs text-white/80">Enhanced Protection</div></th>
+              <th class="p-4 text-center"><div class="font-extrabold">DIAMOND</div><div class="text-xs text-gray-400">Unlimited Protection</div></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- All the help -->
+  <section id="services" class="py-16 sm:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="grid lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-1">
+          <p class="text-xs font-bold tracking-widest text-brand uppercase">Services Covered</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">All The Help You Need. <span class="text-brand">Whenever You Need It.</span></h2>
+          <p class="mt-4 text-gray-500">From minor issues to major breakdowns, FixorAssist has you covered with a wide range of roadside assistance services for your bike.</p>
+          <img src="assets/img/bike/redbike.png" alt="Sports bike" class="mt-6 w-full h-auto" />
+        </div>
+        <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 3v3.6M12 17.4V21M3 12h3.6M17.4 12H21"/></svg></span><h4 class="font-bold text-sm">Flat Tyre Assistance</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">We'll come to you and fix your flat tyre on the spot.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 10v4M6 10v4M10 10v4"/></svg></span><h4 class="font-bold text-sm">Battery Jumpstart</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">Dead battery? We'll jumpstart your bike and get you going.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h13"/><path d="M14 8h3l3 3v7a2 2 0 0 1-4 0v-6"/><path d="M7 7h4"/></svg></span><h4 class="font-bold text-sm">Fuel Delivery</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">Run out of fuel? We'll deliver enough fuel to get you to the nearest pump.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h4 class="font-bold text-sm">Starting Problem</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">Facing starting issues? Our experts diagnose and help start your bike.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h4 class="font-bold text-sm">Key Unlock Assistance</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">Locked your key inside or lost your key? We'll help you unlock your bike.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h9v9H2z"/><path d="M11 11h5l3 3v3h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/><path d="m2 12 3.5-3.5"/></svg></span><h4 class="font-bold text-sm">Towing Support</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">If your bike can't be fixed on the spot, we'll tow it to the nearest service center.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h4 class="font-bold text-sm">Safe Custody</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">We provide secure custody of your vehicle if repair takes time.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 shadow-sm p-5 hover:shadow-md transition">
+            <div class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><h4 class="font-bold text-sm">On-road Support</h4></div>
+            <p class="mt-2 text-xs text-gray-500 leading-relaxed">Stuck on the highway? Our team will reach you anywhere, anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center">
+        <p class="text-xs font-bold tracking-widest text-brand uppercase">How it Works</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">We're With You. From Start to Finish.</h2>
+      </div>
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-5 gap-5">
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+          <div class="relative"><img src="assets/img/bike/hw1.jpg" alt="Request Help" class="w-full h-28 object-cover" /><span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xs font-extrabold text-brand bg-white rounded-full px-2">01</span></div>
+          <div class="p-4 pt-5"><span class="mx-auto w-10 h-10 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span><h4 class="mt-3 font-bold text-sm">Request Help</h4><p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Open the FixorAssist app and tap on "Request Help". Share your location and issue in seconds.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+          <div class="relative"><img src="assets/img/bike/hw2.jpg" alt="We Acknowledge" class="w-full h-28 object-cover" /><span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xs font-extrabold text-brand bg-white rounded-full px-2">02</span></div>
+          <div class="p-4 pt-5"><span class="mx-auto w-10 h-10 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span><h4 class="mt-3 font-bold text-sm">We Acknowledge</h4><p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Our support team receives your request instantly and verifies the details to assist you better.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+          <div class="relative"><img src="assets/img/bike/hw3.jpg" alt="Expert On The Way" class="w-full h-28 object-cover" /><span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xs font-extrabold text-brand bg-white rounded-full px-2">03</span></div>
+          <div class="p-4 pt-5"><span class="mx-auto w-10 h-10 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6M21 20a6 6 0 0 0-4-5.7"/></svg></span><h4 class="mt-3 font-bold text-sm">Expert On The Way</h4><p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Our nearest technician is dispatched immediately and heads your way with the right tools.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+          <div class="relative"><img src="assets/img/bike/hw4.jpg" alt="Issue Resolved" class="w-full h-28 object-cover" /><span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xs font-extrabold text-brand bg-white rounded-full px-2">04</span></div>
+          <div class="p-4 pt-5"><span class="mx-auto w-10 h-10 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><h4 class="mt-3 font-bold text-sm">Issue Resolved</h4><p class="mt-1.5 text-xs text-gray-500 leading-relaxed">From minor fixes to major breakdowns, we resolve the issue on the spot and get you moving.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+          <div class="relative"><img src="assets/img/bike/hw5.jpg" alt="You Ride Again" class="w-full h-28 object-cover" /><span class="absolute -bottom-3 left-1/2 -translate-x-1/2 text-xs font-extrabold text-brand bg-white rounded-full px-2">05</span></div>
+          <div class="p-4 pt-5"><span class="mx-auto w-10 h-10 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h4 class="mt-3 font-bold text-sm">You Ride Again</h4><p class="mt-1.5 text-xs text-gray-500 leading-relaxed">You're safe, your bike is ready, and your journey continues without any worry.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App section -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-xs font-bold tracking-widest text-brand uppercase">On the go. Help in a tap.</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">Everything You Need,<br />Right in <span class="text-brand">Your Pocket.</span></h2>
+        <p class="mt-4 text-gray-500 max-w-md">The FixorAssist app makes roadside assistance smarter, faster and hassle-free for every rider.</p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-6">
+          <div>
+            <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><h4 class="font-bold text-sm">Instant Help</h4></div>
+            <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Request assistance in seconds and track your service in real-time.</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M8 12h8M8 16h6"/></svg></span><h4 class="font-bold text-sm">Easy &amp; Smart</h4></div>
+            <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Raise requests, manage your membership and get updates — all in one place.</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h4 class="font-bold text-sm">Secure &amp; Reliable</h4></div>
+            <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Your data and rides are protected with top-notch security.</p>
+          </div>
+          <div>
+            <div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-red-50 text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><h4 class="font-bold text-sm">Stay Updated</h4></div>
+            <p class="mt-1.5 text-xs text-gray-500 leading-relaxed">Get real-time alerts, service updates and important notifications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center"><img src="assets/img/bike/app.jpg" alt="FixorAssist app" class="w-64 h-auto" /></div>
+    </div>
+  </section>
+
+  <!-- Feature bar -->
+  <section class="bg-ink text-white">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 py-6 grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div class="flex items-start gap-3"><span class="w-9 h-9 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span><div><div class="font-bold text-sm">24/7 Support</div><div class="text-[11px] text-gray-400 leading-tight">Help is just a tap away, anytime, anywhere.</div></div></div>
+      <div class="flex items-start gap-3"><span class="w-9 h-9 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><div class="font-bold text-sm">Live Tracking</div><div class="text-[11px] text-gray-400 leading-tight">Track your assistance in real-time.</div></div></div>
+      <div class="flex items-start gap-3"><span class="w-9 h-9 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span><div><div class="font-bold text-sm">In-App Chat</div><div class="text-[11px] text-gray-400 leading-tight">Chat with our support team instantly.</div></div></div>
+      <div class="flex items-start gap-3"><span class="w-9 h-9 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M8 12h8M8 16h6"/></svg></span><div><div class="font-bold text-sm">Digital Records</div><div class="text-[11px] text-gray-400 leading-tight">Access all your service records easily.</div></div></div>
+      <div class="flex items-start gap-3"><span class="w-9 h-9 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><div><div class="font-bold text-sm">Secure Payments</div><div class="text-[11px] text-gray-400 leading-tight">Safe, fast and hassle-free payments.</div></div></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Real Riders. Real Stories.<br /><span class="text-brand">Real Peace of Mind.</span></h2>
+      </div>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-6"><div class="text-4xl leading-none text-brand font-serif">&ldquo;</div><p class="mt-2 text-sm text-gray-600 leading-relaxed">Flat tyre on the highway at night. FixorAssist reached in 25 minutes and I was back on my way.</p><div class="mt-4 font-bold text-sm">Rohit Verma</div><div class="text-xs text-gray-400">Delhi</div></div>
+          <img src="assets/img/bike/t1.jpg" alt="Rohit Verma" class="w-full h-40 object-cover" />
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-6"><div class="text-4xl leading-none text-brand font-serif">&ldquo;</div><p class="mt-2 text-sm text-gray-600 leading-relaxed">Battery died before an important meeting. They jumpstarted my bike quickly and I made it on time!</p><div class="mt-4 font-bold text-sm">Neha Sharma</div><div class="text-xs text-gray-400">Bengaluru</div></div>
+          <img src="assets/img/bike/t2.jpg" alt="Neha Sharma" class="w-full h-40 object-cover" />
+        </div>
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+          <div class="p-6"><div class="text-4xl leading-none text-brand font-serif">&ldquo;</div><p class="mt-2 text-sm text-gray-600 leading-relaxed">Very professional team. They picked up my bike, fixed it and dropped it back. Amazing!</p><div class="mt-4 font-bold text-sm">Arjun Mehta</div><div class="text-xs text-gray-400">Mumbai</div></div>
+          <img src="assets/img/bike/t3.jpg" alt="Arjun Mehta" class="w-full h-40 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b0c10] text-gray-400 py-12">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/img/logo-mark-footer.png" alt="FixorAssist" class="h-10 w-auto" />
+        <div><div class="text-white font-bold">FixorAssist</div><div class="text-xs">Trusted Automotive Support</div></div>
+      </div>
+      <a href="https://fixorassist.com" class="text-sm hover:text-white">fixorassist.com</a>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 mt-8 pt-6 border-t border-white/10 text-xs text-center sm:text-left" id="copyright">© FixorAssist. All rights reserved.</div>
+  </footer>
+
+  <!-- Buy modal mount -->
+  <div id="buyModalMount"></div>
+
+  <script>
+  (function () {
+    'use strict';
+    var API_BASE = 'https://15.207.113.110.nip.io';
+    var VEHICLE_TYPE = 'TWO_WHEELER';
+
+    var gstIncl = function (p) { return Math.round(Number(p) * 1.18); };
+    var inr = function (n) { return '₹' + Number(n).toLocaleString('en-IN'); };
+    var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    }); };
+
+    document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' FixorAssist. All rights reserved.';
+
+    window.scrollToPlans = function () {
+      var el = document.getElementById('plans');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    // ---- API ----
+    function req(path, opts) {
+      opts = opts || {};
+      var headers = { 'Content-Type': 'application/json' };
+      return fetch(API_BASE + path, {
+        method: opts.method || 'GET',
+        headers: headers,
+        body: opts.body ? JSON.stringify(opts.body) : undefined,
+      }).then(function (res) {
+        return res.json().catch(function () { return null; }).then(function (data) {
+          if (!res.ok) {
+            var msg = (data && data.error && data.error.message) || ('Request failed (' + res.status + ')');
+            throw new Error(msg);
+          }
+          return data;
+        });
+      });
+    }
+    var api = {
+      getPlans: function (vt) { return req(vt ? '/plans?vehicleType=' + vt : '/plans'); },
+      rsaOrder: function (payload) { return req('/public/rsa/order', { method: 'POST', body: payload }); },
+      rsaVerify: function (payload) { return req('/public/rsa/verify', { method: 'POST', body: payload }); },
+    };
+
+    // ---- Icons (inline SVG strings) ----
+    var svgAttrs = 'fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"';
+    var ICONS = {
+      shield: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>',
+      star: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 3l2.7 5.4 6 .9-4.3 4.2 1 6L12 16.6 6.6 19.5l1-6L3.3 9.3l6-.9z"/></svg>',
+      diamond: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3 7 9l5 12M15 3l2 6-5 12"/></svg>',
+      ribbon: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 6 21l6-3 6 3-2.5-8.5"/></svg>',
+      contactless: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><path d="M8 7a9 9 0 0 1 0 10M12 5a13 13 0 0 1 0 14M4 9a5 5 0 0 1 0 6"/></svg>',
+      check: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><path d="m5 12 5 5L20 6"/></svg>',
+      close: '<svg viewBox="0 0 24 24" ' + svgAttrs + '><path d="M6 6l12 12M18 6 6 18"/></svg>',
+    };
+
+    // ---- MembershipCard (JS replica of MembershipCard.jsx) ----
+    var TIER_THEMES = [
+      { m: 'SILVER', gradient: ['#C9D1D9', '#6B7785', '#3F4854'], icon: 'shield' },
+      { m: 'GOLD', gradient: ['#F4D17A', '#D9A431', '#8B6210'], icon: 'star' },
+      { m: 'DIAMOND', gradient: ['#2B3550', '#141C33', '#070C1C'], icon: 'diamond' },
+      { m: 'PLATINUM', gradient: ['#1E2D52', '#0F1B3D', '#06122E'], icon: 'diamond' },
+    ];
+    var DEFAULT_THEME = { gradient: ['#F63C3C', '#D52F2F', '#9A1F1F'], icon: 'ribbon' };
+    function themeForPlan(code) {
+      var c = String(code || '').toUpperCase();
+      for (var i = 0; i < TIER_THEMES.length; i++) { if (c.indexOf(TIER_THEMES[i].m) !== -1) return TIER_THEMES[i]; }
+      return DEFAULT_THEME;
+    }
+    function compactBenefits(plan) {
+      var parts = [];
+      parts.push(plan.serviceCallsIncluded == null ? 'UNLIMITED CALLS' : (plan.serviceCallsIncluded + ' CALLS'));
+      if (plan.towingKmIncluded != null) parts.push(plan.towingKmIncluded + 'KM TOW');
+      if (plan.code === 'F-GOLD') parts.push('PRIORITY');
+      else if (plan.code === 'F-PLATINUM') parts.push('PAN-INDIA');
+      else if (plan.code === 'F-SILVER') parts.push('ESSENTIAL');
+      return parts.join(' · ');
+    }
+    function membershipCardHTML(plan, memberName) {
+      memberName = memberName || 'FIXOR MEMBER';
+      var t = themeForPlan(plan.code);
+      var bg = 'linear-gradient(135deg, ' + t.gradient[0] + ' 0%, ' + t.gradient[1] + ' 55%, ' + t.gradient[2] + ' 100%)';
+      var ACCENT = '#FFFFFF', ACCENT_DIM = 'rgba(255,255,255,0.55)';
+      var chips = '';
+      for (var i = 0; i < 4; i++) chips += '<span style="width:46%;height:46%;background:rgba(122,88,0,0.4);border-radius:1px"></span>';
+      var popular = plan.highlighted
+        ? '<span class="absolute flex items-center gap-1" style="top:12px;right:80px;background:#FFE5A0;color:#7A5800;font-size:9px;font-weight:800;letter-spacing:1px;padding:2px 6px;border-radius:4px">' +
+            '<span style="width:10px;height:10px;display:inline-flex">' + ICONS.star + '</span> POPULAR</span>'
+        : '';
+      return '' +
+        '<div>' +
+          '<div class="relative rounded-2xl overflow-hidden text-white flex flex-col justify-between" style="aspect-ratio:1.6 / 1;padding:18px;background:' + bg + ';box-shadow:0 8px 16px rgba(0,0,0,0.25)">' +
+            '<div class="flex items-center justify-between">' +
+              '<span style="color:' + ACCENT + ';font-size:18px;font-weight:800;letter-spacing:2px">FIXOR</span>' +
+              '<span class="inline-flex items-center gap-1.5" style="color:' + ACCENT + '">' +
+                '<span style="width:15px;height:15px;display:inline-flex">' + ICONS[t.icon] + '</span>' +
+                '<span style="font-size:12px;font-weight:700;letter-spacing:1.5px">' + esc(plan.code) + '</span>' +
+              '</span>' +
+            '</div>' +
+            '<div class="flex items-center" style="gap:12px">' +
+              '<span class="flex flex-wrap content-between justify-between" style="width:34px;height:26px;background:rgba(255,215,140,0.85);border-radius:4px;padding:2px">' + chips + '</span>' +
+              '<span style="width:20px;height:20px;display:inline-flex;color:' + ACCENT + ';transform:rotate(90deg)">' + ICONS.contactless + '</span>' +
+            '</div>' +
+            '<div class="truncate" style="color:' + ACCENT + ';font-size:13px;font-weight:700;letter-spacing:1.8px;margin-top:6px">' + esc(compactBenefits(plan)) + '</div>' +
+            '<div class="flex items-end justify-between">' +
+              '<div>' +
+                '<div style="color:' + ACCENT_DIM + ';font-size:8px;font-weight:700;letter-spacing:1.2px">VALID FOR</div>' +
+                '<div style="color:' + ACCENT + ';font-size:11px;font-weight:700;letter-spacing:1.5px;margin-top:2px">' + esc(plan.validityDays) + ' DAYS</div>' +
+              '</div>' +
+              '<div class="text-right">' +
+                '<div style="color:' + ACCENT_DIM + ';font-size:8px;font-weight:700;letter-spacing:1.2px">MEMBER</div>' +
+                '<div class="truncate" style="color:' + ACCENT + ';font-size:11px;font-weight:700;letter-spacing:1.5px;margin-top:2px">' + esc(memberName.toUpperCase()) + '</div>' +
+              '</div>' +
+            '</div>' +
+            popular +
+          '</div>' +
+          '<div class="flex items-baseline justify-center" style="margin-top:10px">' +
+            '<span style="font-size:22px;font-weight:800;color:#1A1A1A">' + inr(plan.priceInr) + '</span>' +
+            '<span style="font-size:12px;color:#8E8E93;margin-left:4px">/ year</span>' +
+          '</div>' +
+        '</div>';
+    }
+
+    // ---- Plan cards (JS replica of Plans.jsx cards) ----
+    var PLANS_BY_ID = {};
+    function planCardHTML(plan) {
+      var total = gstIncl(plan.priceInr);
+      var featuresHTML = (plan.features || []).map(function (f) {
+        return '<li class="flex gap-3 text-sm">' +
+          '<span class="w-5 h-5 text-brand flex-none mt-0.5">' + ICONS.check + '</span>' +
+          '<span><span class="font-semibold text-ink">' + esc(f.title) + '</span>' +
+          (f.description ? '<span class="text-gray-500"> — ' + esc(f.description) + '</span>' : '') + '</span>' +
+        '</li>';
+      }).join('');
+      var wrapCls = 'relative rounded-2xl bg-white p-6 flex flex-col w-full sm:w-[344px] ' +
+        (plan.highlighted ? 'ring-2 ring-brand shadow-xl' : 'border border-gray-200 shadow-sm');
+      var btnCls = 'mt-7 w-full rounded-xl font-semibold py-3.5 transition ' +
+        (plan.highlighted ? 'bg-brand text-white hover:bg-brand-deep' : 'border-2 border-brand text-brand hover:bg-brand hover:text-white');
+      return '<div class="' + wrapCls + '">' +
+        membershipCardHTML(plan) +
+        '<h3 class="text-lg font-extrabold mt-5">' + esc(plan.name) + '</h3>' +
+        (plan.tagline ? '<p class="text-sm text-gray-500 mt-0.5">' + esc(plan.tagline) + '</p>' : '') +
+        '<p class="text-sm text-gray-500 mt-2"><span class="text-2xl font-extrabold text-brand align-middle">' + inr(plan.priceInr) + '</span> + 18% GST · <b>' + inr(total) + '</b> total</p>' +
+        '<ul class="mt-5 space-y-3 flex-1">' + featuresHTML + '</ul>' +
+        '<button type="button" class="' + btnCls + '" data-buy="' + esc(plan.id) + '">Buy ' + esc(plan.name) + '</button>' +
+      '</div>';
+    }
+
+    function renderPlans(plans) {
+      var msg = document.getElementById('plansMsg');
+      var wrap = document.getElementById('planCards');
+      if (!plans.length) { msg.textContent = 'No plans available right now.'; return; }
+      msg.style.display = 'none';
+      PLANS_BY_ID = {};
+      wrap.innerHTML = plans.map(function (p) { PLANS_BY_ID[p.id] = p; return planCardHTML(p); }).join('');
+      wrap.querySelectorAll('[data-buy]').forEach(function (btn) {
+        btn.addEventListener('click', function () { openBuyModal(PLANS_BY_ID[btn.getAttribute('data-buy')]); });
+      });
+    }
+
+    api.getPlans(VEHICLE_TYPE)
+      .then(function (d) { renderPlans(((d && d.plans) || []).filter(function (p) { return p.active !== false; })); })
+      .catch(function (e) {
+        var msg = document.getElementById('plansMsg');
+        msg.className = 'mt-4 text-center text-red-500';
+        msg.textContent = "Couldn't load plans: " + e.message;
+      });
+
+    // ---- Comparison table (Cell rendering) ----
+    var TABLE_ROWS = [
+      { t: 'Flat Tyre Assistance', s: true, g: true, d: true },
+      { t: 'Battery Jumpstart', s: true, g: true, d: true },
+      { t: 'Fuel Delivery', s: true, g: true, d: true },
+      { t: 'Key Unlock Assistance', s: true, g: true, d: true },
+      { t: 'Starting Problem', s: true, g: true, d: true },
+      { t: 'Towing - Breakdown', s: 'Up to 75 km', g: 'Up to 150 km', d: 'Unlimited' },
+      { t: 'Towing - After Accident', s: false, g: true, d: 'Unlimited' },
+      { t: 'Vehicle Custody', s: 'Up to 1 Day', g: 'Up to 2 Days', d: 'Up to 5 Days' },
+      { t: 'Trip Interruption Benefit', s: false, g: true, d: true },
+    ];
+    function cell(v) {
+      if (v === true) return '<span class="inline-flex w-6 h-6 rounded-full bg-brand text-white items-center justify-center"><span class="w-3.5 h-3.5">' + ICONS.check + '</span></span>';
+      if (v === false) return '<span class="w-5 h-5 text-gray-300 mx-auto inline-block">' + ICONS.close + '</span>';
+      return '<span class="text-sm font-semibold text-brand">' + esc(v) + '</span>';
+    }
+    (function renderTable() {
+      var body = document.getElementById('tableBody');
+      var rows = TABLE_ROWS.map(function (r) {
+        return '<tr class="border-t border-gray-100 text-sm">' +
+          '<td class="p-4 font-medium">' + esc(r.t) + '</td>' +
+          '<td class="p-4 text-center">' + cell(r.s) + '</td>' +
+          '<td class="p-4 text-center bg-red-50/60">' + cell(r.g) + '</td>' +
+          '<td class="p-4 text-center">' + cell(r.d) + '</td>' +
+        '</tr>';
+      }).join('');
+      rows += '<tr class="border-t border-gray-100">' +
+        '<td class="p-4 text-xs font-bold uppercase text-gray-400">Price (365 Days)</td>' +
+        '<td class="p-4 text-center font-extrabold">₹699</td>' +
+        '<td class="p-4 text-center font-extrabold bg-red-50/60 text-brand">₹1,199</td>' +
+        '<td class="p-4 text-center font-extrabold">₹4,999</td>' +
+      '</tr>';
+      rows += '<tr><td></td>' +
+        ['Silver', 'Gold', 'Diamond'].map(function (p, i) {
+          var cls = i === 1 ? 'bg-brand text-white border-brand' : 'border-brand text-brand hover:bg-brand hover:text-white';
+          return '<td class="p-4 text-center"><button type="button" onclick="scrollToPlans()" class="text-sm font-semibold rounded-lg px-4 py-2 border-2 ' + cls + ' transition">Choose ' + p + ' Plan</button></td>';
+        }).join('') +
+      '</tr>';
+      body.innerHTML = rows;
+    })();
+
+    // ---- BuyModal (vanilla JS replica of BuyModal.jsx) ----
+    var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+    var mount = document.getElementById('buyModalMount');
+
+    function utm() {
+      var p = new URLSearchParams(window.location.search), o = {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(function (k) {
+        if (p.get(k)) o[k] = p.get(k);
+      });
+      return o;
+    }
+
+    function closeBuyModal() {
+      mount.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+    window.closeBuyModal = closeBuyModal;
+
+    function openBuyModal(plan) {
+      if (!plan) return;
+      var total = gstIncl(plan.priceInr);
+      document.body.style.overflow = 'hidden';
+      mount.innerHTML =
+        '<div id="buyOverlay" class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/50 p-0 sm:p-4">' +
+          '<div id="buyPanel" class="w-full sm:max-w-md bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl max-h-[92vh] overflow-y-auto">' +
+            '<div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 sticky top-0 bg-white">' +
+              '<div><p class="text-xs font-semibold tracking-wide text-brand uppercase">FixorAssist RSA</p><h3 class="text-lg font-bold">' + esc(plan.name) + '</h3></div>' +
+              '<button type="button" id="buyClose" aria-label="Close" class="p-2 rounded-lg hover:bg-gray-100"><span class="w-5 h-5 inline-block">' + ICONS.close + '</span></button>' +
+            '</div>' +
+            '<div id="buyPriceBar" class="px-6 py-4 bg-gray-50 flex items-center justify-between">' +
+              '<div class="text-sm text-gray-500">' + inr(plan.priceInr) + ' + 18% GST</div>' +
+              '<div class="text-2xl font-extrabold text-brand">' + inr(total) + '</div>' +
+            '</div>' +
+            '<div class="px-6 py-6"><div id="buyErr" class="mb-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3" style="display:none"></div><div id="buyBody"></div></div>' +
+          '</div>' +
+        '</div>';
+
+      var overlay = document.getElementById('buyOverlay');
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) closeBuyModal(); });
+      document.getElementById('buyClose').addEventListener('click', closeBuyModal);
+      renderForm(plan, total);
+    }
+    window.openBuyModal = openBuyModal;
+
+    function setErr(msg) {
+      var e = document.getElementById('buyErr');
+      if (!e) return;
+      if (msg) { e.textContent = msg; e.style.display = ''; } else { e.style.display = 'none'; }
+    }
+
+    function renderForm(plan, total) {
+      var inputCls = 'mt-1.5 w-full rounded-xl border border-gray-300 focus:border-brand px-3 py-3 outline-none';
+      document.getElementById('buyBody').innerHTML =
+        '<form id="buyForm" class="space-y-4">' +
+          '<p class="text-sm text-gray-600">Enter your details to activate your membership. You\'ll be registered in the FixorAssist app after payment.</p>' +
+          '<div class="grid grid-cols-2 gap-3">' +
+            '<label class="block text-sm font-semibold">First Name<input id="bmFirst" autofocus placeholder="First" class="' + inputCls + '" /></label>' +
+            '<label class="block text-sm font-semibold">Last Name<input id="bmLast" placeholder="Last" class="' + inputCls + '" /></label>' +
+          '</div>' +
+          '<label class="block text-sm font-semibold">Mobile Number' +
+            '<div class="mt-1.5 flex items-center rounded-xl border border-gray-300 focus-within:border-brand overflow-hidden">' +
+              '<span class="px-3 text-gray-500 border-r border-gray-200 py-3">+91</span>' +
+              '<input id="bmPhone" inputmode="numeric" maxlength="10" placeholder="98765 43210" class="flex-1 px-3 py-3 outline-none" />' +
+            '</div>' +
+          '</label>' +
+          '<label class="block text-sm font-semibold">Email<input id="bmEmail" type="email" placeholder="you@email.com" class="' + inputCls + '" /></label>' +
+          '<button id="bmSubmit" type="submit" class="w-full rounded-xl bg-brand text-white font-semibold py-3.5 hover:bg-brand-deep transition disabled:opacity-60">Pay ' + inr(total) + '</button>' +
+          '<p class="text-center text-xs text-gray-400 flex items-center justify-center gap-1.5"><span class="w-4 h-4 inline-block">' + ICONS.shield + '</span> Secure payment via Razorpay</p>' +
+        '</form>';
+      var phone = document.getElementById('bmPhone');
+      phone.addEventListener('input', function () { phone.value = phone.value.replace(/\D/g, ''); });
+      document.getElementById('buyForm').addEventListener('submit', function (e) { e.preventDefault(); submitForm(plan, total); });
+    }
+
+    function renderPay() {
+      var pb = document.getElementById('buyPriceBar');
+      if (pb) pb.style.display = '';
+      document.getElementById('buyBody').innerHTML =
+        '<div class="py-8 text-center text-gray-600"><div class="animate-pulse text-brand font-semibold">Opening secure payment…</div></div>';
+    }
+
+    function renderSuccess(plan, total, phone) {
+      var pb = document.getElementById('buyPriceBar');
+      if (pb) pb.style.display = 'none';
+      document.getElementById('buyBody').innerHTML =
+        '<div class="text-center py-4">' +
+          '<div class="mx-auto w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-4"><span class="w-9 h-9 inline-block">' + ICONS.check + '</span></div>' +
+          '<h3 class="text-xl font-extrabold">You\'re covered! 🎉</h3>' +
+          '<p class="text-gray-600 mt-2 text-sm">Your <b>' + esc(plan.name) + '</b> membership is active. We\'ve registered your account with <b>+91 ' + esc(phone) + '</b>.</p>' +
+          '<div class="mt-5 rounded-xl bg-gray-50 border border-gray-100 p-4 text-left text-sm space-y-1">' +
+            '<div class="flex justify-between"><span class="text-gray-500">Plan</span><b>' + esc(plan.name) + '</b></div>' +
+            '<div class="flex justify-between"><span class="text-gray-500">Amount paid</span><b>' + inr(total) + '</b></div>' +
+            '<div class="flex justify-between"><span class="text-gray-500">Validity</span><b>' + Math.round(plan.validityDays / 365) + ' year(s)</b></div>' +
+          '</div>' +
+          '<p class="text-gray-500 text-xs mt-4">Download the FixorAssist app and log in with your mobile number to manage your plan and request help 24×7.</p>' +
+          '<button type="button" id="bmDone" class="mt-5 w-full rounded-xl bg-brand text-white font-semibold py-3.5 hover:bg-brand-deep transition">Done</button>' +
+        '</div>';
+      document.getElementById('bmDone').addEventListener('click', closeBuyModal);
+    }
+
+    function submitForm(plan, total) {
+      setErr('');
+      var firstName = (document.getElementById('bmFirst').value || '').trim();
+      var lastName = (document.getElementById('bmLast').value || '').trim();
+      var phone = document.getElementById('bmPhone').value || '';
+      var email = (document.getElementById('bmEmail').value || '').trim();
+      if (!firstName) return setErr('Please enter your first name.');
+      if (!lastName) return setErr('Please enter your last name.');
+      if (!/^[6-9]\d{9}$/.test(phone)) return setErr('Enter a valid 10-digit mobile number.');
+      if (!EMAIL_RE.test(email)) return setErr('Enter a valid email address.');
+      var submit = document.getElementById('bmSubmit');
+      if (submit) { submit.disabled = true; submit.textContent = 'Processing…'; }
+
+      api.rsaOrder({ planId: plan.id, firstName: firstName, lastName: lastName, phone: phone, email: email, utm: utm() })
+        .then(function (res) { return pay(res, plan, total, { firstName: firstName, lastName: lastName, phone: phone, email: email }); })
+        .catch(function (e) {
+          setErr(e.message);
+          if (submit) { submit.disabled = false; submit.textContent = 'Pay ' + inr(total); }
+        });
+    }
+
+    function pay(res, plan, total, info) {
+      // Dev/mock provider — simulate a successful payment.
+      if (res.mockCheckout) {
+        renderPay();
+        return api.rsaVerify({
+          orderId: res.mockCheckout.orderId,
+          paymentId: res.mockCheckout.paymentId,
+          signature: res.mockCheckout.signature,
+          leadId: res.leadId,
+        }).then(function () { renderSuccess(plan, total, info.phone); });
+      }
+
+      // Real Razorpay web checkout.
+      if (!window.Razorpay) { setErr('Could not load the payment gateway. Please try again.'); return; }
+      var order = res.order;
+      var rzp = new window.Razorpay({
+        key: order.keyId,
+        order_id: order.orderId,
+        amount: Math.round(order.amountInr * 100),
+        currency: order.currency || 'INR',
+        name: 'FixorAssist',
+        description: plan.name + ' · Roadside Assistance',
+        image: 'assets/img/logo-mark-footer.png',
+        prefill: { name: (info.firstName + ' ' + info.lastName).trim(), email: info.email, contact: info.phone },
+        theme: { color: '#e1181e' },
+        handler: function (resp) {
+          api.rsaVerify({
+            orderId: resp.razorpay_order_id,
+            paymentId: resp.razorpay_payment_id,
+            signature: resp.razorpay_signature,
+            leadId: res.leadId,
+          }).then(function () { renderSuccess(plan, total, info.phone); })
+            .catch(function (e) { renderForm(plan, total); setErr(e.message); });
+        },
+        modal: { ondismiss: function () { renderForm(plan, total); } },
+      });
+      rzp.on('payment.failed', function (r) {
+        renderForm(plan, total);
+        setErr((r.error && r.error.description) || 'Payment failed. Please try again.');
+      });
+      renderPay();
+      rzp.open();
+    }
+  })();
+  </script>
+</body>
+</html>
