@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs — FixorAssist</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="description" content="Frequently asked questions about FixorAssist — Roadside Assistance, Car Service, Spare Parts, Vehicle Inspection and Extended Warranty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260819a">
+<link rel="stylesheet" href="css/services.css?v=20260819a">
+<link rel="stylesheet" href="css/motion.css?v=20260819a">
+  <style>
+    .legal-hero{background:#0c0c0e;color:#fff;padding:60px 0 50px}
+    .legal-hero .lh-eyebrow{color:#e1181e;font-weight:600;letter-spacing:.05em;font-size:13.5px;text-transform:uppercase}
+    .legal-hero h1{font-size:48px;line-height:1.1;margin:10px 0 14px;letter-spacing:-.01em}
+    .legal-hero h1 .red{color:#e1181e}
+    .legal-hero p{color:#c9cbce;font-size:15.5px;max-width:640px;line-height:1.7;font-weight:300}
+    .faqpage{padding:52px 0 76px;background:#fff}
+    .faqpage .container{max-width:920px}
+    .faq-cat{margin-bottom:40px}
+    .faq-cat h2{font-size:23px;font-weight:700;color:#0c0c0e;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #f0e0e0;position:relative}
+    .faq-cat h2::after{content:"";position:absolute;left:0;bottom:-2px;width:60px;height:2px;background:#e1181e}
+    .faq-acc{display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:#fff;border:1px solid #eef0f2;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(15,15,20,.05)}
+    .faq-item>summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:flex-start;padding:17px 20px;font-weight:600;font-size:15px;color:#0c0c0e}
+    .faq-item>summary::-webkit-details-marker{display:none}
+    .faq-item>summary .faq-q{flex:1}
+    .faq-item>summary .faq-chev{margin-left:auto;flex:none;color:#e1181e;transition:transform .2s ease;margin-top:2px}
+    .faq-item[open]>summary .faq-chev{transform:rotate(180deg)}
+    .faq-a{padding:0 20px 18px;color:#43464c;font-size:14px;line-height:1.75;font-weight:300}
+    @media (max-width:720px){.legal-hero h1{font-size:34px}.faq-cat h2{font-size:20px}}
+  </style>
+</head>
+<body class="svc-page">
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-people3" viewBox="0 0 48 48"><circle cx="24" cy="13" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="10.5" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="37.5" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M13 38a11 11 0 0 1 22 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M2 34a8 8 0 0 1 9-7.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M46 34a8 8 0 0 0-9-7.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 48 48"><path d="M24 4c7 4 11 11 11 20 0 4-1 8-3 11H16c-2-3-3-7-3-11 0-9 4-16 11-20z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="4.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 35c-3 1-5 3-6 9 6-1 8-3 9-6M32 35c3 1 5 3 6 9-6-1-8-3-9-6" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M21 42h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-award" viewBox="0 0 48 48"><circle cx="24" cy="18" r="12" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M24 12l1.9 3.8 4.2.6-3 3 .7 4.2-3.8-2-3.8 2 .7-4.2-3-3 4.2-.6z" fill="currentColor" stroke="none"/><path d="M17 28l-4 14 11-6 11 6-4-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chart-up" viewBox="0 0 48 48"><path d="M8 8v32h32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="26" width="6" height="10" fill="currentColor"/><rect x="24" y="18" width="6" height="18" fill="currentColor"/><rect x="34" y="10" width="6" height="26" fill="currentColor"/><path d="M14 20l9-7 7 4 8-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 7h4v4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-rocket-s" viewBox="0 0 48 48"><path d="M25 4c8 3 14 11 14 21 0 2-.3 4-.8 6l-8 4H17.8l-8-4c-.5-2-.8-4-.8-6C9 15 15 7 23 4z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><circle cx="24" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M18 37l-4 7 7-3M30 37l4 7-7-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-users-star" viewBox="0 0 48 48"><circle cx="24" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 12l1.2 2.5 2.8.4-2 2 .5 2.7L12 20.8 9.5 22l.5-2.7-2-2 2.8-.4z" fill="currentColor" stroke="none" transform="translate(12,-2)"/><path d="M14 34a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="10" cy="20" r="4.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M2 36a8 8 0 0 1 9-7.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="38" cy="20" r="4.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M46 36a8 8 0 0 0-9-7.4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-target" viewBox="0 0 48 48"><circle cx="22" cy="26" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="22" cy="26" r="8.5" fill="none" stroke="currentColor" stroke-width="2.3"/><circle cx="22" cy="26" r="2.6" fill="currentColor"/><path d="M22 26l14-14M32 8v6h6" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-crowd" viewBox="0 0 48 48"><circle cx="24" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M17 24a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><circle cx="10" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4 32a6.5 6.5 0 0 1 12-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="38" cy="18" r="4.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M44 32a6.5 6.5 0 0 0-12-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 40a11 11 0 0 1 22 0" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 56 48"><path d="M4 14l9-3 12 4 12-4 9 3" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M13 32l-9-4V14M43 32l9-4V14" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M25 15l-8 7a3 3 0 0 0 4 4l5-4 3 3a3 3 0 0 0 4-4l-2-2 4-4" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M21 26l4 4M25 30l4 4a3 3 0 0 0 4-4M33 30a3 3 0 0 0 4-4" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 48 48"><path d="M24 5l2.6 4.7 5.3-.9 1.7 5.1 5.1 1.7-.9 5.3L42.6 24 38.9 26.6l.9 5.3-5.1 1.7-1.7 5.1-5.3-.9L24 42.6 21.4 38.9l-5.3.9-1.7-5.1-5.1-1.7.9-5.3L5.4 24 9.1 21.4l-.9-5.3 5.1-1.7 1.7-5.1 5.3.9z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="24" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  <symbol id="i-code-laptop" viewBox="0 0 48 48"><rect x="8" y="10" width="32" height="22" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.3"/><path d="M4 38h40l-3-6H7z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M20 16l-5 5 5 5M28 16l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 48 48"><path d="M6 20v8a3 3 0 0 0 3 3h4l3 9h5l-2-9 18 8V12L18 20H9a3 3 0 0 0-3 3z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M40 18a8 8 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc-shield" viewBox="0 0 48 48"><path d="M12 5h16l8 8v20a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M16 16h10M16 22h14" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M24 26l7 2.5v5c0 3.5-2.9 6.4-7 7.5-4.1-1.1-7-4-7-7.5v-5z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M21 33l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-resume" viewBox="0 0 48 48"><path d="M12 5h18l8 8v26a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><circle cx="24" cy="20" r="4.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16 34a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-note-pen" viewBox="0 0 48 48"><path d="M28 6H12a2 2 0 0 0-2 2v32a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V16" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round"/><path d="M17 20h10M17 27h14M17 34h8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M32 4l8 8-11 11-9 2 2-9z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin-dot" viewBox="0 0 48 48"><path d="M24 4c8.3 0 15 6.7 15 15 0 10.5-15 25-15 25S9 29.5 9 19C9 10.7 15.7 4 24 4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5.5" fill="#e1181e"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4.5 2-4.5 4.5v2.5H7V15h2.5v6.5H13V15h3l.5-3.5H13V9c0-.6.4-1 1-1z" fill="currentColor"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-tw" viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" fill="currentColor"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.5 12 5.5 12 5.5s-6.2 0-8 .6a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.6 8 .6 8 .6s6.2 0 8-.6a3 3 0 0 0 2-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="FixorAssist — Pan-India Automotive Services"></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <div class="nav-drop">
+      <a href="services.html" class="drop-trigger">Services <svg class="ic cv"><use href="#i-chevron"/></svg></a>
+      <div class="drop-panel">
+        <a href="services.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.6-4.4A2 2 0 0 1 7.5 7.2h9a2 2 0 0 1 1.9 1.4L20 13"/><rect x="3" y="13" width="18" height="4.6" rx="1.3"/><circle cx="7.5" cy="15.3" r="1.1"/><circle cx="16.5" cy="15.3" r="1.1"/></svg></span><span class="dl-txt"><strong>Roadside Assistance &mdash; Car</strong><em>24&times;7 car breakdown &amp; towing</em></span></a>
+        <a href="rsa-bike.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16" r="3.1"/><circle cx="18.5" cy="16" r="3.1"/><path d="M5.5 16 9.6 10.5h3.7l1.7 2.6H18.5"/><path d="M9.8 10.5h3.4"/><path d="M14 8.2h2.6v2"/></svg></span><span class="dl-txt"><strong>Roadside Assistance &mdash; Bike</strong><em>24&times;7 two-wheeler rescue</em></span></a>
+        <a href="parts.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></span><span class="dl-txt"><strong>Genuine Spare Parts</strong><em>Quality parts you can trust</em></span></a>
+        <a href="carservice.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><span class="dl-txt"><strong>Car Service &amp; Maintenance</strong><em>Maintenance for every kilometer</em></span></a>
+        <a href="warranty.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span><span class="dl-txt"><strong>Extended Warranty</strong><em>Cover beyond the manufacturer</em></span><span class="dl-new">NEW</span></a>
+      </div>
+    </div>
+      <a href="index.html#network">Partner Garages</a>
+      <a href="about.html">About Us</a>
+      <a href="#footer">Contact Us</a>
+    </nav>
+    <a href="tel:+919717758510" class="btn btn-red header-cta"><svg class="ic"><use href="#i-phone-call"/></svg> 24/7 Emergency</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ═══════════════ FAQ HERO ═══════════════ -->
+<section class="legal-hero">
+  <div class="container">
+    <p class="lh-eyebrow">Help Centre</p>
+    <h1>Frequently Asked <span class="red">Questions</span></h1>
+    <p>Everything you need to know about FixorAssist — Roadside Assistance, Car Service, Spare Parts, Vehicle Inspection and Extended Warranty.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ CONTENT ═══════════════ -->
+<section class="faqpage">
+  <div class="container">
+      <div class="faq-cat">
+        <h2>Car Roadside Assistance (RSA)</h2>
+        <div class="faq-acc">
+        <details class="faq-item" open>
+          <summary><span class="faq-q">What is FixorAssist Car Roadside Assistance?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist Car RSA provides 24×7 emergency roadside support when your car breaks down or you face an unexpected problem on the road.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What problems are covered under Car RSA?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Our roadside assistance can help with flat tyres, dead batteries, fuel shortage, vehicle breakdowns, lockouts, towing and other eligible roadside emergencies.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is FixorAssist Car RSA available 24×7?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. FixorAssist provides roadside assistance 24 hours a day, 7 days a week, subject to service availability in your location.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How quickly will roadside assistance reach me?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Response time depends on your location, traffic and availability of the nearest service professional. In covered locations, FixorAssist generally aims for a response within approximately 30–45 minutes.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I request RSA if my car battery is dead?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Battery jump-start assistance is available for eligible roadside breakdown situations.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist help if my car has a flat tyre?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Tyre assistance is available for eligible vehicles. If the tyre cannot be repaired or replaced safely at the location, towing may be recommended.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What if my car runs out of fuel?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist can arrange fuel delivery assistance where available. Applicable fuel and service charges may apply.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist provide towing?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Towing assistance is available for eligible breakdowns. The towing distance depends on your RSA plan or applicable service terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get help if I lock my keys inside the car?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Lockout assistance may be arranged where the service is available and the vehicle can be safely accessed without causing damage.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Do I need a FixorAssist membership to request RSA?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">No. Customers may be able to request individual roadside assistance without membership. Membership plans provide additional benefits and included services according to the selected plan.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I track the assigned technician?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Where tracking is available, you can receive service updates and track the assigned assistance professional through the FixorAssist platform.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How can I pay for roadside assistance?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Depending on the service, payment may be made through available digital payment methods or cash, subject to the applicable service terms.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>Bike Roadside Assistance</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What is FixorAssist Bike RSA?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist Bike RSA provides 24×7 roadside assistance for two-wheelers when you experience a breakdown or emergency while riding.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What bike problems does FixorAssist cover?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Services can include flat-tyre assistance, battery assistance, fuel delivery, breakdown support, key lockout assistance and towing, depending on the selected plan and service availability.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is Bike RSA available 24×7?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. FixorAssist provides 24×7 roadside assistance for eligible bike emergencies.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get help if my bike won't start?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. You can request roadside assistance when your bike fails to start. A suitable technician will be assigned based on the nature of the problem and availability.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist provide bike towing?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Towing assistance is available for eligible breakdown situations according to your membership/service terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What happens if my bike runs out of fuel?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist can arrange fuel assistance where available. Fuel and applicable service charges may apply.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist help with a puncture?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Flat-tyre/puncture assistance is available for eligible bikes and locations.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I use Bike RSA anywhere in India?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist is designed to provide Pan-India assistance through its network, subject to coverage and availability at your location.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How do I request bike roadside assistance?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">You can request assistance through the available FixorAssist service channels by providing your vehicle details, current location and the nature of the emergency.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How long does it take for help to arrive?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">The response time depends on location, traffic, weather and technician availability. In covered areas, FixorAssist generally targets approximately 30–45 minutes.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I buy Bike RSA for a new bike?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes, subject to the applicable membership eligibility and terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What is the benefit of taking an annual Bike RSA membership?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">An annual membership can reduce the need to pay separately for eligible roadside assistance events and provides access to benefits included in your selected plan.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>Car Service &amp; Maintenance</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What car services does FixorAssist provide?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist provides a range of vehicle maintenance and repair services, including periodic servicing, oil and filter replacement, brake checks, tyre and wheel care, AC service, diagnostics and general vehicle inspection.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Why should I service my car regularly?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Regular servicing helps maintain vehicle performance, identify potential problems early, improve reliability and potentially reduce expensive repairs in the future.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How often should I service my car?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Service intervals depend on the vehicle manufacturer, model, age, mileage and driving conditions. Always follow the manufacturer's recommended maintenance schedule.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist use genuine spare parts?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Where replacement parts are required, FixorAssist aims to provide genuine or appropriate quality parts according to the vehicle and selected service.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get an oil and filter change from FixorAssist?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Oil and filter replacement is one of the regular maintenance services offered.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist provide brake inspection?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Brake inspection and related maintenance can be arranged depending on your vehicle's requirements.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist provide AC service?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Car AC inspection and service are available as part of the vehicle-care offering, subject to service availability.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist diagnose an engine problem?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Diagnostic services can help identify potential mechanical or electronic issues and determine the appropriate repair.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get my tyres checked?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Tyre and wheel-related inspection and maintenance are part of the vehicle-care offering.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist service all car brands?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist is designed to support a wide range of vehicle makes and models. Specific service availability depends on the vehicle and location.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Will I receive information about additional repairs?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">The vehicle should be inspected before additional work is recommended. Customers should be informed about required work and applicable costs before proceeding.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I book a car service online?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes, where online booking is available, you can provide your vehicle and service details to initiate a service request.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>Genuine Spare Parts</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What type of spare parts does FixorAssist provide?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist provides a range of vehicle components, including engine parts, brake components, filters, suspension parts, electrical components and body parts.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Are FixorAssist spare parts genuine?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist focuses on sourcing genuine/OEM-quality parts from trusted and verified sources. Availability depends on the specific vehicle and part.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How do I find the correct spare part for my vehicle?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Provide your vehicle make, model, variant, year and required part details. FixorAssist can help identify the appropriate component.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Why should I use genuine spare parts?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Correct-quality parts are designed to provide proper fitment, performance, reliability and compatibility with your vehicle.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist help me if I don't know the part number?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Vehicle details and the nature of the requirement can be used to help identify the appropriate part.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I purchase parts and get them installed?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Where the service is available, FixorAssist can coordinate parts supply and installation through its service network.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Do spare parts come with a warranty?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Warranty coverage depends on the specific part, manufacturer and applicable terms. The applicable warranty should be confirmed before purchase.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How long does spare-part delivery take?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Delivery time depends on part availability, location, supplier and logistics.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get parts for older cars?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist can check availability based on your vehicle details and the required component.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I return a spare part?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Return or replacement eligibility depends on the part, condition, supplier policy and applicable terms.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>Vehicle Inspection</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What is FixorAssist Vehicle Inspection?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Vehicle inspection is a systematic examination of a vehicle to assess its condition and identify visible, mechanical or functional issues.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Why should I get my car inspected before buying a used car?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">A pre-purchase inspection can help identify potential problems and give you better information before making a purchase decision.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What does a vehicle inspection include?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Depending on the inspection package, checks may cover the exterior, interior, tyres, brakes, engine-related components, electrical systems and other important vehicle areas.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can FixorAssist inspect a used car before I purchase it?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. A pre-purchase vehicle inspection can help you understand the vehicle's current condition before buying.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I get my own car inspected?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. An inspection can also be useful for an existing vehicle when you want to understand its condition or identify potential maintenance requirements.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does an inspection guarantee that the vehicle has no problems?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">No. An inspection represents the condition observed during the inspection. It cannot guarantee that every current or future problem will be detected.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can inspection help determine repair requirements?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. The inspection findings can help identify areas that may require further diagnosis, maintenance or repair.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is vehicle inspection required for warranty?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">For certain FixorAssist warranty products, inspection may be required before the warranty becomes active.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How long does a vehicle inspection take?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Inspection time varies depending on the vehicle, inspection package and condition of the vehicle.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Will I receive an inspection report?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Where included in the selected inspection package, customers can receive inspection findings/report details.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>Extended Warranty</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What is FixorAssist Extended Warranty?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist Extended Warranty provides additional protection for eligible vehicle components after the manufacturer's warranty period, subject to the selected plan's terms and conditions.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What does the extended warranty cover?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Coverage depends on the selected warranty plan. Available protection may include specified engine, transmission and other eligible components.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How long is the warranty valid?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist offers warranty options such as 6-month and 12-month coverage, depending on eligibility and the selected plan.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is vehicle inspection required before purchasing the warranty?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">For applicable FixorAssist warranty plans, a vehicle inspection is required before activation.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I buy an extended warranty after my manufacturer's warranty expires?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Eligibility depends on the vehicle's age, mileage, condition and the specific warranty product.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does the warranty cover normal vehicle servicing?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Generally, routine maintenance and normal wear-and-tear items are not automatically covered. Coverage depends on the specific warranty terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does the warranty cover accidental damage?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Accidental damage is generally subject to exclusions unless specifically covered by the selected product.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I claim warranty coverage at any garage?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Warranty claims are subject to the applicable network, authorization and claim procedures. Customers should follow FixorAssist's warranty process before repairs.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">What happens if my covered component fails?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Contact FixorAssist and provide the required vehicle and warranty details. The claim will be assessed according to the applicable terms and conditions.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does an extended warranty cover every vehicle component?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">No. Only components specifically listed as covered under the selected warranty plan are eligible.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is there an inspection before a warranty claim is approved?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">The vehicle/component may be inspected and the claim assessed before authorization, depending on the circumstances and warranty terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Why should I buy an extended warranty?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">An extended warranty can help reduce the financial impact of certain unexpected mechanical failures after the manufacturer's warranty period, subject to coverage limits and exclusions.</div>
+        </details>
+        </div>
+      </div>
+      <div class="faq-cat">
+        <h2>General FixorAssist</h2>
+        <div class="faq-acc">
+        <details class="faq-item">
+          <summary><span class="faq-q">What is FixorAssist?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist is an automotive assistance platform providing roadside assistance, vehicle servicing, inspections, genuine spare parts and extended warranty solutions.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is FixorAssist available across India?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist is designed to provide services through a Pan-India network. Actual availability depends on your location and the specific service.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Is FixorAssist available 24×7?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Roadside assistance is designed to operate 24×7. Other services such as workshops, inspections and parts may follow their respective operating/service schedules.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How do I contact FixorAssist during an emergency?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">You can use the available FixorAssist emergency assistance channels and provide your vehicle details, location and the nature of the problem.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Do I need to download an app?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">App availability depends on the service and current FixorAssist platform. Customers can use the available booking and assistance channels.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Does FixorAssist work with partner garages?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. FixorAssist operates through a network of service professionals and automotive partners to deliver services in different locations.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">How are FixorAssist service professionals selected?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist aims to work with verified and qualified service professionals and partners.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I use FixorAssist for both my car and bike?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. FixorAssist provides separate automotive solutions for cars and two-wheelers, subject to the applicable service and membership terms.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Can I purchase more than one FixorAssist service?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. Customers can use different FixorAssist offerings depending on their vehicle requirements—for example, RSA, service, spare parts, inspection and warranty.</div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Are there hidden charges?</span><svg class="faq-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">FixorAssist promotes transparent pricing. However, additional charges may apply for services, parts, fuel, additional towing distance or work outside the included benefits. The applicable price should be confirmed before service.</div>
+        </details>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer" id="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <div class="f-logo"><img src="assets/img/logo-mark-footer.png" alt="FixorAssist logo"><div><strong>Fixor<span class="white">Assist</span></strong><span class="tag">Trusted Automotive Support</span></div></div>
+      <p>FixorAssist is your trusted partner for roadside assistance, car repairs, maintenance and more.<br><span class="red">We're here anytime, anywhere.</span></p>
+      <div class="f-social">
+        <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg><use href="#i-tw"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h5>COMPANY</h5><span class="f-rule"></span>
+      <a href="about.html">About Us</a><a href="index.html#mission">Our Mission &amp; Vision</a><a href="index.html#why">Why Choose Us</a><a href="careers.html">Careers</a><a href="#" data-enquiry="">Contact Us</a>
+    </div>
+    <div class="f-col">
+      <h5>SERVICES</h5><span class="f-rule"></span>
+      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="warranty.html">Extended Warranty</a><a href="#">Customer Support</a>
+    </div>
+    <div class="f-col">
+      <h5>SUPPORT</h5><span class="f-rule"></span>
+      <a href="faqs.html">FAQs</a><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a>
+    </div>
+    <div class="f-col f-connect">
+      <h5>STAY CONNECTED</h5><span class="f-rule"></span>
+      <p>Subscribe to get latest updates, offers and car care tips.</p>
+      <form class="f-subscribe" onsubmit="return false">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" aria-label="Subscribe"><svg><use href="#i-send"/></svg></button>
+      </form>
+      <p class="f-app">Download the <span class="red">FixorAssist</span> App</p>
+      <div class="f-badges">
+        <a href="#"><img src="assets/img/badge-gplay.png" alt="Get it on Google Play"></a>
+        <a href="#"><img src="assets/img/badge-appstore.png" alt="Download on the App Store"></a>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="container f-bottom-in">
+      <p>© 2025 <span class="red">FixorAssist</span>. All rights reserved.</p>
+      <span class="f-sep"></span>
+      <a href="tel:+919717758510"><svg class="fb-ic"><use href="#i-phone-call"/></svg> +91 97177 58510</a>
+      <span class="f-sep"></span>
+      <a href="mailto:admin@fixorassist.com"><svg class="fb-ic"><use href="#i-mail"/></svg> admin@fixorassist.com</a>
+      <span class="f-sep"></span>
+      <p><svg class="fb-ic"><use href="#i-pin-dot"/></svg> New Delhi, India</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=20260819a"></script>
+<script src="js/enquiry.js?v=20260825a"></script>
+</body>
+</html>

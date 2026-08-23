@@ -17,21 +17,90 @@
 </head>
 <body class="min-h-screen bg-white text-ink">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
-      <a href="rsa-bike.html" class="flex items-center"><img src="assets/img/logo-header.png" alt="FixorAssist" class="h-10 w-auto" /></a>
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
-        <a href="index.html" class="hover:text-brand">Home</a>
-        <a href="#reasons" class="hover:text-brand">About Us</a>
-        <a href="#services" class="hover:text-brand">Services</a>
-        <a href="#plans" class="text-brand font-semibold">Plans</a>
-        <a href="#included" class="hover:text-brand">Coverage</a>
-        <a href="#faq" class="hover:text-brand">Support</a>
+  <!-- ═══════════════ HEADER (matches marketing site navbar) ═══════════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-phone-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <style>
+    .mkt-vars{--red:#e1181e;--red-deep:#c40f15;--ink:#0c0c0e;--maxw:1440px}
+    .site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #f4f4f5;font-family:'Poppins',ui-sans-serif,system-ui,sans-serif}
+    .site-header .container{max-width:var(--maxw);margin:0 auto;padding:0 48px}
+    .header-inner{display:flex;align-items:center;gap:34px;height:104px}
+    .site-header .logo img{height:76px;width:auto}
+    .main-nav{display:flex;align-items:center;gap:34px;margin-left:48px;flex:1}
+    .main-nav a{font-size:16px;font-weight:500;color:#101114;position:relative;display:inline-flex;align-items:center;gap:6px;padding:38px 0;white-space:nowrap;text-decoration:none}
+    .main-nav a:hover{color:var(--red)}
+    .main-nav a.active{color:var(--red);font-weight:600}
+    .main-nav a.active::after{content:"";position:absolute;left:0;bottom:0;width:42px;height:4px;background:var(--red);border-radius:2px 2px 0 0}
+    .main-nav .ic{width:15px;height:15px;color:#101114;flex:none}
+    .main-nav .cv{width:15px;height:15px;transition:transform .22s ease}
+    .site-header .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;border-radius:10px;padding:14px 26px;transition:.25s;cursor:pointer;text-decoration:none}
+    .site-header .btn .ic{width:18px;height:18px;flex:none}
+    .site-header .btn-red{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(225,24,30,.28)}
+    .site-header .btn-red:hover{background:var(--red-deep);transform:translateY(-2px)}
+    .header-cta{margin-left:auto}
+    .nav-toggle{display:none;background:none;border:0;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+    .nav-toggle span{width:26px;height:3px;background:var(--ink);border-radius:2px}
+    .nav-drop{position:relative;display:flex;align-items:center}
+    .nav-drop .drop-trigger{cursor:pointer}
+    .drop-panel{position:absolute;top:100%;left:-20px;min-width:344px;background:#fff;border:1px solid #eef0f2;border-radius:16px;box-shadow:0 24px 60px rgba(15,15,20,.16);padding:12px;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:200}
+    .nav-drop:hover .drop-panel,.nav-drop:focus-within .drop-panel{opacity:1;visibility:visible;transform:translateY(0)}
+    .nav-drop:hover .cv,.nav-drop:focus-within .cv{transform:rotate(180deg)}
+    .drop-panel::before{content:"";position:absolute;top:-16px;left:0;right:0;height:16px}
+    .drop-link{display:flex!important;align-items:center;gap:14px;padding:12px 14px!important;border-radius:11px;transition:background .18s}
+    .drop-link:hover{background:#fdecec}
+    .dl-ic{width:44px;height:44px;border-radius:11px;background:#fdecec;display:flex;align-items:center;justify-content:center;flex:none}
+    .dl-ic svg{width:23px;height:23px;color:var(--red)}
+    .dl-txt{display:flex;flex-direction:column;line-height:1.32}
+    .dl-txt strong{font-size:15px;font-weight:600;color:var(--ink)}
+    .dl-txt em{font-size:12.5px;font-style:normal;color:#7a7d82;font-weight:300;margin-top:1px}
+    .dl-new{margin-left:auto;align-self:center;background:#16a34a;color:#fff;font-size:10px;font-weight:700;letter-spacing:.03em;padding:3px 8px;border-radius:999px}
+    @media (max-width:1280px){.site-header .container{padding:0 32px}}
+    @media (max-width:720px){
+      .site-header .container{padding:0 20px}
+      .header-inner{height:76px}
+      .site-header .logo img{height:52px}
+      .main-nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:12px 20px;margin:0;border-bottom:1px solid #eee;box-shadow:0 14px 30px rgba(0,0,0,.08)}
+      .main-nav.open{display:flex}
+      .main-nav a{padding:14px 0;width:100%}
+      .main-nav a.active::after{display:none}
+      .nav-toggle{display:flex;margin-left:auto}
+      .header-cta{display:none}
+      .nav-drop{flex-direction:column;align-items:stretch;width:100%}
+      .drop-panel{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-left:2px solid #f2d9da;border-radius:0;padding:2px 0 6px 10px;margin:0 0 4px 4px;min-width:0}
+      .drop-panel::before{display:none}
+      .drop-link{padding:10px 8px!important}
+      .dl-ic{width:36px;height:36px}
+      .dl-ic svg{width:19px;height:19px}
+    }
+  </style>
+  <header class="site-header mkt-vars">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="assets/img/logo-header.png" alt="FixorAssist — Pan-India Automotive Services"></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <div class="nav-drop">
+          <a href="services.html" class="drop-trigger active">Services <svg class="ic cv"><use href="#i-chevron"/></svg></a>
+          <div class="drop-panel">
+            <a href="services.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l1.6-4.4A2 2 0 0 1 7.5 7.2h9a2 2 0 0 1 1.9 1.4L20 13"/><rect x="3" y="13" width="18" height="4.6" rx="1.3"/><circle cx="7.5" cy="15.3" r="1.1"/><circle cx="16.5" cy="15.3" r="1.1"/></svg></span><span class="dl-txt"><strong>Roadside Assistance &mdash; Car</strong><em>24&times;7 car breakdown &amp; towing</em></span></a>
+            <a href="rsa-bike.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16" r="3.1"/><circle cx="18.5" cy="16" r="3.1"/><path d="M5.5 16 9.6 10.5h3.7l1.7 2.6H18.5"/><path d="M9.8 10.5h3.4"/><path d="M14 8.2h2.6v2"/></svg></span><span class="dl-txt"><strong>Roadside Assistance &mdash; Bike</strong><em>24&times;7 two-wheeler rescue</em></span></a>
+            <a href="parts.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></span><span class="dl-txt"><strong>Genuine Spare Parts</strong><em>Quality parts you can trust</em></span></a>
+            <a href="carservice.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><span class="dl-txt"><strong>Car Service &amp; Maintenance</strong><em>Maintenance for every kilometer</em></span></a>
+            <a href="warranty.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span><span class="dl-txt"><strong>Extended Warranty</strong><em>Cover beyond the manufacturer</em></span><span class="dl-new">NEW</span></a>
+          </div>
+        </div>
+        <a href="index.html#network">Partner Garages</a>
+        <a href="about.html">About Us</a>
+        <a href="#footer">Contact Us</a>
       </nav>
-      <div class="w-6" aria-hidden="true"></div>
+      <a href="tel:+919717758510" class="btn btn-red header-cta"><svg class="ic"><use href="#i-phone-call"/></svg> 24/7 Emergency</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
+  <script>
+    (function(){var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');if(t&&n)t.addEventListener('click',function(){n.classList.toggle('open');});})();
+  </script>
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
@@ -48,8 +117,7 @@
         <p class="mt-6 text-xs font-semibold tracking-widest text-gray-400 uppercase">Starting from</p>
         <p class="text-4xl font-extrabold text-brand">₹699 <span class="text-base font-medium text-gray-400">/ year</span></p>
         <div class="mt-5 flex flex-wrap gap-3">
-          <button type="button" onclick="scrollToPlans()" class="inline-flex items-center gap-2 rounded-xl bg-brand text-white font-semibold px-7 py-3.5 hover:bg-brand-deep transition">Join Membership <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
-          <button type="button" onclick="scrollToPlans()" class="inline-flex items-center gap-2 rounded-xl border-2 border-brand text-brand font-semibold px-7 py-3.5 hover:bg-brand hover:text-white transition">Compare Plans <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          <button type="button" data-enquiry="Roadside Assistance" class="inline-flex items-center gap-2 rounded-xl bg-brand text-white font-semibold px-7 py-3.5 hover:bg-brand-deep transition">Request Emergency Assistance <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
         </div>
         <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
           <div class="rounded-xl border border-gray-100 shadow-sm px-3 py-2.5"><div class="font-extrabold text-sm">365 Days</div><div class="text-gray-500">Coverage</div></div>
@@ -75,7 +143,7 @@
       </div>
       <div class="flex items-center gap-3 px-4 py-5">
         <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-        <div><div class="font-extrabold">India Wide</div><div class="text-[11px] text-gray-300 leading-tight">Pan India network you can rely on</div></div>
+        <div><div class="font-extrabold">Pan India Service Network</div><div class="text-[11px] text-gray-300 leading-tight">Pan India network you can rely on</div></div>
       </div>
       <div class="flex items-center gap-3 px-4 py-5">
         <span class="w-11 h-11 rounded-full bg-white text-brand flex items-center justify-center flex-none"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
@@ -134,6 +202,22 @@
     <div class="max-w-[1440px] px-6 lg:px-10 mx-auto">
       <div id="plansMsg" class="mt-4 text-center text-gray-400">Loading plans…</div>
       <div id="planCards" class="mt-12 flex flex-wrap justify-center gap-7 items-stretch"></div>
+
+      <!-- Pickup & Drop custody assurance -->
+      <div class="mt-14 max-w-[980px] mx-auto">
+        <div class="relative overflow-hidden rounded-2xl bg-ink text-white p-8 sm:p-10 shadow-xl">
+          <div class="flex flex-col sm:flex-row items-start gap-6">
+            <span class="flex-none w-14 h-14 rounded-xl bg-brand/15 text-brand flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h9v9H2z"/><path d="M11 11h5l3 3v3h-8z"/><circle cx="6" cy="18" r="1.7"/><circle cx="16.5" cy="18" r="1.7"/><path d="m2 12 3.5-3.5"/></svg>
+            </span>
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">We Pick Up. We Drop. <span class="text-brand">Worry Handled.</span></h3>
+              <p class="mt-4 text-gray-300 leading-relaxed">If your car or bike has a breakdown, has been involved in an accident, or you are unable to take it to the service centre due to an emergency or lack of time — our representative can take care of it for you.</p>
+              <p class="mt-3 text-gray-300 leading-relaxed">We will pick up your vehicle and ensure it is safely delivered to the service centre. <span class="text-white font-semibold">The responsibility of getting your vehicle there is ours.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -172,7 +256,7 @@
           <div>
             <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6M21 20a6 6 0 0 0-4-5.7"/></svg></span>
             <h4 class="mt-3 text-sm font-bold uppercase tracking-wide">Pan India Network</h4>
-            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">We're present in 600+ cities and towns across India.</p>
+            <p class="mt-1.5 text-sm text-gray-500 leading-relaxed">We're present in 250+ cities and towns across India.</p>
           </div>
           <div>
             <span class="w-11 h-11 rounded-full bg-red-50 text-brand flex items-center justify-center"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></span>
@@ -205,27 +289,6 @@
   </section>
 
   <!-- Comparison table -->
-  <section id="included" class="py-16 sm:py-20 bg-gray-50">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-10">
-      <div class="text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">See <span class="text-brand">What's Included</span> in Each Plan.</h2>
-      </div>
-      <div class="mt-10 overflow-x-auto">
-        <table class="w-full min-w-[640px] bg-white rounded-2xl overflow-hidden shadow-sm">
-          <thead>
-            <tr class="text-left">
-              <th class="p-4 text-xs font-bold uppercase tracking-wide text-gray-400">Services Covered</th>
-              <th class="p-4 text-center"><div class="font-extrabold">SILVER</div><div class="text-xs text-gray-400">Essential Protection</div></th>
-              <th class="p-4 text-center bg-brand text-white"><div class="text-[10px] font-bold">★ MOST POPULAR</div><div class="font-extrabold">GOLD</div><div class="text-xs text-white/80">Enhanced Protection</div></th>
-              <th class="p-4 text-center"><div class="font-extrabold">DIAMOND</div><div class="text-xs text-gray-400">Unlimited Protection</div></th>
-            </tr>
-          </thead>
-          <tbody id="tableBody"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
   <!-- All the help -->
   <section id="services" class="py-16 sm:py-20">
     <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
@@ -371,15 +434,331 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#0b0c10] text-gray-400 py-12">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <img src="assets/img/logo-mark-footer.png" alt="FixorAssist" class="h-10 w-auto" />
-        <div><div class="text-white font-bold">FixorAssist</div><div class="text-xs">Trusted Automotive Support</div></div>
+  <!-- FAQ -->
+  <style>
+    .rsa-faq{max-width:920px;margin:32px auto 0;display:flex;flex-direction:column;gap:12px}
+    .rsa-faq-item{background:#fff;border:1px solid #eef0f2;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(15,15,20,.05)}
+    .rsa-faq-item>summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:flex-start;padding:18px 22px;font-weight:600;font-size:15.5px;color:#0c0c0e}
+    .rsa-faq-item>summary::-webkit-details-marker{display:none}
+    .rsa-faq-item>summary .rsa-q-num{color:#e1181e;font-weight:700;flex:none}
+    .rsa-faq-item>summary .rsa-q-txt{flex:1}
+    .rsa-faq-item>summary .rsa-chev{margin-left:auto;flex:none;color:#e1181e;transition:transform .2s ease;margin-top:2px}
+    .rsa-faq-item[open]>summary .rsa-chev{transform:rotate(180deg)}
+    .rsa-faq-a{padding:0 22px 20px 22px;color:#43464c;font-size:14.5px;line-height:1.75;font-weight:300}
+    .rsa-faq-a a{color:#e1181e;font-weight:500}
+    .rsa-faq-eyebrow{color:#e1181e;font-weight:700;letter-spacing:.12em;font-size:13px;text-transform:uppercase;margin-bottom:8px}
+  </style>
+  <section id="faq" class="py-16 sm:py-20 bg-gray-50">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10">
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="rsa-faq-eyebrow">FAQ</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Frequently Asked <span class="text-brand">Questions</span></h2>
+        <p class="mt-3 text-gray-500">Everything you need to know about FixorAssist Roadside Assistance.</p>
       </div>
-      <a href="https://fixorassist.com" class="text-sm hover:text-white">fixorassist.com</a>
+      <div class="rsa-faq">
+        <details class="rsa-faq-item" open>
+          <summary><span class="rsa-q-num">1.</span><span class="rsa-q-txt">What does Roadside Assistance cover?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>FixorAssist RSA is our on-the-spot breakdown support service. If your vehicle stops working on the road, our network gets you moving again — either through a quick fix at the spot or by arranging a tow to the nearest workshop.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">2.</span><span class="rsa-q-txt">What all is included under RSA?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Flat tyre change, battery jump-start, minor on-spot repairs, key lockout help, and breakdown/accident towing to an authorized workshop.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">3.</span><span class="rsa-q-txt">How fast will help reach me?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Typical arrival windows:<br>&bull; <strong>City/highway locations:</strong> 60&ndash;90 minutes<br>&bull; <strong>Difficult or hilly terrain:</strong> 150 minutes<br>&bull; <strong>Remote/hard-to-access areas:</strong> up to 210 minutes<br><br>Actual arrival time can be affected by traffic, weather, road closures, or other conditions outside our control.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">4.</span><span class="rsa-q-txt">Is towing free?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, up to 25 km from the breakdown/incident location. Beyond 25 km, distance charges apply as per prevailing rates.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">5.</span><span class="rsa-q-txt">Do I need to file a police report for towing after an accident?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Not for routine towing. For accident-related recovery, a Police Clearance Certificate is generally required before the vehicle can be moved.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">6.</span><span class="rsa-q-txt">Can someone else in my family use my RSA plan?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes — RSA is linked to the vehicle, not the driver. Any authorized driver of that vehicle can request assistance (key-unlock and towing may require valid ID verification).</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">7.</span><span class="rsa-q-txt">Can I use one RSA plan across two vehicles?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>No. Each plan is tied to a specific vehicle registration number. A separate plan is needed for each vehicle.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">8.</span><span class="rsa-q-txt">Is RSA available 24/7, pan-India?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, RSA support is available round the clock across our serviceable locations nationwide.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">9.</span><span class="rsa-q-txt">What if I've used up all my free RSA incidents?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>You can still request service on a pay-per-use basis, subject to availability in your location.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">10.</span><span class="rsa-q-txt">When would FixorAssist decline a service request?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>If the driver is unlicensed, underage, intoxicated, involved in an unlawful act, or the vehicle is overloaded beyond permitted limits.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">11.</span><span class="rsa-q-txt">Can I cancel or change my RSA plan?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>You can cancel anytime, though plans are non-refundable. Upgrades and vehicle-detail changes are allowed within 72 hours of purchase; downgrades are not permitted.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">12.</span><span class="rsa-q-txt">How do I request RSA assistance in an emergency?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Call our support line, or raise a request through the FixorAssist app/WhatsApp with your location pin — our team dispatches the nearest available service partner.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">13.</span><span class="rsa-q-txt">Will I be charged if the breakdown turns out to be something not covered under RSA?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>If the issue falls outside your plan's coverage (e.g., a part replacement rather than an on-spot fix), you'll be informed of the applicable charge before any work is done.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">14.</span><span class="rsa-q-txt">What happens if I'm stuck somewhere with no network coverage?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Try reaching support via SMS or a shared location from someone nearby with network access. Where possible, keep our helpline number saved for quick access.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">15.</span><span class="rsa-q-txt">Can I track the service vehicle once it's been dispatched?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, once a request is confirmed, live tracking of the assigned service partner is available through the app.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">16.</span><span class="rsa-q-txt">What if the assigned mechanic can't fix the issue on the spot?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>The vehicle will be towed to the nearest authorized workshop within your plan's coverage terms.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">17.</span><span class="rsa-q-txt">Is RSA valid if I'm traveling outside my home city or state?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, RSA coverage applies pan-India across our serviceable locations, not just your registered city.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">18.</span><span class="rsa-q-txt">Does RSA cover fuel delivery if I run out of fuel on the road?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>This depends on your specific plan — check your plan document, as fuel-related assistance may be a separate add-on in some cases.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">19.</span><span class="rsa-q-txt">What documents do I need to keep handy when requesting RSA?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Your vehicle registration number, a valid driving license, and your RSA plan/subscription ID.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">20.</span><span class="rsa-q-txt">Can I request RSA for a two-wheeler and four-wheeler under the same account?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Each vehicle needs its own RSA plan; however, both plans can be managed from the same registered mobile number/account.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">21.</span><span class="rsa-q-txt">What if the breakdown happens due to an accident rather than a mechanical fault?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Accident-related towing follows the accidental recovery terms of your plan, which may have separate towing distance limits and documentation requirements compared to a routine breakdown.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">22.</span><span class="rsa-q-txt">How many free RSA incidents do I get in a year?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>This depends on the specific plan tier purchased — refer to your plan document for the exact number of free incidents included.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">23.</span><span class="rsa-q-txt">Can I extend or renew my RSA plan before it expires?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, renewal can be done through the app/website or by contacting support before your current plan lapses.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">24.</span><span class="rsa-q-txt">Will RSA assist if my vehicle breaks down at home or in a parking lot?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, RSA coverage isn't limited to highways or open roads — assistance can be requested from any location, including your home or a parking facility.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">25.</span><span class="rsa-q-txt">What if I need a repeat visit for the same issue?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>If the same issue recurs shortly after an on-spot fix, contact support — this is reviewed on a case-by-case basis as per plan terms.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">26.</span><span class="rsa-q-txt">Is there a limit on how many times I can use RSA in a month?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>There's no fixed monthly cap, but usage is governed by the total free-incident limit and pay-per-use terms of your plan.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">27.</span><span class="rsa-q-txt">Can I transfer my RSA plan to a new vehicle if I sell my old one?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>No, RSA plans are tied to the specific vehicle's registration number and are not transferable to a different vehicle.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">28.</span><span class="rsa-q-txt">What if I disagree with the charges applied for a service?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Raise a dispute with our support team along with your service request ID — it will be reviewed against your plan's terms.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">29.</span><span class="rsa-q-txt">Does RSA cover damage caused during towing?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Our network partners follow standard safety protocols; any grievance related to towing should be reported to support immediately for review.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">30.</span><span class="rsa-q-txt">Who do I contact for RSA-related complaints or feedback?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p><strong>Phone:</strong> <a href="tel:+919717758510">+91 97177 58510</a><br><strong>Email:</strong> <a href="mailto:admin@fixorassist.com">admin@fixorassist.com</a><br>Support is also available via the FixorAssist app and WhatsApp.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">31.</span><span class="rsa-q-txt">What is covered under "minor on-spot repair"?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Small fixable issues like loose connections, minor electrical faults, or adjustments that don't require spare parts or workshop equipment — anything beyond this is handled through towing.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">32.</span><span class="rsa-q-txt">Will RSA help if my vehicle's battery is completely dead and needs replacement, not just a jump-start?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>A jump-start is provided free as part of RSA. If the battery itself needs replacement, that cost is borne by you, though our partner can assist with sourcing it.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">33.</span><span class="rsa-q-txt">Can I request RSA for someone else's vehicle if I'm driving it?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>RSA is linked to the vehicle's registered plan, so assistance can be availed as long as the vehicle itself is covered, regardless of who is driving (subject to valid license and ID).</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">34.</span><span class="rsa-q-txt">What if my car breaks down at night in an unfamiliar area?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>RSA operates 24/7 — share your live location through the app or call our helpline, and the nearest available partner will be dispatched regardless of the hour.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">35.</span><span class="rsa-q-txt">Does RSA cover a flat tyre if I don't have a spare wheel?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Our technician will attempt a puncture repair on the spot. If no spare is available and the tyre can't be repaired, the vehicle may need to be towed for a replacement.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">36.</span><span class="rsa-q-txt">Is there a waiting charge if the technician arrives but I'm not at the location?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Extended waiting beyond a reasonable grace period may attract additional charges, similar to standard service norms — check your plan for specifics.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">37.</span><span class="rsa-q-txt">Can I choose which workshop my vehicle is towed to?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>You can request a preferred authorized workshop; if it's outside our towing network or beyond the free-km limit, standard distance charges will apply.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">38.</span><span class="rsa-q-txt">What happens if the same vehicle breaks down multiple times in the same week?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Each valid breakdown is treated as a separate incident against your plan's free-incident allowance, unless it's clearly a repeat of an unresolved issue.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">39.</span><span class="rsa-q-txt">Does RSA include support if my vehicle is stuck due to flooding or waterlogging?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Assistance is attempted subject to safety conditions at the location; response may be delayed or limited during natural events like flooding, as these fall outside guaranteed TAT commitments.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">40.</span><span class="rsa-q-txt">Can I get RSA assistance for a rented or leased vehicle?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, as long as the vehicle itself has an active RSA plan registered against its registration number, ownership status doesn't affect eligibility.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">41.</span><span class="rsa-q-txt">What if my vehicle needs to be moved from a no-parking zone due to a breakdown?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Our team will coordinate towing to a safe location or authorized workshop; any applicable fines from local authorities remain the vehicle owner's responsibility.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">42.</span><span class="rsa-q-txt">Is roadside assistance available for commercial vehicles?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Coverage depends on the specific plan purchased — commercial vehicle plans may have different terms than personal-vehicle plans, so check your plan document.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">43.</span><span class="rsa-q-txt">Will RSA help if I lock my keys inside the car and don't have a spare?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Key-unlock service requires a spare key to be available; if no spare exists, you'll need to arrange a locksmith or dealership support separately.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">44.</span><span class="rsa-q-txt">Can I get an estimated time of arrival before confirming my RSA request?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, once your request is logged, an estimated arrival window is shared based on the nearest available service partner.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">45.</span><span class="rsa-q-txt">What if the RSA partner assigned to me cancels or doesn't show up?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Report this to support immediately — a replacement partner will be dispatched on priority, and the delay will be reviewed against your service TAT.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">46.</span><span class="rsa-q-txt">Does RSA cover damage that occurred before the breakdown, like pre-existing dents?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>No, RSA only addresses the immediate breakdown/mobility issue — it is not a repair or damage-assessment service for unrelated pre-existing damage.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">47.</span><span class="rsa-q-txt">Can I add RSA coverage mid-way through my vehicle's ownership, or only at purchase?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>RSA plans can generally be purchased anytime, not just at the time of vehicle purchase — check current eligibility with our support team.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">48.</span><span class="rsa-q-txt">What's the difference between breakdown towing and accidental towing limits?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Both currently offer free towing up to 25 km from the incident location; however, accidental towing may have additional documentation requirements like a Police Clearance Certificate.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">49.</span><span class="rsa-q-txt">Will I get a service report after RSA assistance is completed?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Yes, a summary of the service provided — including nature of issue and action taken — is available through the app once the request is closed.</p></div>
+        </details>
+        <details class="rsa-faq-item">
+          <summary><span class="rsa-q-num">50.</span><span class="rsa-q-txt">Who is responsible if my vehicle is damaged during the towing process?</span><svg class="rsa-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="rsa-faq-a"><p>Our network partners are expected to follow safe towing protocols. Any damage during towing should be reported immediately to support for investigation and resolution.</p></div>
+        </details>
+      </div>
     </div>
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 mt-8 pt-6 border-t border-white/10 text-xs text-center sm:text-left" id="copyright">© FixorAssist. All rights reserved.</div>
+  </section>
+
+  <!-- ═══════════════ FOOTER (matches marketing site) ═══════════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m2 7 10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin-dot" viewBox="0 0 48 48"><path d="M24 4c8.3 0 15 6.7 15 15 0 10.5-15 25-15 25S9 29.5 9 19C9 10.7 15.7 4 24 4z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle cx="24" cy="19" r="5.5" fill="#e1181e"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4.5 2-4.5 4.5v2.5H7V15h2.5v6.5H13V15h3l.5-3.5H13V9c0-.6.4-1 1-1z" fill="currentColor"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-tw" viewBox="0 0 24 24"><path d="M22 5.8c-.7.3-1.5.6-2.3.7a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.7a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5a4.1 4.1 0 0 0 3.3 4 4 4 0 0 1-1.8.1 4.1 4.1 0 0 0 3.8 2.9A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2z" fill="currentColor"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2-2.1C18.2 5.5 12 5.5 12 5.5s-6.2 0-8 .6a3 3 0 0 0-2 2.1A31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2 2.1c1.8.6 8 .6 8 .6s6.2 0 8-.6a3 3 0 0 0 2-2.1A31 31 0 0 0 22.4 12 31 31 0 0 0 22 8.2z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-li" viewBox="0 0 24 24"><path d="M6.5 9.5v11M6.5 5.4v.1M11 20.5v-6a3.5 3.5 0 0 1 7 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9.5v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  </svg>
+  <style>
+    .footer{--dark:#12141a;--dark-2:#0b0d13;--red:#e1181e;--red-deep:#c40f15;background:var(--dark);color:#e8e9eb;font-family:'Poppins',ui-sans-serif,system-ui,sans-serif}
+    .footer .container{max-width:1440px;margin:0 auto;padding:0 40px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1.05fr 1fr 1.45fr;gap:44px;padding-top:64px;padding-bottom:52px}
+    .f-brand .f-logo{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+    .f-logo img{height:70px;width:auto}
+    .f-logo strong{font-size:28px;font-weight:700;color:var(--red);display:block;line-height:1.1}
+    .f-logo strong .white{color:#fff;font-size:inherit}
+    .f-logo .tag{font-size:12.5px;color:#b7bac0;letter-spacing:.03em}
+    .f-brand>p{font-size:15px;font-weight:300;color:#c3c6cb;line-height:1.85;max-width:330px}
+    .f-brand .red{font-weight:500;color:var(--red)}
+    .f-social{display:flex;gap:14px;margin-top:28px}
+    .f-social a{width:44px;height:44px;border-radius:50%;border:1.4px solid #3a3d44;display:flex;align-items:center;justify-content:center;transition:.25s}
+    .f-social a:hover{border-color:var(--red);background:var(--red)}
+    .f-social svg{width:20px;height:20px;color:#fff}
+    .f-col h5{font-size:16px;font-weight:600;letter-spacing:.08em;color:#fff}
+    .f-rule{display:block;width:40px;height:3px;background:var(--red);border-radius:2px;margin:14px 0 24px}
+    .f-col a{display:block;font-size:15px;font-weight:300;color:#c3c6cb;margin-bottom:14px;transition:.2s;text-decoration:none}
+    .f-col a:hover{color:#fff;padding-left:4px}
+    .f-connect p{font-size:15px;font-weight:300;color:#c3c6cb;line-height:1.8;margin-bottom:18px}
+    .f-subscribe{display:flex;margin-bottom:26px}
+    .f-subscribe input{flex:1;background:#1d2027;border:1px solid #33363d;border-right:0;color:#fff;font-family:inherit;font-size:14.5px;padding:14px 16px;border-radius:9px 0 0 9px;outline:none}
+    .f-subscribe input::placeholder{color:#8b8f96}
+    .f-subscribe button{background:var(--red);border:0;width:60px;border-radius:0 9px 9px 0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+    .f-subscribe svg{width:20px;height:20px;color:#fff}
+    .f-app{margin-bottom:16px;font-weight:400;color:#fff}
+    .f-badges{display:flex;gap:12px}
+    .f-badges img{height:48px;width:auto;border-radius:8px}
+    .f-bottom{border-top:1px solid #272a31;padding:26px 0;background:var(--dark-2)}
+    .f-bottom-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .f-bottom-in p,.f-bottom-in a{font-size:14.5px;font-weight:300;color:#c3c6cb;display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+    .f-bottom-in a:hover{color:#fff}
+    .f-bottom-in .red{color:var(--red)}
+    .f-sep{width:1px;height:22px;background:#33363d}
+    .fb-ic{width:19px;height:19px;color:var(--red)}
+    @media (max-width:900px){.footer-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+    @media (max-width:600px){.footer .container{padding:0 20px}.footer-grid{grid-template-columns:1fr}.f-bottom-in{flex-direction:column;align-items:flex-start}.f-sep{display:none}}
+  </style>
+  <footer class="footer" id="footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <div class="f-logo"><img src="assets/img/logo-mark-footer.png" alt="FixorAssist logo"><div><strong>Fixor<span class="white">Assist</span></strong><span class="tag">Trusted Automotive Support</span></div></div>
+        <p>FixorAssist is your trusted partner for roadside assistance, car repairs, maintenance and more.<br><span class="red">We're here anytime, anywhere.</span></p>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg><use href="#i-tw"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg><use href="#i-li"/></svg></a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h5>COMPANY</h5><span class="f-rule"></span>
+        <a href="about.html">About Us</a><a href="index.html#mission">Our Mission &amp; Vision</a><a href="index.html#why">Why Choose Us</a><a href="careers.html">Careers</a><a href="#footer">Contact Us</a>
+      </div>
+      <div class="f-col">
+        <h5>SERVICES</h5><span class="f-rule"></span>
+        <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="warranty.html">Extended Warranty</a><a href="#footer">Customer Support</a>
+      </div>
+      <div class="f-col">
+        <h5>SUPPORT</h5><span class="f-rule"></span>
+        <a href="faqs.html">FAQs</a><a href="terms.html">Terms &amp; Conditions</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a>
+      </div>
+      <div class="f-col f-connect">
+        <h5>STAY CONNECTED</h5><span class="f-rule"></span>
+        <p>Subscribe to get latest updates, offers and car care tips.</p>
+        <form class="f-subscribe" onsubmit="return false">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" aria-label="Subscribe"><svg><use href="#i-send"/></svg></button>
+        </form>
+        <p class="f-app">Download the <span class="red">FixorAssist</span> App</p>
+        <div class="f-badges">
+          <a href="#"><img src="assets/img/badge-gplay.png" alt="Get it on Google Play"></a>
+          <a href="#"><img src="assets/img/badge-appstore.png" alt="Download on the App Store"></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div class="container f-bottom-in">
+        <p>© 2026 <span class="red">FixorAssist</span>. All rights reserved.</p>
+        <span class="f-sep"></span>
+        <a href="tel:+919717758510"><svg class="fb-ic"><use href="#i-phone-call"/></svg> +91 97177 58510</a>
+        <span class="f-sep"></span>
+        <a href="mailto:admin@fixorassist.com"><svg class="fb-ic"><use href="#i-mail"/></svg> admin@fixorassist.com</a>
+        <span class="f-sep"></span>
+        <p><svg class="fb-ic"><use href="#i-pin-dot"/></svg> New Delhi, India</p>
+      </div>
+    </div>
   </footer>
 
   <!-- Buy modal mount -->
@@ -397,7 +776,7 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     }); };
 
-    document.getElementById('copyright').textContent = '© ' + new Date().getFullYear() + ' FixorAssist. All rights reserved.';
+    var _cpy = document.getElementById('copyright'); if (_cpy) _cpy.textContent = '© ' + new Date().getFullYear() + ' FixorAssist. All rights reserved.';
 
     window.scrollToPlans = function () {
       var el = document.getElementById('plans');
@@ -477,7 +856,7 @@
         '<div>' +
           '<div class="relative rounded-2xl overflow-hidden text-white flex flex-col justify-between" style="aspect-ratio:1.6 / 1;padding:18px;background:' + bg + ';box-shadow:0 8px 16px rgba(0,0,0,0.25)">' +
             '<div class="flex items-center justify-between">' +
-              '<span style="color:' + ACCENT + ';font-size:18px;font-weight:800;letter-spacing:2px">FIXOR</span>' +
+              '<img src="assets/img/logo-mark-footer.png" alt="FixorAssist" style="height:30px;width:auto">' +
               '<span class="inline-flex items-center gap-1.5" style="color:' + ACCENT + '">' +
                 '<span style="width:15px;height:15px;display:inline-flex">' + ICONS[t.icon] + '</span>' +
                 '<span style="font-size:12px;font-weight:700;letter-spacing:1.5px">' + esc(plan.code) + '</span>' +
@@ -504,21 +883,54 @@
             '<span style="font-size:22px;font-weight:800;color:#1A1A1A">' + inr(plan.priceInr) + '</span>' +
             '<span style="font-size:12px;color:#8E8E93;margin-left:4px">/ year</span>' +
           '</div>' +
+          '<div class="text-center" style="margin-top:3px;font-size:12.5px;font-weight:600;color:#e1181e">' + (String(plan.code).toUpperCase().indexOf('SILVER') > -1 ? 'Delhi-NCR' : 'Pan India') + '</div>' +
         '</div>';
     }
 
     // ---- Plan cards (JS replica of Plans.jsx cards) ----
     var PLANS_BY_ID = {};
-    function planCardHTML(plan) {
+    (function injectPlanStyle() {
+      if (document.getElementById('cp-diff-style')) return;
+      var s = document.createElement('style'); s.id = 'cp-diff-style';
+      s.textContent = ''
+        + '#planCards{align-items:flex-start!important}'
+        + '.pc-zig{margin-top:38px}'
+        + '.pc-card{transition:transform .25s ease,box-shadow .25s ease}'
+        + '.pc-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,15,20,.16)}'
+        + '.pc-diff{border-radius:10px;padding:9px 11px;margin:-2px 0}'
+        /* silver/default red */
+        + '.pc-silver .pc-diff{background:#fff5f5;border:1px solid #fbdada}'
+        + '.pc-silver .pc-diff .pc-t{color:#e1181e!important}'
+        + '.pc-silver .pc-diff .pc-ic{color:#e1181e!important}'
+        /* gold */
+        + '.pc-gold .pc-diff{background:#fdf6e3;border:1px solid #ecd48f}'
+        + '.pc-gold .pc-diff .pc-t{color:#a9781a!important}'
+        + '.pc-gold .pc-diff .pc-ic{color:#c9962a!important}'
+        /* diamond blue */
+        + '.pc-diamond .pc-diff{background:#eef2fb;border:1px solid #bcc9ee}'
+        + '.pc-diamond .pc-diff .pc-t{color:#1e3a8a!important}'
+        + '.pc-diamond .pc-diff .pc-ic{color:#2b4db8!important}'
+        + '@media (max-width:1080px){.pc-zig{margin-top:0}}';
+      document.head.appendChild(s);
+    })();
+
+    function planCardHTML(plan, commonTitles) {
       var total = gstIncl(plan.priceInr);
+      var code = String(plan.code || '').toUpperCase();
+      var tier = code.indexOf('GOLD') > -1 ? 'pc-gold' : (code.indexOf('DIAMOND') > -1 ? 'pc-diamond' : 'pc-silver');
+      var hlColor = tier === 'pc-gold' ? '#c9962a' : (tier === 'pc-diamond' ? '#2b4db8' : '#e1181e');
       var featuresHTML = (plan.features || []).map(function (f) {
-        return '<li class="flex gap-3 text-sm">' +
-          '<span class="w-5 h-5 text-brand flex-none mt-0.5">' + ICONS.check + '</span>' +
-          '<span><span class="font-semibold text-ink">' + esc(f.title) + '</span>' +
-          (f.description ? '<span class="text-gray-500"> — ' + esc(f.description) + '</span>' : '') + '</span>' +
+        var diff = commonTitles && !commonTitles[String(f.title || '').toLowerCase().trim()];
+        if (/\d+\s*bikes/i.test(f.description || '')) diff = true; // pill the multi-bike (Diamond) row
+        var descHTML = f.description ? esc(f.description).replace(/(unlimited|\d+\s*bikes)/ig, '<b style="color:' + hlColor + ';font-weight:700">$1</b>') : '';
+        return '<li class="flex gap-3 text-sm' + (diff ? ' pc-diff' : '') + '">' +
+          '<span class="pc-ic w-5 h-5 text-brand flex-none mt-0.5">' + ICONS.check + '</span>' +
+          '<span><span class="pc-t font-semibold text-ink">' + esc(f.title) + '</span>' +
+          (descHTML ? '<span class="text-gray-500"> — ' + descHTML + '</span>' : '') + '</span>' +
         '</li>';
       }).join('');
-      var wrapCls = 'relative rounded-2xl bg-white p-6 flex flex-col w-full sm:w-[344px] ' +
+      var zig = plan.highlighted ? '' : ' pc-zig';
+      var wrapCls = 'pc-card ' + tier + zig + ' relative rounded-2xl bg-white p-6 flex flex-col w-full sm:w-[344px] ' +
         (plan.highlighted ? 'ring-2 ring-brand shadow-xl' : 'border border-gray-200 shadow-sm');
       var btnCls = 'mt-7 w-full rounded-xl font-semibold py-3.5 transition ' +
         (plan.highlighted ? 'bg-brand text-white hover:bg-brand-deep' : 'border-2 border-brand text-brand hover:bg-brand hover:text-white');
@@ -538,7 +950,18 @@
       if (!plans.length) { msg.textContent = 'No plans available right now.'; return; }
       msg.style.display = 'none';
       PLANS_BY_ID = {};
-      wrap.innerHTML = plans.map(function (p) { PLANS_BY_ID[p.id] = p; return planCardHTML(p); }).join('');
+      // feature titles common to EVERY plan; the rest are highlighted differences
+      var counts = {};
+      plans.forEach(function (p) {
+        var seen = {};
+        (p.features || []).forEach(function (f) {
+          var k = String(f.title || '').toLowerCase().trim();
+          if (k && !seen[k]) { seen[k] = 1; counts[k] = (counts[k] || 0) + 1; }
+        });
+      });
+      var common = {};
+      Object.keys(counts).forEach(function (k) { if (counts[k] === plans.length) common[k] = 1; });
+      wrap.innerHTML = plans.map(function (p) { PLANS_BY_ID[p.id] = p; return planCardHTML(p, common); }).join('');
       wrap.querySelectorAll('[data-buy]').forEach(function (btn) {
         btn.addEventListener('click', function () { openBuyModal(PLANS_BY_ID[btn.getAttribute('data-buy')]); });
       });
@@ -559,8 +982,8 @@
       { t: 'Fuel Delivery', s: true, g: true, d: true },
       { t: 'Key Unlock Assistance', s: true, g: true, d: true },
       { t: 'Starting Problem', s: true, g: true, d: true },
-      { t: 'Towing - Breakdown', s: 'Up to 75 km', g: 'Up to 150 km', d: 'Unlimited' },
-      { t: 'Towing - After Accident', s: false, g: true, d: 'Unlimited' },
+      { t: 'Towing - Breakdown', s: 'Up to 25 km', g: 'Up to 25 km', d: 'Up to 25 km' },
+      { t: 'Towing - After Accident', s: false, g: true, d: 'Up to 25 km' },
       { t: 'Vehicle Custody', s: 'Up to 1 Day', g: 'Up to 2 Days', d: 'Up to 5 Days' },
       { t: 'Trip Interruption Benefit', s: false, g: true, d: true },
     ];
@@ -571,6 +994,7 @@
     }
     (function renderTable() {
       var body = document.getElementById('tableBody');
+      if (!body) return;
       var rows = TABLE_ROWS.map(function (r) {
         return '<tr class="border-t border-gray-100 text-sm">' +
           '<td class="p-4 font-medium">' + esc(r.t) + '</td>' +
@@ -583,7 +1007,7 @@
         '<td class="p-4 text-xs font-bold uppercase text-gray-400">Price (365 Days)</td>' +
         '<td class="p-4 text-center font-extrabold">₹699</td>' +
         '<td class="p-4 text-center font-extrabold bg-red-50/60 text-brand">₹1,199</td>' +
-        '<td class="p-4 text-center font-extrabold">₹4,999</td>' +
+        '<td class="p-4 text-center font-extrabold">₹3,999</td>' +
       '</tr>';
       rows += '<tr><td></td>' +
         ['Silver', 'Gold', 'Diamond'].map(function (p, i) {
@@ -758,6 +1182,35 @@
       renderPay();
       rzp.open();
     }
+  })();
+  </script>
+  <script src="js/enquiry.js?v=20260826a"></script>
+  <script>
+  /* FAQ: show first 10, reveal rest with a View More button */
+  (function () {
+    var list = document.querySelector('.rsa-faq');
+    if (!list) return;
+    var items = list.querySelectorAll('.rsa-faq-item');
+    var LIMIT = 10;
+    if (items.length <= LIMIT) return;
+    for (var i = LIMIT; i < items.length; i++) items[i].style.display = 'none';
+    var wrap = document.createElement('div');
+    wrap.style.cssText = 'text-align:center;margin-top:24px';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'View More';
+    btn.style.cssText = 'font-family:inherit;font-weight:700;font-size:15px;color:#e1181e;background:#fff;border:2px solid #e1181e;border-radius:12px;padding:13px 34px;cursor:pointer;transition:.2s';
+    btn.onmouseover = function () { btn.style.background = '#e1181e'; btn.style.color = '#fff'; };
+    btn.onmouseout = function () { btn.style.background = '#fff'; btn.style.color = '#e1181e'; };
+    var open = false;
+    btn.addEventListener('click', function () {
+      open = !open;
+      for (var i = LIMIT; i < items.length; i++) items[i].style.display = open ? '' : 'none';
+      btn.textContent = open ? 'View Less' : 'View More';
+      if (!open) list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    wrap.appendChild(btn);
+    list.appendChild(wrap);
   })();
   </script>
 </body>
