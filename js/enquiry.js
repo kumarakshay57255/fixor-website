@@ -4,6 +4,15 @@
 (function () {
   var WA = '919717758510';
 
+  // Page can override the Service dropdown list via window.ENQUIRY_SERVICES.
+  var DEFAULT_SERVICES = ['Roadside Assistance', 'Vehicle Inspection', 'Service & Maintenance', 'Genuine Spare Parts', 'Insurance Claim', 'Extended Warranty', 'Other'];
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+  function serviceOptions() {
+    var list = (window.ENQUIRY_SERVICES && window.ENQUIRY_SERVICES.length) ? window.ENQUIRY_SERVICES.slice() : DEFAULT_SERVICES;
+    if (list.indexOf('Other') === -1) list.push('Other');
+    return list.map(function (s) { return '<option value="' + esc(s) + '">' + esc(s) + '</option>'; }).join('');
+  }
+
   var css = ''
     + '.enq-overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(12,12,14,.55);backdrop-filter:blur(3px);padding:20px}'
     + '.enq-overlay.open{display:flex}'
@@ -32,7 +41,7 @@
     + '  <span class="enq-eyebrow" id="enqEyebrow">Enquire Now</span>'
     + '  <h3>Talk to FixorAssist</h3>'
     + '  <p class="enq-sub" id="enqSub">Share your details and we’ll connect with you on WhatsApp right away.</p>'
-    + '  <div class="enq-field"><label for="enqService">Service you need *</label><select id="enqService"><option value="Roadside Assistance">Roadside Assistance</option><option value="Vehicle Inspection">Vehicle Inspection</option><option value="Service & Maintenance">Service &amp; Maintenance</option><option value="Genuine Spare Parts">Genuine Spare Parts</option><option value="Insurance Claim">Insurance Claim</option><option value="Extended Warranty">Extended Warranty</option><option value="Other">Other</option></select></div>'
+    + '  <div class="enq-field"><label for="enqService">Service you need *</label><select id="enqService">' + serviceOptions() + '</select></div>'
     + '  <div class="enq-field"><label for="enqName">Full Name *</label><input id="enqName" type="text" placeholder="Your name" autocomplete="name"></div>'
     + '  <div class="enq-field"><label for="enqPhone">Mobile Number *</label><input id="enqPhone" type="tel" maxlength="10" placeholder="10-digit number" autocomplete="tel"></div>'
     + '  <div class="enq-field"><label for="enqCity">City</label><input id="enqCity" type="text" placeholder="Your city"></div>'
@@ -63,12 +72,25 @@
         : 'Share your details and we’ll connect with you on WhatsApp right away.';
       // pre-select the Service dropdown based on the card clicked
       var sel = overlay.querySelector('#enqService');
+      // drop any temp option injected on a previous open
+      var tmp = sel.querySelector('option[data-tmp]');
+      if (tmp) sel.removeChild(tmp);
       var c = ctx.toLowerCase();
       var match = c ? Array.prototype.filter.call(sel.options, function (o) {
         var v = o.value.toLowerCase();
         return v !== 'other' && (c === v || c.indexOf(v) > -1 || v.indexOf(c) > -1);
       })[0] : null;
-      sel.value = match ? match.value : 'Other';
+      if (match) {
+        sel.value = match.value;
+      } else if (ctx) {
+        // capture the exact service (e.g. "Denting & Painting") as its own option
+        var o = document.createElement('option');
+        o.value = ctx; o.textContent = ctx; o.setAttribute('data-tmp', '1');
+        sel.insertBefore(o, sel.firstChild);
+        sel.value = ctx;
+      } else {
+        sel.value = 'Other';
+      }
       overlay.classList.add('open');
       setTimeout(function () { overlay.querySelector('#enqName').focus(); }, 60);
     }

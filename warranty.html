@@ -86,9 +86,10 @@
           <a href="parts.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></span><span class="dl-txt"><strong>Genuine Spare Parts</strong><em>Quality parts you can trust</em></span></a>
           <a href="carservice.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><span class="dl-txt"><strong>Car Service &amp; Maintenance</strong><em>Maintenance for every kilometer</em></span></a>
           <a href="warranty.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span><span class="dl-txt"><strong>Extended Warranty</strong><em>Cover beyond the manufacturer</em></span><span class="dl-new">NEW</span></a>
+          <a href="insurance.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m8.5 12.5 2 2 3.5-4"/><path d="M12 8v3"/></svg></span><span class="dl-txt"><strong>Insurance Claim</strong><em>Cashless claim assistance</em></span></a>
         </div>
       </div>
-      <a href="index.html#network">Partner Garages</a>
+      <a href="become-partner.html">Partner Garages</a>
       <a href="about.html">About Us</a>
       <a href="#footer">Contact Us</a>
     </nav>
@@ -110,7 +111,7 @@
       <p class="lede">Get an instant quote, pay securely, and drive covered with zero cost on covered repairs across our Pan-India workshop network.</p>
       <div class="hero-cta">
         <a href="#quote" class="btn btn-primary btn-lg">Get Your Quote &rarr;</a>
-        <a href="#coverage" class="btn btn-outline btn-lg">See What's Covered</a>
+        <a href="claim.html" class="btn btn-outline btn-lg">Submit a Claim</a>
       </div>
       <div class="hero-trust">
         <div><div class="stat-num">8+ yrs</div><div class="stat-label">In vehicle protection</div></div>
@@ -202,14 +203,13 @@
 </section>
 
 <!-- trust strip -->
-<div class="trust-strip"><div class="container"><span class="tl">Trusted by <b>6,700+</b> vehicle owners across India · Genuine parts · Pan-India authorised workshop network</span></div></div>
+<div class="trust-strip"><div class="container"><span class="tl">Trusted by <b>6,700+</b> vehicle owners across India · Genuine parts · Pan-India authorised cashless workshop network</span></div></div>
 
 <!-- audience -->
 <section class="section">
   <div class="container">
     <div class="sec-head center">
-      <span class="section-label">Who it's for</span>
-      <h2>Your Vehicle Isn't Getting <span class="red">Better With Age.</span></h2>
+      <h2>Just like age, a car also <span class="red">wears out over time.</span></h2>
       <p>As your car ages, the risk of an expensive mechanical failure rises. Extended Warranty keeps you protected.</p>
     </div>
     <div class="grid g3">
@@ -251,8 +251,12 @@
 <section class="section" id="coverage">
   <div class="container">
     <div class="sec-head center"><span class="section-label">Plan types</span><h2>Flexible Plans. <span class="red">Comprehensive Protection.</span></h2><p>Choose the cover that fits your needs. Available for 6 or 12 months, priced by your vehicle's engine capacity.</p></div>
-    <div class="plans">
-      <div class="plan">
+    <style>
+      .plans .plan{cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s}
+      .plans .plan:hover{transform:translateY(-3px)}
+    </style>
+    <div class="plans" id="coverPlans">
+      <div class="plan" data-cover-card>
         <h3>Engine + Transmission</h3>
         <div class="plan-sub">Covers the core powertrain — the costliest parts to repair.</div>
         <ul>
@@ -261,7 +265,7 @@
           <li>Manual gearbox: gears, shafts, synchromesh hubs, selectors, bearings</li>
         </ul>
       </div>
-      <div class="plan featured">
+      <div class="plan featured" data-cover-card>
         <span class="plan-badge">★ Most popular</span>
         <h3>Comprehensive</h3>
         <div class="plan-sub">Everything in Engine+Transmission, plus critical systems.</div>
@@ -277,6 +281,17 @@
     </div>
     <div class="plan-note">💡 <b>Pricing:</b> your exact price depends on your car's engine CC (and model, for premium brands) — enter your vehicle in the quote box above for an instant price. Premium brands (Audi, BMW, Mercedes-Benz, Jaguar, Volvo, Land Rover) are available on the 12-month plan. All prices are exclusive of 18% GST.</div>
   </div>
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('#coverPlans [data-cover-card]');
+      cards.forEach(function (c) {
+        c.addEventListener('click', function () {
+          cards.forEach(function (x) { x.classList.remove('featured'); });
+          c.classList.add('featured');
+        });
+      });
+    })();
+  </script>
 </section>
 
 <!-- coverage included -->
@@ -343,7 +358,7 @@
           <tr><td class="feat-name">Works on older / high-mileage cars</td><td class="yes">Yes</td><td class="no">Limited</td></tr>
           <tr><td class="feat-name">Zero cost on covered parts &amp; labour</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
           <tr><td class="feat-name">Transferable to next owner</td><td class="yes">Yes</td><td class="no">Rarely</td></tr>
-          <tr><td class="feat-name">Pan-India authorised workshop network</td><td class="yes">Yes</td><td class="yes">Dealer only</td></tr>
+          <tr><td class="feat-name">Pan-India authorised cashless workshop network</td><td class="yes">Yes</td><td class="yes">Dealer only</td></tr>
           <tr><td class="feat-name">Flexible 6 or 12-month terms</td><td class="yes">Yes</td><td class="no">Fixed</td></tr>
           <tr><td class="feat-name">Instant online quote &amp; purchase</td><td class="yes">Yes</td><td class="no">No</td></tr>
         </tbody>
@@ -370,15 +385,46 @@
 <!-- good to know -->
 <section class="section section-alt">
   <div class="container">
-    <div class="sec-head center"><span class="section-label">Good to know</span><h2>Before You <span class="red">Buy.</span></h2></div>
-    <div class="acc">
-      <details class="acc-item" open><summary>How is my price calculated?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body">Pricing is based on your vehicle's engine capacity (CC) for most cars, and on make + model for premium brands. Choose your cover (Engine+Transmission or Comprehensive) and period (6 or 12 months) — the quote box shows your exact price instantly. All prices are exclusive of 18% GST.</div></details>
-      <details class="acc-item"><summary>When does coverage start?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body">After purchase, our team schedules a quick vehicle inspection. Once your vehicle is approved, your warranty certificate is issued and coverage begins as stated on the certificate.</div></details>
-      <details class="acc-item"><summary>Which brands are covered?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body">Most petrol and diesel brands across India — Maruti Suzuki, Hyundai, Tata, Mahindra, Kia, Toyota, Honda and more. Premium brands (Audi, BMW, Mercedes-Benz, Jaguar, Volvo, Land Rover) are covered on the 12-month plan.</div></details>
-      <details class="acc-item"><summary>Can I transfer the warranty if I sell my car?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body">Yes — the warranty can be transferred to the next owner, boosting your car's resale value. Contact our support team with the new owner's details.</div></details>
-      <details class="acc-item"><summary>How do I make a claim?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body">Take your vehicle to any authorised FixorAssist network workshop and notify us with your warranty and registration details. Once the cause of breakdown is confirmed as covered, repairs are carried out at no cost for covered parts and labour.</div></details>
+    <div class="sec-head center"><span class="section-label">FAQ</span><h2>Frequently Asked <span class="red">Questions.</span></h2>
+      <p>Everything you need to know before choosing your Vehicle Protection Plan. Can’t find the answer you’re looking for? Our team is always happy to help you understand the details.</p>
+    </div>
+    <div class="acc" id="wty-faq" style="max-width:940px">
+      <details class="acc-item wfaq-item" open><summary>What is a Vehicle Protection Plan?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">A Vehicle Protection Plan helps cover the cost of specified mechanical repairs after your manufacturer's warranty has expired. It is designed to protect you from unexpected repair expenses and give you greater peace of mind while owning your vehicle.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Which vehicles are eligible for coverage?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Vehicle eligibility depends on several factors, including:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Vehicle age</li><li style="margin-bottom:5px">Kilometres driven</li><li style="margin-bottom:5px">Service history</li><li style="margin-bottom:5px">Vehicle verification results</li><li style="margin-bottom:5px">Overall vehicle condition</li></ul><p style="margin:0 0 10px">Every vehicle must be reviewed and approved before a protection plan can be issued.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Are electrical and electronic components covered?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">No. Electrical, electronic, infotainment, battery, sensor, module, ECU/TCU, wiring, and software-related components are not covered under the Vehicle Protection Plan.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>How long does the coverage last?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">You can choose a 1-year, 2-year, or 3-year protection plan.</p><p style="margin:0 0 10px">Each year provides coverage for up to 15,000 kilometres, whichever limit is reached first. Coverage begins from the activation date mentioned on your Plan Certificate and automatically ends once either the time or kilometre limit is reached.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Is there a waiting period before I can make a claim?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Yes. Every plan includes a mandatory waiting period of 30 days or 1,000 kilometres, whichever comes first.</p><p style="margin:0 0 10px">Claims arising during this period will not be eligible for coverage. For selected vehicles, the waiting period may be waived at the Company's sole discretion.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>What are the claim limits for each plan?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">The maximum total claim liability under each plan is:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Essential: ₹1,00,000</li><li style="margin-bottom:5px">Elite: ₹2,00,000</li><li style="margin-bottom:5px">Ultimate: ₹3,00,000</li></ul><p style="margin:0 0 10px">The Company reserves the right to repair, replace, or recondition any covered component. Please refer to the Coverage Details for the complete terms.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Do you cover Petrol, Diesel, and EV vehicles?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Yes. Vehicle Protection Plans are available for Petrol, Diesel, and EV vehicles.</p><p style="margin:0 0 10px">Petrol and Diesel plan pricing depends on your vehicle's brand category, while EV plans are available at a fixed rate based on the selected plan tier.</p><p style="margin:0 0 10px">You can get an instant personalised quote using the calculator on our homepage.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Are wear-and-tear items covered?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">No. Parts that naturally wear out through regular use are not covered.</p><p style="margin:0 0 10px">These include items such as:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Brake pads</li><li style="margin-bottom:5px">Clutch plates</li><li style="margin-bottom:5px">Tyres</li><li style="margin-bottom:5px">Wiper blades</li><li style="margin-bottom:5px">Filters</li><li style="margin-bottom:5px">Oils and other fluids</li></ul></div></details>
+      <details class="acc-item wfaq-item"><summary>How do I make a claim, and how long does it take?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Take your vehicle to a manufacturer-authorised service centre and share the following with us:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Service centre details</li><li style="margin-bottom:5px">Service advisor's contact information</li><li style="margin-bottom:5px">Vehicle job card</li></ul><p style="margin:0 0 10px">Once your claim is verified, our claims team will begin the review process and provide an estimated timeline. Processing time may vary depending on the complexity of the repair and the required documentation.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Is this the same as car insurance?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">No. Motor insurance generally covers events such as accidents, theft, and other insured incidents.</p><p style="margin:0 0 10px">A Vehicle Protection Plan is designed to help cover specified mechanical failures that occur during normal vehicle use, including eligible components of the engine, gearbox, drivetrain, steering, and braking systems, depending on your selected plan.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>What components are covered?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Coverage depends on the protection plan you choose:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Essential: Covers the engine.</li><li style="margin-bottom:5px">Elite: Includes engine coverage and adds gearbox/transmission and drivetrain components.</li><li style="margin-bottom:5px">Ultimate: Includes the coverage offered in Elite and adds specified steering, braking, cooling, and fuel system components, along with factory-fitted turbochargers or superchargers.</li></ul><p style="margin:0 0 10px">Please refer to the Coverage Details for the complete component list under each plan.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Is the 30-second vehicle verification mandatory?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Yes. Every vehicle must successfully complete a 30-second self-guided vehicle verification before coverage can be activated.</p><p style="margin:0 0 10px">The process is completed through a short smartphone-based video walkaround of the vehicle.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Can I purchase coverage for a used car?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Yes. Our Vehicle Protection Plans are designed for both out-of-warranty and pre-owned vehicles, not only newly purchased cars.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>What is not covered?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">The following are generally excluded from coverage:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Electrical and electronic failures</li><li style="margin-bottom:5px">Accident, flood, or fire damage</li><li style="margin-bottom:5px">Damage caused by negligence</li><li style="margin-bottom:5px">Unauthorised modifications</li><li style="margin-bottom:5px">Routine maintenance and servicing</li><li style="margin-bottom:5px">Cosmetic repairs</li><li style="margin-bottom:5px">Standard wear-and-tear items</li></ul><p style="margin:0 0 10px">Please refer to the complete Terms &amp; Conditions for all applicable exclusions.</p></div></details>
+      <details class="acc-item wfaq-item"><summary>Can I transfer my plan to a new owner?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Yes. The Vehicle Protection Plan may be transferred to a subsequent vehicle owner, subject to:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">Company approval</li><li style="margin-bottom:5px">Verification of the change in ownership</li><li style="margin-bottom:5px">Applicable transfer administration fees</li></ul></div></details>
+      <details class="acc-item wfaq-item"><summary>What happens if I provide false information?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Coverage will terminate immediately, without any refund, if:</p><ul style="margin:8px 0 0;padding-left:18px"><li style="margin-bottom:5px">False or misleading information is provided</li><li style="margin-bottom:5px">The vehicle odometer is tampered with</li><li style="margin-bottom:5px">Service history is falsified</li><li style="margin-bottom:5px">A fraudulent claim is submitted or attempted</li></ul></div></details>
+      <details class="acc-item wfaq-item"><summary>Why should I buy a Vehicle Protection Plan?<svg class="acc-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><div class="acc-body"><p style="margin:0 0 10px">Major mechanical repairs can be expensive, especially once your manufacturer's warranty has expired. Repairs involving the engine, gearbox, transmission, or drivetrain can sometimes cost thousands or even lakhs of rupees.</p><p style="margin:0 0 10px">A Vehicle Protection Plan helps protect you from these unexpected expenses by providing specified mechanical repair coverage for a predictable cost. It can also provide greater confidence when maintaining and owning your vehicle.</p></div></details>
     </div>
   </div>
+  <script>
+    (function () {
+      var list = document.getElementById("wty-faq");
+      if (!list) return;
+      var items = list.querySelectorAll(".wfaq-item");
+      var LIMIT = 10; if (items.length <= LIMIT) return;
+      for (var i = LIMIT; i < items.length; i++) items[i].style.display = "none";
+      var wrap = document.createElement("div"); wrap.style.cssText = "text-align:center;margin-top:24px";
+      var btn = document.createElement("button"); btn.type = "button"; btn.textContent = "View More";
+      btn.style.cssText = "font-family:inherit;font-weight:700;font-size:15px;color:#e1181e;background:#fff;border:2px solid #e1181e;border-radius:12px;padding:13px 34px;cursor:pointer;transition:.2s";
+      btn.onmouseover = function(){btn.style.background="#e1181e";btn.style.color="#fff";};
+      btn.onmouseout = function(){btn.style.background="#fff";btn.style.color="#e1181e";};
+      var open=false;
+      btn.addEventListener("click", function(){ open=!open; for (var i=LIMIT;i<items.length;i++) items[i].style.display=open?"":"none"; btn.textContent=open?"View Less":"View More"; if(!open) list.scrollIntoView({behavior:"smooth",block:"start"}); });
+      wrap.appendChild(btn); list.parentNode.insertBefore(wrap, list.nextSibling);
+    })();
+  </script>
 </section>
 
 <!-- terms & conditions -->
@@ -475,6 +521,7 @@
       <p>Get an instant quote in under a minute. Pay securely online or enquire on WhatsApp — our team is here to help.</p>
       <div class="hero-cta">
         <a href="#quote" class="btn btn-primary btn-lg">Get Your Quote &rarr;</a>
+        <a href="claim.html" class="btn btn-outline btn-lg">Submit a Claim</a>
         <a href="https://wa.me/919717758510?text=Hi%20FixorAssist%2C%20I%27m%20interested%20in%20an%20Extended%20Warranty%20for%20my%20car." class="btn btn-wa btn-lg" target="_blank" rel="noopener">Chat on WhatsApp</a>
       </div>
     </div>

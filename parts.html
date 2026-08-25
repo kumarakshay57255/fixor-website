@@ -84,9 +84,10 @@
         <a href="parts.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg></span><span class="dl-txt"><strong>Genuine Spare Parts</strong><em>Quality parts you can trust</em></span></a>
         <a href="carservice.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6.5a3.8 3.8 0 0 0-5.2 4.9l-6.3 6.3 2.6 2.6 6.3-6.3A3.8 3.8 0 0 0 17.3 8.8l-2.4 2.4-2-.5-.5-2z"/></svg></span><span class="dl-txt"><strong>Car Service &amp; Maintenance</strong><em>Maintenance for every kilometer</em></span></a>
         <a href="warranty.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span><span class="dl-txt"><strong>Extended Warranty</strong><em>Cover beyond the manufacturer</em></span><span class="dl-new">NEW</span></a>
+          <a href="insurance.html" class="drop-link"><span class="dl-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8V11c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V5.8z"/><path d="m8.5 12.5 2 2 3.5-4"/><path d="M12 8v3"/></svg></span><span class="dl-txt"><strong>Insurance Claim</strong><em>Cashless claim assistance</em></span></a>
       </div>
     </div>
-      <a href="index.html#network">Partner Garages</a>
+      <a href="become-partner.html">Partner Garages</a>
       <a href="about.html">About Us</a>
       <a href="#footer">Contact Us</a>
     </nav>
@@ -114,6 +115,38 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ═══════════════ BRANDS MARQUEE ═══════════════ -->
+<section class="brands-marquee">
+  <style>
+    .brands-marquee{padding:52px 0 72px;margin-bottom:24px;background:#fff;border-top:1px solid #eef0f2;border-bottom:1px solid #eef0f2;overflow:hidden}
+    .bm-head{text-align:center;max-width:820px;margin:0 auto 30px;padding:0 20px}
+    .bm-head h2{font-size:30px;font-weight:800;letter-spacing:-.01em;color:#0c0c0e}
+    .bm-head h2 .red{color:#e1181e}
+    .bm-track-wrap{position:relative;width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+    .bm-track{display:flex;gap:56px;width:max-content;align-items:center;animation:bmScroll 40s linear infinite}
+    .brands-marquee:hover .bm-track{animation-play-state:paused}
+    .bm-track img{height:58px;width:auto;object-fit:contain;transition:transform .25s}
+    .bm-track img:hover{transform:scale(1.08)}
+    @keyframes bmScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media (max-width:720px){.bm-head h2{font-size:23px}.bm-track img{height:42px}.bm-track{gap:40px}}
+  </style>
+  <div class="bm-head">
+    <h2>Your Vehicle Deserves <span class="red">Genuine.</span> We Deliver <span class="red">OEM.</span></h2>
+  </div>
+  <div class="bm-track-wrap">
+    <div class="bm-track" id="bmTrack"></div>
+  </div>
+  <script>
+    (function () {
+      var files = ['1.png','2.png','3.png','4.jpg','5.jpg','6.png','7.png','8.png','9.png','10.png','11.png','12.png','13.png','14.png','15.png','16.jpg','17.png','18.png','19.png','20.jpg','21.png','22.png','23.png','24.jpg'];
+      var track = document.getElementById('bmTrack');
+      if (!track) return;
+      var html = files.map(function (f) { return '<img src="assets/img/brands/' + f + '" alt="Car brand" loading="lazy">'; }).join('');
+      track.innerHTML = html + html; // duplicate for seamless loop
+    })();
+  </script>
 </section>
 
 <!-- ═══════════════ DARK STRIP ═══════════════ -->
@@ -258,7 +291,7 @@
         <span class="ghost-num">03</span>
         <span class="gstep-ic"><svg><use href="#i-shield-tick2"/></svg></span>
         <div class="gstep-photo"><img src="assets/img/parts-step3.png" alt="FixorAssist genuine parts box with QR verification"></div>
-        <h4>Verify Genuine</h4><span class="red-rule sm center"></span>
+        <h4>Verify Genuine parts</h4><span class="red-rule sm center"></span>
         <p>Every part is 100% genuine and quality-checked for complete peace of mind.</p>
       </div>
       <span class="gstep-arrow"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="#e1181e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -279,27 +312,28 @@
     <div class="finder-card">
       <div class="finder-copy">
         <span class="gp-label">FIND YOUR PART <span class="gp-dash"></span></span>
-        <h2>Your Car.<br><span class="red">Its Exact Part.</span></h2>
+        <h2>The Right Part.<br><span class="red">For Your Car.</span></h2>
         <p>Enter your vehicle details and find the genuine<br>part that fits perfectly.</p>
         <form class="finder-form" onsubmit="return false">
           <div class="fsel"><svg class="ic"><use href="#i-car-front"/></svg><select id="pfBrand"><option value="">Loading brands…</option></select></div>
           <div class="fsel"><svg class="ic"><use href="#i-car-front"/></svg><select id="pfModel" disabled><option value="">Select a brand first</option></select></div>
           <div class="fsel"><svg class="ic"><use href="#i-calendar2"/></svg><select id="pfYear"><option value="">Select Year</option></select></div>
           <div class="fsel"><svg class="ic"><use href="#i-gear-o2"/></svg><select id="pfFuel"><option value="">Select Fuel</option><option>Petrol</option><option>Diesel</option></select></div>
-          <div class="fsel fsel-wide"><svg class="ic"><use href="#i-cart"/></svg><input id="pfPart" list="pfPartList" placeholder="Select or type part" autocomplete="off">
-            <datalist id="pfPartList">
-              <option value="Engine Parts"></option>
-              <option value="Brake System"></option>
-              <option value="Suspension &amp; Steering"></option>
-              <option value="Electrical &amp; Battery"></option>
-              <option value="Filters &amp; Fluids"></option>
-              <option value="AC &amp; Cooling"></option>
-              <option value="Transmission &amp; Clutch"></option>
-              <option value="Lights &amp; Indicators"></option>
-              <option value="Body &amp; Exterior"></option>
-              <option value="Tyres &amp; Wheels"></option>
-              <option value="Other"></option>
-            </datalist></div>
+          <div class="fsel fsel-wide"><svg class="ic"><use href="#i-cart"/></svg><select id="pfPart">
+            <option value="">Select Part</option>
+            <option>Engine Parts</option>
+            <option>Brake System</option>
+            <option>Suspension &amp; Steering</option>
+            <option>Electrical &amp; Battery</option>
+            <option>Filters &amp; Fluids</option>
+            <option>AC &amp; Cooling</option>
+            <option>Transmission &amp; Clutch</option>
+            <option>Lights &amp; Indicators</option>
+            <option>Body &amp; Exterior</option>
+            <option>Tyres &amp; Wheels</option>
+            <option>Other</option>
+          </select></div>
+          <div class="fsel fsel-wide" id="pfPartOtherWrap" style="display:none"><svg class="ic"><use href="#i-cart"/></svg><input id="pfPartOther" type="text" placeholder="Type the part you need" style="border:0!important;outline:none!important;box-shadow:none!important;background:transparent!important;padding:15px 0;width:100%;font-family:inherit;font-size:15px;color:#33363b"></div>
         </form>
         <div class="finder-actions">
           <button type="button" id="pfFind" class="btn btn-red"><svg class="ic"><use href="#i-search"/></svg> FIND MY PART</button>
@@ -309,8 +343,8 @@
       <div class="finder-photo"><img src="assets/img/parts-finder.png" alt="FixorAssist genuine parts with brake disc and filters"></div>
     </div>
     <div class="finder-band">
-      <div><svg class="fb2-ic"><use href="#i-shield-tick2"/></svg><h5>Exact Fit Guarantee</h5><p>Parts that match your<br>vehicle perfectly.</p></div>
-      <div><svg class="fb2-ic"><use href="#i-ribbon"/></svg><h5>100% Genuine</h5><p>Sourced from authorized<br>manufacturers.</p></div>
+      <div><svg class="fb2-ic"><use href="#i-shield-tick2"/></svg><h5>Exact Fit</h5><p>Parts that match your<br>vehicle perfectly.</p></div>
+      <div><svg class="fb2-ic"><use href="#i-ribbon"/></svg><h5>100% Genuine parts</h5><p>Sourced from authorized<br>manufacturers.</p></div>
       <div><svg class="fb2-ic"><use href="#i-truck2"/></svg><h5>Fast Delivery</h5><p>Quick and reliable delivery<br>to your doorstep.</p></div>
       <div><svg class="fb2-ic"><use href="#i-headset3"/></svg><h5>Expert Support</h5><p>We're here to help you<br>every step of the way.</p></div>
     </div>
@@ -457,7 +491,7 @@
     </div>
     <div class="f-col">
       <h5>SERVICES</h5><span class="f-rule"></span>
-      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="warranty.html">Extended Warranty</a><a href="#">Customer Support</a>
+      <a href="services.html">Roadside Assistance</a><a href="pdi.html">Vehicle Inspection</a><a href="carservice.html">Repairs &amp; Maintenance</a><a href="parts.html">Genuine Parts</a><a href="warranty.html">Extended Warranty</a><a href="#" data-enquiry="">Customer Support</a>
     </div>
     <div class="f-col">
       <h5>SUPPORT</h5><span class="f-rule"></span>
@@ -492,7 +526,7 @@
 
 <script src="js/main.js?v=20260819a"></script>
 <script src="js/enquiry.js?v=20260825a"></script>
-<script src="js/parts-finder.js?v=20260823a"></script>
+<script src="js/parts-finder.js?v=20260826c"></script>
 <script>
 /* FAQ: show first 10, reveal rest with a View More button */
 (function () {

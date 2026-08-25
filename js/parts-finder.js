@@ -46,6 +46,19 @@
       if (!hBrand.value) { hModel.innerHTML = '<option value="">Select a brand first</option>'; return; }
       loadModels(hBrand.value).then(function (m) { fillSelect(hModel, m, 'Select Model'); hModel.disabled = false; });
     });
+    // "Other" → reveal a manual text field
+    var hOtherWrap = document.getElementById('pfPartOtherWrap');
+    var hOther = document.getElementById('pfPartOther');
+    if (hPart && hOtherWrap) hPart.addEventListener('change', function () {
+      var isOther = hPart.value === 'Other';
+      hOtherWrap.style.display = isOther ? '' : 'none';
+      if (isOther) setTimeout(function () { hOther.focus(); }, 50);
+    });
+  }
+  function heroPart() {
+    if (!hPart) return '';
+    if (hPart.value === 'Other') { var t = document.getElementById('pfPartOther'); return (t && t.value.trim()) || 'Other'; }
+    return hPart.value;
   }
 
   // ---- Lead modal (self-contained: brand/model/part + name/email/mobile) ----
@@ -141,7 +154,7 @@
   }
 
   if (findBtn) findBtn.addEventListener('click', function () {
-    open({ brand: hBrand && hBrand.value, model: hModel && hModel.value, year: hYear && hYear.value, fuel: hFuel && hFuel.value, part: hPart && hPart.value.trim() });
+    open({ brand: hBrand && hBrand.value, model: hModel && hModel.value, year: hYear && hYear.value, fuel: hFuel && hFuel.value, part: heroPart() });
   });
   // any Order Now / order button
   document.querySelectorAll('[data-parts-order]').forEach(function (el) {
