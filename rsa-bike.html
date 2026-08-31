@@ -771,7 +771,7 @@
     var API_BASE = 'https://15.207.113.110.nip.io';
     var VEHICLE_TYPE = 'TWO_WHEELER';
 
-    var gstIncl = function (p) { return Math.round(Number(p) * 1.18); };
+    var gstIncl = function (p) { return Math.round(Number(p)); }; // website charges base price only (no GST added)
     var inr = function (n) { return '₹' + Number(n).toLocaleString('en-IN'); };
     var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -939,7 +939,7 @@
         membershipCardHTML(plan) +
         '<h3 class="text-lg font-extrabold mt-5">' + esc(plan.name) + '</h3>' +
         (plan.tagline ? '<p class="text-sm text-gray-500 mt-0.5">' + esc(plan.tagline) + '</p>' : '') +
-        '<p class="text-sm text-gray-500 mt-2"><span class="text-2xl font-extrabold text-brand align-middle">' + inr(plan.priceInr) + '</span> + 18% GST · <b>' + inr(total) + '</b> total</p>' +
+        '<p class="text-sm text-gray-500 mt-2"><span class="text-2xl font-extrabold text-brand align-middle">' + inr(plan.priceInr) + '</span> total</p>' +
         '<ul class="mt-5 space-y-3 flex-1">' + featuresHTML + '</ul>' +
         '<button type="button" class="' + btnCls + '" data-buy="' + esc(plan.id) + '">Buy ' + esc(plan.name) + '</button>' +
       '</div>';
@@ -1049,7 +1049,7 @@
               '<button type="button" id="buyClose" aria-label="Close" class="p-2 rounded-lg hover:bg-gray-100"><span class="w-5 h-5 inline-block">' + ICONS.close + '</span></button>' +
             '</div>' +
             '<div id="buyPriceBar" class="px-6 py-4 bg-gray-50 flex items-center justify-between">' +
-              '<div class="text-sm text-gray-500">' + inr(plan.priceInr) + ' + 18% GST</div>' +
+              '<div class="text-sm text-gray-500">Total payable</div>' +
               '<div class="text-2xl font-extrabold text-brand">' + inr(total) + '</div>' +
             '</div>' +
             '<div class="px-6 py-6"><div id="buyErr" class="mb-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3" style="display:none"></div><div id="buyBody"></div></div>' +

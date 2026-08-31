@@ -117,7 +117,7 @@
       + creditCard(p)
       + '<h3 class="cp-name">' + esc(p.name) + '</h3>'
       + (p.tagline ? '<p class="cp-tag">' + esc(p.tagline) + '</p>' : '')
-      + '<p class="cp-price"><span class="cp-amt">' + inr(p.priceInr) + '</span> + 18% GST · <b>' + inr(total) + '</b> total</p>'
+      + '<p class="cp-price"><span class="cp-amt">' + inr(p.priceInr) + '</span> total</p>'
       + '<ul class="cp-feats">' + feats + '</ul>'
       + '<a href="#" data-enquiry="Car Roadside Assistance" class="cp-btn' + (p.highlighted ? ' solid' : '') + '">Get ' + esc(p.name) + '</a>'
       + '</div>';
