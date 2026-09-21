@@ -1,0 +1,29 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "PMVN634FB6.com.fixor.customer",
+          "PMVN634FB6.com.fixor.vendor"
+        ],
+        "components": [
+          {
+            "/": "/app/*",
+            "comment": "Deep-link entry point — /app/, /app/anything, /app/?ref=CODE all open the app"
+          },
+          {
+            "/": "/app",
+            "comment": "Bare /app also opens the app"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "PMVN634FB6.com.fixor.customer",
+      "PMVN634FB6.com.fixor.vendor"
+    ]
+  }
+}

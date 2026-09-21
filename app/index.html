@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="theme-color" content="#B00E0E" />
+<title>Get FIXOR — Roadside Assistance</title>
+<meta name="description" content="Download the FIXOR app to book 24×7 roadside assistance across India." />
+<link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    background:linear-gradient(180deg,#B00E0E 0%,#7A0808 100%);
+    color:#fff;min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:24px;text-align:center;
+  }
+  .wrap{max-width:420px;width:100%}
+  .logo{width:96px;height:96px;border-radius:22px;background:#fff;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(0,0,0,.25);margin-bottom:24px}
+  .logo img{width:64px;height:64px;object-fit:contain}
+  h1{font-size:26px;font-weight:800;letter-spacing:-.3px;margin-bottom:8px}
+  p{font-size:15px;opacity:.9;line-height:1.5;margin-bottom:28px}
+  .ref{
+    display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+    padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:24px;
+    font-family:'SF Mono',Menlo,monospace;letter-spacing:.5px;
+  }
+  .badges{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+  .badge{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    background:#fff;color:#0F172A;padding:14px 22px;border-radius:14px;
+    text-decoration:none;font-weight:700;font-size:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,.15);transition:transform .1s;
+  }
+  .badge:active{transform:scale(.98)}
+  .badge svg{width:24px;height:24px;flex-shrink:0}
+  .badge small{display:block;font-size:11px;font-weight:500;opacity:.6;line-height:1.1}
+  .badge b{display:block;font-size:16px;font-weight:800;line-height:1.2}
+  .badge.disabled{
+    background:rgba(255,255,255,.55);color:#0F172A;cursor:not-allowed;
+    box-shadow:none;pointer-events:none;
+  }
+  .badge.disabled svg{opacity:.45}
+  .badge.disabled b, .badge.disabled small{opacity:.55}
+  .cs-inline{
+    display:inline-block;margin-left:8px;background:#B00E0E;color:#fff;
+    font-size:10px;font-weight:800;letter-spacing:.5px;padding:2px 8px;border-radius:999px;
+    vertical-align:middle;
+  }
+  .altlink{color:rgba(255,255,255,.8);font-size:13px;text-decoration:underline;text-underline-offset:3px}
+  .altlink:hover{color:#fff}
+  .foot{margin-top:36px;font-size:11px;opacity:.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <img src="/assets/img/logo-mark-footer.png" alt="FixorAssist" onerror="this.src='/favicon.ico'" />
+  </div>
+  <h1>Open in the FIXOR app</h1>
+  <p>If you already have FIXOR installed, it should have opened automatically.<br>Otherwise, install it below.</p>
+
+  <div id="refBanner" class="ref" style="display:none">🎁 Referred by <b id="refCode"></b></div>
+
+  <div class="badges">
+    <a id="playBtn" class="badge" href="https://play.google.com/store/apps/details?id=com.fixor.customer" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 3v18l15-9L3 3z" fill="#01875F"/></svg>
+      <span><small>GET IT ON</small><b>Google Play</b></span>
+    </a>
+    <div id="iosBtn" class="badge disabled" aria-disabled="true" title="iOS app coming soon">
+      <svg viewBox="0 0 24 24" fill="#000"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <span><small>Download on the</small><b>App Store <span class="cs-inline">Coming Soon</span></b></span>
+    </div>
+  </div>
+
+  <a class="altlink" href="/rsa-car" id="webLink">Continue in browser →</a>
+
+  <div class="foot">FixorAssist · Roadside Assistance</div>
+</div>
+
+<script>
+(function () {
+  // 1) Extract ?ref=CODE from URL and stash for later Play install-referrer
+  //    (Play Store passes it through; app reads on first launch).
+  var params = new URLSearchParams(window.location.search);
+  var ref = (params.get('ref') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+
+  if (ref && ref.length >= 4 && ref.length <= 12) {
+    // Persist in localStorage so if the user comes back to the marketing
+    // landing on the same browser and buys via web checkout, we still capture it.
+    try { localStorage.setItem('fixorRefCode', ref); localStorage.setItem('fixorRefSource', 'WEB'); } catch (e) {}
+
+    // Show the "Referred by CODE" chip.
+    var banner = document.getElementById('refBanner');
+    var codeEl = document.getElementById('refCode');
+    if (banner && codeEl) { codeEl.textContent = ref; banner.style.display = 'inline-block'; }
+
+    // Append install_referrer to the Play Store link so a fresh install
+    // gets the ref auto-attributed via Play Install Referrer API.
+    var playBtn = document.getElementById('playBtn');
+    if (playBtn) {
+      var pkg = 'com.fixor.customer';
+      var referrer = encodeURIComponent('ref=' + ref);
+      playBtn.href = 'https://play.google.com/store/apps/details?id=' + pkg + '&referrer=' + referrer;
+    }
+
+    // Preserve the ref on the "continue in browser" fallback too.
+    var webLink = document.getElementById('webLink');
+    if (webLink) webLink.href = '/rsa-car?ref=' + encodeURIComponent(ref);
+  }
+
+  // 2) On iOS and Android, if the app IS installed, Universal Link / App Link
+  //    intercepts BEFORE this page loads — so we never even reach here in
+  //    that case. If we ARE here, the app is not installed (or the OS didn't
+  //    verify yet). No further JS trickery needed.
+})();
+</script>
+</body>
+</html>

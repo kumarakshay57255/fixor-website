@@ -1,0 +1,24 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fixor.customer",
+      "sha256_cert_fingerprints": [
+        "33:45:F5:8E:CB:93:60:59:15:CD:F5:A5:DA:7F:2B:94:A2:9C:F6:4E:98:49:AC:87:D1:8C:2C:0E:64:64:86:E3",
+        "CA:F5:58:00:BA:21:09:9F:F1:10:B0:39:29:75:F4:37:8D:80:D3:72:D7:E9:98:1D:63:72:BE:BB:5C:BF:4D:48"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fixor.vendor",
+      "sha256_cert_fingerprints": [
+        "05:69:30:87:41:AB:36:D0:86:38:69:3C:BD:44:B0:32:22:5F:6A:12:0B:E5:E1:70:1F:33:A1:B1:0E:B9:BC:1B",
+        "B1:D6:C7:3A:7D:A6:D4:50:CB:52:B4:FF:93:8D:59:6F:B7:13:BE:83:0E:59:75:7F:5F:D4:F6:AB:BE:E5:F8:D8"
+      ]
+    }
+  }
+]
