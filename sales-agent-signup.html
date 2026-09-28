@@ -8,26 +8,26 @@
 <link rel="icon" href="/favicon.ico" />
 <style>
 :root{
-  --bg:#0A0A0B;
-  --bg-2:#111114;
-  --surface:#17171B;
-  --card:#1D1D22;
-  --line:#2A2A31;
-  --line-soft:#22222A;
-  --ink:#F5F5F7;
-  --ink-soft:#D4D4D8;
-  --muted:#8A8A93;
-  --muted-2:#5C5C64;
+  --bg:#FFFFFF;
+  --bg-2:#F7F7F9;
+  --surface:#FFFFFF;
+  --card:#FFFFFF;
+  --line:#E4E4E7;
+  --line-soft:#EFEFF2;
+  --ink:#0A0A0B;
+  --ink-soft:#3F3F46;
+  --muted:#71717A;
+  --muted-2:#A1A1AA;
   --accent:#E11D2E;
-  --accent-glow:rgba(225,29,46,0.28);
-  --accent-soft:rgba(225,29,46,0.12);
+  --accent-glow:rgba(225,29,46,0.20);
+  --accent-soft:rgba(225,29,46,0.08);
   --gold:#F5B301;
-  --ok:#10B981;
-  --ok-soft:rgba(16,185,129,0.14);
-  --warn:#F59E0B;
-  --warn-soft:rgba(245,158,11,0.14);
-  --danger:#EF4444;
-  --danger-soft:rgba(239,68,68,0.14);
+  --ok:#059669;
+  --ok-soft:rgba(16,185,129,0.10);
+  --warn:#D97706;
+  --warn-soft:rgba(245,158,11,0.10);
+  --danger:#DC2626;
+  --danger-soft:rgba(239,68,68,0.10);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
@@ -45,14 +45,13 @@ h3{font-size:16px}
 body::before{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:
-    radial-gradient(1200px 500px at 85% -10%,rgba(225,29,46,0.16),transparent 60%),
-    radial-gradient(900px 400px at 5% 90%,rgba(245,179,1,0.08),transparent 60%),
-    radial-gradient(600px 400px at 50% 50%,rgba(225,29,46,0.03),transparent 70%);
+    radial-gradient(1200px 500px at 85% -10%,rgba(225,29,46,0.06),transparent 60%),
+    radial-gradient(900px 400px at 5% 90%,rgba(245,179,1,0.04),transparent 60%);
 }
 
 .nav{position:relative;z-index:10;padding:16px 40px;display:flex;align-items:center;
   border-bottom:1px solid var(--line-soft);
-  background:rgba(10,10,11,0.7);backdrop-filter:blur(20px)}
+  background:rgba(255,255,255,0.85);backdrop-filter:blur(20px)}
 .nav .brand img{height:42px;display:block}
 
 .wrap{position:relative;z-index:1;max-width:1240px;margin:0 auto;
@@ -62,7 +61,7 @@ body::before{
 .hero{padding-top:20px}
 .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;
   background:var(--accent-soft);border:1px solid rgba(225,29,46,0.3);
-  border-radius:999px;font-size:12px;font-weight:600;color:#FF9297;
+  border-radius:999px;font-size:12px;font-weight:600;color:var(--accent);
   letter-spacing:0.02em;margin-bottom:22px}
 .badge .pulse{width:7px;height:7px;background:var(--accent);border-radius:50%;
   box-shadow:0 0 0 0 var(--accent-glow);animation:pulse 2s infinite}
@@ -71,21 +70,21 @@ body::before{
 .hero h1 span.grad{background:linear-gradient(120deg,#E11D2E 0%,#F5B301 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero .lead{margin-top:18px;font-size:17px;color:var(--muted);max-width:480px;line-height:1.6}
-.hero .lead b{color:#fff}
+.hero .lead b{color:var(--ink)}
 
 .counter{margin-top:32px;padding:22px 24px;background:var(--card);
   border:1px solid var(--line);border-radius:14px;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);position:relative;overflow:hidden}
+  position:relative;overflow:hidden}
 .counter::before{content:"";position:absolute;inset:-1px;border-radius:14px;
   background:linear-gradient(120deg,var(--accent-glow),transparent 40%);pointer-events:none;opacity:0.6}
 .counter .l{position:relative;font-size:11.5px;color:var(--muted);letter-spacing:0.1em;
   text-transform:uppercase;font-weight:600}
 .counter .v{position:relative;font-size:38px;font-weight:800;margin-top:4px;
-  font-variant-numeric:tabular-nums;color:#fff;letter-spacing:-0.02em}
+  font-variant-numeric:tabular-nums;color:var(--ink);letter-spacing:-0.02em}
 .counter .s{position:relative;font-size:12.5px;color:var(--muted);margin-top:2px}
 
 .feats{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.feat{padding:14px 16px;background:rgba(255,255,255,0.02);
+.feat{padding:14px 16px;background:var(--bg-2);
   border:1px solid var(--line-soft);border-radius:11px}
 .feat .ic{width:32px;height:32px;border-radius:8px;background:var(--accent-soft);
   display:grid;place-items:center;font-size:15px;margin-bottom:10px}
@@ -93,7 +92,7 @@ body::before{
 .feat .d{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.5}
 
 .form-card{background:var(--card);border:1px solid var(--line);border-radius:18px;
-  padding:32px 30px;box-shadow:0 30px 80px rgba(0,0,0,0.5),0 0 60px rgba(225,29,46,0.05);
+  padding:32px 30px;box-shadow:0 10px 40px rgba(0,0,0,0.06),0 0 30px rgba(225,29,46,0.04);
   position:relative;overflow:hidden;height:fit-content;position:sticky;top:20px}
 .form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,var(--accent),transparent)}
@@ -129,12 +128,12 @@ body::before{
   min-width:110px;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px}
 .vg .vbtn:hover{background:#C21728;box-shadow:0 4px 14px var(--accent-glow)}
 .vg .vbtn:disabled{background:var(--line);color:var(--muted);cursor:not-allowed;box-shadow:none}
-.vg .vbtn.done{background:var(--ok-soft);color:#6EE7B7;border:1px solid rgba(16,185,129,0.3)}
+.vg .vbtn.done{background:var(--ok-soft);color:#047857;border:1px solid rgba(16,185,129,0.3)}
 .vg .vbtn.done:hover{background:var(--ok-soft);box-shadow:none}
 
 .verified{margin-top:8px;padding:9px 12px;background:var(--ok-soft);
   border:1px solid rgba(16,185,129,0.3);border-radius:8px;
-  font-size:12.5px;color:#6EE7B7;display:none;align-items:center;gap:8px}
+  font-size:12.5px;color:#047857;display:none;align-items:center;gap:8px}
 .verified.on{display:flex}
 .verified .check{width:16px;height:16px;background:var(--ok);border-radius:50%;
   display:grid;place-items:center;color:#fff;font-size:10px;font-weight:900}
@@ -142,7 +141,7 @@ body::before{
 
 .errmsg{margin-top:8px;padding:9px 12px;background:var(--danger-soft);
   border:1px solid rgba(239,68,68,0.3);border-radius:8px;font-size:12.5px;
-  color:#FCA5A5;display:none}
+  color:#B91C1C;display:none}
 .errmsg.on{display:block}
 
 .hint{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5}
@@ -152,7 +151,7 @@ body::before{
 .pw-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);
   padding:5px 10px;font-size:11px;font-weight:600;letter-spacing:0.05em;
   color:var(--muted);border-radius:6px;cursor:pointer;background:transparent}
-.pw-toggle:hover{color:var(--ink);background:rgba(255,255,255,0.05)}
+.pw-toggle:hover{color:var(--ink);background:var(--bg-2)}
 
 .submit{width:100%;margin-top:22px;padding:15px;background:var(--accent);color:#fff;
   border-radius:11px;font-size:14.5px;font-weight:700;letter-spacing:0.02em;
@@ -180,7 +179,7 @@ body::before{
   display:inline-block}
 .success .steps{text-align:left;background:var(--bg-2);border-radius:11px;padding:16px 20px;
   margin-top:18px;font-size:13px;color:var(--ink-soft)}
-.success .steps b{color:#fff}
+.success .steps b{color:var(--ink)}
 
 .trust{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-soft);
   display:flex;gap:32px;font-size:12px;color:var(--muted);flex-wrap:wrap}
@@ -221,7 +220,7 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
 .agreement-check{display:flex;gap:10px;padding:12px 14px;font-size:12.5px;color:var(--ink);
   border-top:1px solid var(--line);align-items:flex-start;cursor:pointer;line-height:1.5}
 .agreement-check input{margin-top:2px;flex-shrink:0;accent-color:var(--accent);width:16px;height:16px}
-.agreement-check span b{color:#fff}
+.agreement-check span b{color:var(--ink)}
 
 .sig-wrap{border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px}
 #sigPad{width:100%;height:180px;background:#fff;border:1px dashed #cbd5e1;
@@ -341,14 +340,14 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
         <label>Business Details (auto-fetched)</label>
         <div style="padding:14px 16px;background:var(--bg-2);border:1px solid rgba(16,185,129,0.3);border-radius:9px;font-size:13px;line-height:1.7">
           <div style="color:var(--muted);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-bottom:6px">Legal Name</div>
-          <div id="gstDispName" style="color:#fff;font-weight:600">—</div>
+          <div id="gstDispName" style="color:var(--ink);font-weight:600">—</div>
           <div style="color:var(--muted);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-top:12px;margin-bottom:6px">Address on GST</div>
           <div id="gstDispAddr" style="color:var(--ink-soft)">—</div>
         </div>
       </div>
 
       <div class="fld">
-        <label>PAN card <span style="color:#F5B301">*</span></label>
+        <label>PAN card <span style="color:var(--accent)">*</span></label>
         <input id="pan" data-mono placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase" />
         <div class="errmsg" id="errPan"></div>
         <div class="hint">10-character PAN — needed for TDS compliance. Kept confidential; never shared with third parties.</div>
@@ -444,7 +443,7 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
       <div class="ref" id="appRef">APP-202609-XXXX</div>
 
       <div class="steps">
-        <div style="font-weight:600;margin-bottom:10px;color:#fff">What happens next?</div>
+        <div style="font-weight:600;margin-bottom:10px;color:var(--ink)">What happens next?</div>
         <div>1. ✉️ We'll email/SMS you within <b>24 hours</b> with approval status</div>
         <div style="margin-top:6px">2. 🎫 On approval → your <b>unique referral code</b> + partner dashboard login</div>
         <div style="margin-top:6px">3. 📲 Download the app → share your link → start earning</div>
