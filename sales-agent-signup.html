@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Become a FIXOR Sales Agent · Earn ₹50k–₹1L / month</title>
+<meta name="description" content="Sell FIXOR RSA &amp; Extended Warranty plans. Earn up to 20% commission. No cap. Monthly payouts. Apply in 3 minutes." />
+<link rel="icon" href="/favicon.ico" />
+<style>
+:root{
+  --bg:#0A0A0B;
+  --bg-2:#111114;
+  --surface:#17171B;
+  --card:#1D1D22;
+  --line:#2A2A31;
+  --line-soft:#22222A;
+  --ink:#F5F5F7;
+  --ink-soft:#D4D4D8;
+  --muted:#8A8A93;
+  --muted-2:#5C5C64;
+  --accent:#E11D2E;
+  --accent-glow:rgba(225,29,46,0.28);
+  --accent-soft:rgba(225,29,46,0.12);
+  --gold:#F5B301;
+  --ok:#10B981;
+  --ok-soft:rgba(16,185,129,0.14);
+  --warn:#F59E0B;
+  --warn-soft:rgba(245,158,11,0.14);
+  --danger:#EF4444;
+  --danger-soft:rgba(239,68,68,0.14);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,"Inter","SF Pro Text",system-ui,sans-serif;
+  font-size:14.5px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:transparent;cursor:pointer}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-0.02em}
+h1{font-size:44px;line-height:1.05}
+h2{font-size:22px}
+h3{font-size:16px}
+.mono{font-variant-numeric:tabular-nums}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 500px at 85% -10%,rgba(225,29,46,0.16),transparent 60%),
+    radial-gradient(900px 400px at 5% 90%,rgba(245,179,1,0.08),transparent 60%),
+    radial-gradient(600px 400px at 50% 50%,rgba(225,29,46,0.03),transparent 70%);
+}
+
+.nav{position:relative;z-index:10;padding:16px 40px;display:flex;align-items:center;
+  border-bottom:1px solid var(--line-soft);
+  background:rgba(10,10,11,0.7);backdrop-filter:blur(20px)}
+.nav .brand img{height:42px;display:block}
+
+.wrap{position:relative;z-index:1;max-width:1240px;margin:0 auto;
+  padding:40px 40px 80px;display:grid;grid-template-columns:1fr 520px;gap:64px}
+@media (max-width:960px){.wrap{grid-template-columns:1fr;padding:30px 20px 60px;gap:36px}}
+
+.hero{padding-top:20px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;
+  background:var(--accent-soft);border:1px solid rgba(225,29,46,0.3);
+  border-radius:999px;font-size:12px;font-weight:600;color:#FF9297;
+  letter-spacing:0.02em;margin-bottom:22px}
+.badge .pulse{width:7px;height:7px;background:var(--accent);border-radius:50%;
+  box-shadow:0 0 0 0 var(--accent-glow);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--accent-glow)}70%{box-shadow:0 0 0 10px transparent}}
+
+.hero h1 span.grad{background:linear-gradient(120deg,#E11D2E 0%,#F5B301 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .lead{margin-top:18px;font-size:17px;color:var(--muted);max-width:480px;line-height:1.6}
+.hero .lead b{color:#fff}
+
+.counter{margin-top:32px;padding:22px 24px;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);position:relative;overflow:hidden}
+.counter::before{content:"";position:absolute;inset:-1px;border-radius:14px;
+  background:linear-gradient(120deg,var(--accent-glow),transparent 40%);pointer-events:none;opacity:0.6}
+.counter .l{position:relative;font-size:11.5px;color:var(--muted);letter-spacing:0.1em;
+  text-transform:uppercase;font-weight:600}
+.counter .v{position:relative;font-size:38px;font-weight:800;margin-top:4px;
+  font-variant-numeric:tabular-nums;color:#fff;letter-spacing:-0.02em}
+.counter .s{position:relative;font-size:12.5px;color:var(--muted);margin-top:2px}
+
+.feats{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feat{padding:14px 16px;background:rgba(255,255,255,0.02);
+  border:1px solid var(--line-soft);border-radius:11px}
+.feat .ic{width:32px;height:32px;border-radius:8px;background:var(--accent-soft);
+  display:grid;place-items:center;font-size:15px;margin-bottom:10px}
+.feat .t{font-weight:600;font-size:13.5px}
+.feat .d{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.5}
+
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:32px 30px;box-shadow:0 30px 80px rgba(0,0,0,0.5),0 0 60px rgba(225,29,46,0.05);
+  position:relative;overflow:hidden;height:fit-content;position:sticky;top:20px}
+.form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.form-card .fh{font-size:19px;font-weight:700;margin-bottom:4px}
+.form-card .fs{font-size:12.5px;color:var(--muted);margin-bottom:24px}
+
+.tabs{display:flex;background:var(--bg-2);border:1px solid var(--line);border-radius:11px;
+  padding:4px;margin-bottom:22px;gap:2px}
+.tabs button{flex:1;padding:11px 8px;border-radius:8px;font-size:13px;font-weight:600;
+  color:var(--muted);transition:all 0.15s;line-height:1;display:flex;align-items:center;
+  justify-content:center;gap:8px}
+.tabs button.on{background:var(--accent);color:#fff;box-shadow:0 4px 14px var(--accent-glow)}
+.tabs button .em{font-size:15px}
+
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:11px;color:var(--muted);font-weight:600;
+  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px}
+.fld input,.fld select,.fld textarea{width:100%;padding:11px 13px;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:9px;
+  color:var(--ink);font:inherit;font-size:14px;transition:border 0.15s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--accent-soft)}
+.fld input[data-mono]{font-family:ui-monospace,"SF Mono",monospace;
+  letter-spacing:0.05em;text-transform:uppercase}
+
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row-3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+
+.vg{display:flex;gap:8px}
+.vg input{flex:1}
+.vg .vbtn{padding:0 16px;background:var(--accent);color:#fff;border-radius:9px;
+  font-size:12.5px;font-weight:700;letter-spacing:0.02em;white-space:nowrap;
+  min-width:110px;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px}
+.vg .vbtn:hover{background:#C21728;box-shadow:0 4px 14px var(--accent-glow)}
+.vg .vbtn:disabled{background:var(--line);color:var(--muted);cursor:not-allowed;box-shadow:none}
+.vg .vbtn.done{background:var(--ok-soft);color:#6EE7B7;border:1px solid rgba(16,185,129,0.3)}
+.vg .vbtn.done:hover{background:var(--ok-soft);box-shadow:none}
+
+.verified{margin-top:8px;padding:9px 12px;background:var(--ok-soft);
+  border:1px solid rgba(16,185,129,0.3);border-radius:8px;
+  font-size:12.5px;color:#6EE7B7;display:none;align-items:center;gap:8px}
+.verified.on{display:flex}
+.verified .check{width:16px;height:16px;background:var(--ok);border-radius:50%;
+  display:grid;place-items:center;color:#fff;font-size:10px;font-weight:900}
+.verified small{color:var(--muted);margin-left:auto;font-size:11px}
+
+.errmsg{margin-top:8px;padding:9px 12px;background:var(--danger-soft);
+  border:1px solid rgba(239,68,68,0.3);border-radius:8px;font-size:12.5px;
+  color:#FCA5A5;display:none}
+.errmsg.on{display:block}
+
+.hint{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5}
+
+.pw-wrap{position:relative}
+.pw-wrap input{padding-right:52px}
+.pw-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  padding:5px 10px;font-size:11px;font-weight:600;letter-spacing:0.05em;
+  color:var(--muted);border-radius:6px;cursor:pointer;background:transparent}
+.pw-toggle:hover{color:var(--ink);background:rgba(255,255,255,0.05)}
+
+.submit{width:100%;margin-top:22px;padding:15px;background:var(--accent);color:#fff;
+  border-radius:11px;font-size:14.5px;font-weight:700;letter-spacing:0.02em;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:all 0.15s;box-shadow:0 10px 30px var(--accent-glow)}
+.submit:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 14px 40px var(--accent-glow)}
+.submit:disabled{background:var(--line);color:var(--muted);cursor:not-allowed;box-shadow:none}
+.submit .arrow{transition:transform 0.15s}
+.submit:hover:not(:disabled) .arrow{transform:translateX(3px)}
+
+.terms{margin-top:14px;font-size:11.5px;color:var(--muted);text-align:center;line-height:1.6}
+.terms a{color:var(--ink-soft);text-decoration:underline}
+
+.org-only{display:none}
+.form-card.org .org-only{display:block}
+
+.success{display:none;text-align:center;padding:20px 0}
+.form-card.done .form-body{display:none}
+.form-card.done .success{display:block}
+.success .big{font-size:56px;margin-bottom:16px}
+.success h2{font-size:22px;margin-bottom:8px}
+.success .ref{margin:22px auto;padding:14px 20px;background:var(--bg-2);
+  border:1px dashed var(--accent);border-radius:11px;font-family:ui-monospace,monospace;
+  font-size:20px;font-weight:700;letter-spacing:0.06em;color:var(--accent);
+  display:inline-block}
+.success .steps{text-align:left;background:var(--bg-2);border-radius:11px;padding:16px 20px;
+  margin-top:18px;font-size:13px;color:var(--ink-soft)}
+.success .steps b{color:#fff}
+
+.trust{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-soft);
+  display:flex;gap:32px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.trust b{color:var(--ink);font-weight:600}
+
+.spin{width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;
+  border-radius:50%;animation:spin 0.7s linear infinite;display:none}
+.spin.on{display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.confetti{position:fixed;top:-10px;font-size:14px;pointer-events:none;z-index:1000;
+  animation:fall 3s ease-out forwards}
+@keyframes fall{
+  0%{transform:translateY(-10vh) rotate(0deg);opacity:1}
+  100%{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+
+.faq{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:60px 40px;
+  border-top:1px solid var(--line-soft)}
+.faq h2{margin-bottom:24px;font-size:26px}
+.faq .qs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:760px){.faq .qs{grid-template-columns:1fr}}
+.q{padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.q .qh{font-weight:700;font-size:14.5px;margin-bottom:6px}
+.q .qa{font-size:13px;color:var(--muted);line-height:1.6}
+
+footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--line-soft);
+  text-align:center;font-size:12px;color:var(--muted-2)}
+
+/* Franchise Agreement + Signature */
+.agreement-box{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--bg-2)}
+.agreement-head{display:flex;justify-content:space-between;align-items:center;
+  padding:10px 12px;font-size:12px;font-weight:600;color:var(--ink);
+  border-bottom:1px solid var(--line);background:rgba(225,29,46,0.05)}
+.agreement-head a{color:var(--accent);text-decoration:none;font-size:11px}
+.agreement-head a:hover{text-decoration:underline}
+.agreement-frame{width:100%;height:260px;border:0;background:#fff;display:block}
+.agreement-check{display:flex;gap:10px;padding:12px 14px;font-size:12.5px;color:var(--ink);
+  border-top:1px solid var(--line);align-items:flex-start;cursor:pointer;line-height:1.5}
+.agreement-check input{margin-top:2px;flex-shrink:0;accent-color:var(--accent);width:16px;height:16px}
+.agreement-check span b{color:#fff}
+
+.sig-wrap{border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px}
+#sigPad{width:100%;height:180px;background:#fff;border:1px dashed #cbd5e1;
+  border-radius:6px;touch-action:none;cursor:crosshair;display:block}
+.sig-actions{display:flex;gap:8px;margin-top:8px;justify-content:flex-end}
+.sig-btn{padding:6px 14px;font-size:11.5px;font-weight:600;border-radius:6px;
+  border:1px solid var(--line);background:var(--bg-2);color:var(--ink);cursor:pointer}
+.sig-btn:hover{background:rgba(225,29,46,0.1);border-color:var(--accent)}
+.sig-btn:last-child{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sig-btn:last-child:hover{background:#B00E0E}
+#sigStatus.ok{color:#10B981}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="brand">
+    <img src="assets/img/logo-header.png" alt="FIXOR Assist" />
+  </a>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1>Sell FIXOR plans. <br/><span class="grad">Earn up to ₹1 Lakh</span> / month.</h1>
+    <p class="lead">Roadside assistance ka pan-India network. Har sale pe upto <b>20% commission</b>.
+      No cap, monthly payouts, and a live dashboard that shows your earning in real-time.</p>
+
+    <div class="counter">
+      <div class="l">💰 Paid to partners this month</div>
+      <div class="v" id="counter">₹47,32,000</div>
+      <div class="s">Across 124 active partners in September · avg partner earned ₹38,140</div>
+    </div>
+
+    <div class="feats">
+      <div class="feat">
+        <div class="ic">📈</div>
+        <div class="t">Marginal Slab</div>
+        <div class="d">10% → 15% → 20% as you sell more. More you sell, higher you climb.</div>
+      </div>
+      <div class="feat">
+        <div class="ic">👥</div>
+        <div class="t">Build a Team</div>
+        <div class="d">Add sub-partners. Earn 3-7% override on their sales too.</div>
+      </div>
+      <div class="feat">
+        <div class="ic">⚡</div>
+        <div class="t">Instant Payouts</div>
+        <div class="d">Request anytime after ₹2,000. Money in bank within 24h.</div>
+      </div>
+      <div class="feat">
+        <div class="ic">🏆</div>
+        <div class="t">Top Performer Bonus</div>
+        <div class="d">+2% bonus for #1 partner every month. Leaderboard live in-app.</div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <span><b>50,000+</b> customers served</span>
+      <span><b>500+</b> vendor network</span>
+      <span><b>ISO 9001</b> certified</span>
+      <span><b>4.6★</b> Play Store</span>
+    </div>
+  </section>
+
+  <aside class="form-card org" id="form">
+    <div class="form-body">
+      <div class="fh">Start earning in 3 minutes</div>
+      <div class="fs">Fill form → verify Aadhaar &amp; GSTIN → get approved in 24h</div>
+
+      <div class="tabs">
+        <button class="on" data-type="org" onclick="setType('org')"><span class="em">🏢</span> Organization</button>
+        <button data-type="ind" onclick="setType('ind')"><span class="em">👤</span> Individual</button>
+      </div>
+
+      <div class="fld">
+        <label id="lblName">Your Full Name</label>
+        <input id="fullName" placeholder="Ravi Kumar" autocomplete="name" />
+      </div>
+
+      <div class="fld org-only">
+        <label>Legal Entity Name</label>
+        <input id="orgLegalName" placeholder="Sunita Garage LLP" />
+        <div class="hint">As per GSTIN registration</div>
+      </div>
+
+      <div class="row">
+        <div class="fld">
+          <label>Mobile</label>
+          <input id="phone" placeholder="98110 22334" maxlength="10" inputmode="numeric" />
+        </div>
+        <div class="fld">
+          <label>Email</label>
+          <input id="email" type="email" placeholder="you@email.com" />
+        </div>
+      </div>
+
+      <div class="fld">
+        <label id="lblGst">GSTIN <span style="color:var(--muted-2)" id="gstOptTag">(optional)</span></label>
+        <div class="vg">
+          <input id="gstin" data-mono placeholder="07AAGCR3421H1ZK" maxlength="15" />
+          <button class="vbtn" id="btnGst" onclick="verifyGst()">
+            <span class="spin" id="spinGst"></span>
+            <span>Verify GSTIN</span>
+          </button>
+        </div>
+        <div class="verified" id="okGst">
+          <div class="check">✓</div>
+          <span id="okGstText">Verified</span>
+          <small>via gstincheck</small>
+        </div>
+        <div class="errmsg" id="errGst"></div>
+        <div class="hint" id="gstHint">Sole proprietor / freelancer? Add your GST — auto-fills your business address.</div>
+      </div>
+
+      <div class="fld" id="gstDetailsWrap" style="display:none">
+        <label>Business Details (auto-fetched)</label>
+        <div style="padding:14px 16px;background:var(--bg-2);border:1px solid rgba(16,185,129,0.3);border-radius:9px;font-size:13px;line-height:1.7">
+          <div style="color:var(--muted);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-bottom:6px">Legal Name</div>
+          <div id="gstDispName" style="color:#fff;font-weight:600">—</div>
+          <div style="color:var(--muted);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;margin-top:12px;margin-bottom:6px">Address on GST</div>
+          <div id="gstDispAddr" style="color:var(--ink-soft)">—</div>
+        </div>
+      </div>
+
+      <div class="fld">
+        <label>Aadhaar via DigiLocker</label>
+        <div class="vg">
+          <input id="aadhaarLabel" placeholder="Click verify — DigiLocker will open" disabled />
+          <button class="vbtn" id="btnAdh" onclick="verifyAdh()">
+            <span class="spin" id="spinAdh"></span>
+            <span>Verify Aadhaar</span>
+          </button>
+        </div>
+        <div class="verified" id="okAdh">
+          <div class="check">✓</div>
+          <span id="okAdhText">Verified</span>
+          <small>via DigiLocker</small>
+        </div>
+        <div class="errmsg" id="errAdh"></div>
+        <div class="hint">100% secure — Aadhaar number never leaves DigiLocker. We only get the last 4 digits + name.</div>
+      </div>
+
+      <div class="row">
+        <div class="fld">
+          <label>Create Password</label>
+          <div class="pw-wrap">
+            <input id="password" type="password" placeholder="min 8 chars" autocomplete="new-password" />
+            <button type="button" class="pw-toggle" onclick="togglePw('password', this)">Show</button>
+          </div>
+        </div>
+        <div class="fld">
+          <label>Confirm Password</label>
+          <div class="pw-wrap">
+            <input id="password2" type="password" placeholder="re-enter" autocomplete="new-password" />
+            <button type="button" class="pw-toggle" onclick="togglePw('password2', this)">Show</button>
+          </div>
+        </div>
+      </div>
+      <div class="hint" id="pwHint" style="margin-bottom:14px">Min 8 characters, must include one letter and one digit. You'll use this to log in after approval.</div>
+      <div class="errmsg" id="errPw"></div>
+
+      <!-- Franchise Agreement + Signature -->
+      <div class="fld" style="margin-top:6px">
+        <label>Franchise Agreement — read + accept + sign</label>
+        <div class="agreement-box">
+          <div class="agreement-head">
+            <span>📄 FIXORASSIST Franchise Opportunity — L1 Partner Agreement</span>
+            <a href="/assets/agreements/franchise-agreement.pdf" target="_blank" rel="noreferrer">Open in new tab ↗</a>
+          </div>
+          <iframe src="/assets/agreements/franchise-agreement.pdf#toolbar=1&view=FitH" class="agreement-frame"
+            title="Fixor Franchise Agreement"></iframe>
+          <label class="agreement-check">
+            <input type="checkbox" id="agreeChk" onchange="updateSubmitState()" />
+            <span>I have read and I agree to the terms of the <b>FIXORASSIST Franchise Opportunity Agreement</b> above.</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="fld" id="sigBlock" style="display:none">
+        <label>Sign below (finger or mouse) — this signature is your legal consent</label>
+        <div class="sig-wrap">
+          <canvas id="sigPad" width="600" height="180"></canvas>
+          <div class="sig-actions">
+            <button type="button" class="sig-btn" onclick="clearSig()">Clear</button>
+            <button type="button" class="sig-btn" onclick="saveSig()">Save signature ✓</button>
+          </div>
+          <div id="sigStatus" class="hint" style="margin-top:6px">Not signed yet</div>
+        </div>
+      </div>
+
+      <button class="submit" id="btnSubmit" disabled onclick="submitApp()">
+        <span class="spin" id="spinSubmit"></span>
+        <span id="btnSubmitText">Submit Application</span>
+        <span class="arrow">→</span>
+      </button>
+
+      <div class="terms">
+        By applying you agree to our <a href="/terms.html">Partner Terms</a> and
+        <a href="/privacy.html">Privacy Policy</a>. Bank details will be collected at
+        first payout with penny-drop verification.
+      </div>
+    </div>
+
+    <div class="success">
+      <div class="big">🎉</div>
+      <h2>Application submitted!</h2>
+      <p style="color:var(--muted);margin-top:6px;font-size:13.5px">Our team will review within 24 hours.</p>
+
+      <div style="font-size:11.5px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-top:22px">
+        Your application ref
+      </div>
+      <div class="ref" id="appRef">APP-202609-XXXX</div>
+
+      <div class="steps">
+        <div style="font-weight:600;margin-bottom:10px;color:#fff">What happens next?</div>
+        <div>1. ✉️ We'll email/SMS you within <b>24 hours</b> with approval status</div>
+        <div style="margin-top:6px">2. 🎫 On approval → your <b>unique referral code</b> + partner dashboard login</div>
+        <div style="margin-top:6px">3. 📲 Download the app → share your link → start earning</div>
+      </div>
+
+      <button class="submit" style="margin-top:22px" onclick="location.reload()">
+        <span>Submit another application</span> <span class="arrow">→</span>
+      </button>
+    </div>
+  </aside>
+
+</div>
+
+<section class="faq">
+  <h2>Common questions</h2>
+  <div class="qs">
+    <div class="q">
+      <div class="qh">💰 How much can I actually earn?</div>
+      <div class="qa">Sell 3-5 plans/day and clear ₹40-60k/month easy. Top 10% partners earn ₹1L+. It's marginal slab — the more you sell, the higher your rate goes.</div>
+    </div>
+    <div class="q">
+      <div class="qh">🎯 What do I need to sell?</div>
+      <div class="qa">Just download our app + share your unique link. Customer signs up via your link → you earn commission. Zero inventory, zero investment.</div>
+    </div>
+    <div class="q">
+      <div class="qh">🏦 When will I get paid?</div>
+      <div class="qa">Anytime after balance crosses ₹2,000. Request payout → we transfer to your bank within 24 hours. Bank details are collected at first payout with penny-drop verification — no need at signup.</div>
+    </div>
+    <div class="q">
+      <div class="qh">📄 What documents do I need?</div>
+      <div class="qa">Just PAN + Aadhaar (DigiLocker verified). Organizations also need GSTIN + business address. No physical paperwork.</div>
+    </div>
+    <div class="q">
+      <div class="qh">⚡ How fast is approval?</div>
+      <div class="qa">If all KYC passes auto-verification, approval is within 24 hours. In case of manual review, up to 48 hours.</div>
+    </div>
+    <div class="q">
+      <div class="qh">🚫 Can I refund?</div>
+      <div class="qa">If a customer refunds within 15-30 days, the commission is clawed back from your next payout. Rare — refund rate is under 2%.</div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 FIXOR ASSIST · Roadside assistance across India · 9717758510 · admin@fixorassist.com</footer>
+
+<script>
+const API = 'http://localhost:3000/public/v2/sales-agents';
+const state = {
+  type: 'org',
+  gstOk: false, gstName: '', gstAddress: '',
+  adhOk: false, adhName: '', adhClientId: '', adhLast4: '',
+  signatureDataUrl: null
+};
+
+// ── Signature pad ──────────────────────────────────────────────────────────
+let sigCtx = null, sigDrawing = false, sigHasStroke = false;
+function initSigPad() {
+  const cv = document.getElementById('sigPad');
+  if (!cv || sigCtx) return;
+  // High-DPI backing
+  const dpr = window.devicePixelRatio || 1;
+  const rect = cv.getBoundingClientRect();
+  cv.width = rect.width * dpr;
+  cv.height = 180 * dpr;
+  sigCtx = cv.getContext('2d');
+  sigCtx.scale(dpr, dpr);
+  sigCtx.lineWidth = 2;
+  sigCtx.lineCap = 'round';
+  sigCtx.strokeStyle = '#0a0a0b';
+  const start = (x, y) => { sigDrawing = true; sigHasStroke = true; sigCtx.beginPath(); sigCtx.moveTo(x, y); };
+  const move = (x, y) => { if (!sigDrawing) return; sigCtx.lineTo(x, y); sigCtx.stroke(); };
+  const end = () => { sigDrawing = false; };
+  const pos = (ev) => {
+    const r = cv.getBoundingClientRect();
+    const t = ev.touches ? ev.touches[0] : ev;
+    return { x: t.clientX - r.left, y: t.clientY - r.top };
+  };
+  cv.addEventListener('mousedown', (e) => { const p = pos(e); start(p.x, p.y); });
+  cv.addEventListener('mousemove', (e) => { const p = pos(e); move(p.x, p.y); });
+  cv.addEventListener('mouseup', end);
+  cv.addEventListener('mouseleave', end);
+  cv.addEventListener('touchstart', (e) => { e.preventDefault(); const p = pos(e); start(p.x, p.y); }, { passive: false });
+  cv.addEventListener('touchmove', (e) => { e.preventDefault(); const p = pos(e); move(p.x, p.y); }, { passive: false });
+  cv.addEventListener('touchend', (e) => { e.preventDefault(); end(); });
+}
+function clearSig() {
+  const cv = document.getElementById('sigPad');
+  if (!cv || !sigCtx) return;
+  sigCtx.clearRect(0, 0, cv.width, cv.height);
+  sigHasStroke = false;
+  state.signatureDataUrl = null;
+  const st = document.getElementById('sigStatus');
+  st.textContent = 'Not signed yet';
+  st.classList.remove('ok');
+  updateSubmitState();
+}
+function saveSig() {
+  if (!sigHasStroke) {
+    document.getElementById('sigStatus').textContent = 'Please draw your signature first.';
+    return;
+  }
+  const cv = document.getElementById('sigPad');
+  state.signatureDataUrl = cv.toDataURL('image/png');
+  const st = document.getElementById('sigStatus');
+  st.textContent = '✓ Signature saved — you can now submit.';
+  st.classList.add('ok');
+  updateSubmitState();
+}
+
+(function(){
+  const el = document.getElementById('counter');
+  let n = 4600000, target = 4732000;
+  const tick = () => {
+    n += 800 + Math.random() * 4000;
+    if (n >= target) n = target;
+    el.textContent = '₹' + n.toLocaleString('en-IN');
+    if (n < target) requestAnimationFrame(tick);
+  };
+  setTimeout(tick, 400);
+})();
+
+function setType(t) {
+  state.type = t;
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('on', b.dataset.type === t));
+  const card = document.getElementById('form');
+  card.classList.toggle('ind', t === 'ind');
+  card.classList.toggle('org', t === 'org');
+  document.getElementById('lblName').textContent = t === 'org' ? 'Authorized Signatory Name' : 'Your Full Name';
+  document.getElementById('gstOptTag').textContent = t === 'org' ? '' : '(optional)';
+  document.getElementById('gstHint').textContent = t === 'org'
+    ? 'Required for organizations. Legal name + address auto-fetched from GST portal.'
+    : 'Sole proprietor / freelancer? Add your GST — auto-fills your business address.';
+  updateSubmitState();
+}
+
+async function apiCall(path, body) {
+  const r = await fetch(API + path, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body || {})
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.message || data.code || 'Failed');
+  return data;
+}
+
+async function verifyGst() {
+  const gstin = document.getElementById('gstin').value.trim().toUpperCase();
+  const err = document.getElementById('errGst');
+  const ok = document.getElementById('okGst');
+  err.classList.remove('on');
+  if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z][0-9A-Z]{3}$/.test(gstin)) {
+    err.textContent = 'GSTIN must be 15 characters in valid format';
+    err.classList.add('on');
+    return;
+  }
+  const btn = document.getElementById('btnGst');
+  const spin = document.getElementById('spinGst');
+  btn.disabled = true; spin.classList.add('on');
+  try {
+    const res = await apiCall('/verify-gstin', { gstin });
+    state.gstOk = true; state.gstName = res.legalName;
+    state.gstAddress = typeof res.address === 'string' ? res.address : (res.address ? JSON.stringify(res.address) : '');
+    document.getElementById('okGstText').textContent = 'Verified as ' + res.legalName;
+    ok.classList.add('on');
+    btn.querySelector('span:last-child').textContent = 'Verified ✓';
+    btn.classList.add('done');
+    if (!document.getElementById('orgLegalName').value) {
+      document.getElementById('orgLegalName').value = res.legalName;
+    }
+    document.getElementById('gstDispName').textContent = res.legalName + (res.tradeName && res.tradeName !== res.legalName ? '  ·  ' + res.tradeName : '');
+    document.getElementById('gstDispAddr').textContent = state.gstAddress || '(Address not returned by GST portal)';
+    document.getElementById('gstDetailsWrap').style.display = 'block';
+  } catch (e) {
+    err.textContent = e.message; err.classList.add('on');
+  } finally {
+    spin.classList.remove('on'); btn.disabled = false;
+  }
+  updateSubmitState();
+}
+
+async function verifyAdh() {
+  const err = document.getElementById('errAdh');
+  const ok = document.getElementById('okAdh');
+  err.classList.remove('on');
+  const btn = document.getElementById('btnAdh');
+  const spin = document.getElementById('spinAdh');
+  btn.disabled = true; spin.classList.add('on');
+  try {
+    const init = await apiCall('/aadhaar/init', {});
+    state.adhClientId = init.clientId;
+    if (!init.mock && init.redirectUrl && init.redirectUrl !== 'about:blank') {
+      window.open(init.redirectUrl, '_blank', 'width=500,height=650');
+    }
+    const res = await apiCall('/aadhaar/poll', { clientId: init.clientId });
+    state.adhOk = true; state.adhName = res.name; state.adhLast4 = res.aadhaarLast4;
+    document.getElementById('aadhaarLabel').value = 'XXXX-XXXX-' + res.aadhaarLast4;
+    document.getElementById('okAdhText').textContent = 'Verified as ' + res.name + ' (last 4: ' + res.aadhaarLast4 + ')';
+    ok.classList.add('on');
+    btn.querySelector('span:last-child').textContent = 'Verified ✓';
+    btn.classList.add('done');
+  } catch (e) {
+    err.textContent = e.message; err.classList.add('on');
+  } finally {
+    spin.classList.remove('on'); btn.disabled = false;
+  }
+  updateSubmitState();
+}
+
+function togglePw(id, btn) {
+  const el = document.getElementById(id);
+  const isPw = el.type === 'password';
+  el.type = isPw ? 'text' : 'password';
+  btn.textContent = isPw ? 'Hide' : 'Show';
+}
+
+function pwOk() {
+  const p1 = document.getElementById('password').value;
+  const p2 = document.getElementById('password2').value;
+  const errEl = document.getElementById('errPw');
+  errEl.classList.remove('on');
+  if (!p1 && !p2) return false;
+  if (p1.length < 8 || !/[A-Za-z]/.test(p1) || !/\d/.test(p1)) {
+    if (p1) { errEl.textContent = 'Password must be at least 8 chars with a letter and a digit'; errEl.classList.add('on'); }
+    return false;
+  }
+  if (p1 !== p2) {
+    errEl.textContent = 'Passwords do not match';
+    errEl.classList.add('on');
+    return false;
+  }
+  return true;
+}
+
+function updateSubmitState() {
+  const fullName = document.getElementById('fullName').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const agreed = document.getElementById('agreeChk').checked;
+  const signed = !!state.signatureDataUrl;
+  // Signature pad only visible after agreement checkbox is ticked.
+  const sigBlock = document.getElementById('sigBlock');
+  if (sigBlock) {
+    sigBlock.style.display = agreed ? 'block' : 'none';
+    if (agreed) setTimeout(initSigPad, 0);
+  }
+  const baseOk = fullName && phone.length === 10 && email.includes('@') && state.adhOk && pwOk() && agreed && signed;
+  const orgOk = baseOk && state.gstOk && document.getElementById('orgLegalName').value.trim();
+  const ready = state.type === 'ind' ? baseOk : orgOk;
+  document.getElementById('btnSubmit').disabled = !ready;
+}
+
+document.querySelectorAll('input').forEach(i => i.addEventListener('input', updateSubmitState));
+
+async function submitApp() {
+  const spin = document.getElementById('spinSubmit');
+  const btn = document.getElementById('btnSubmit');
+  const btnTxt = document.getElementById('btnSubmitText');
+  btn.disabled = true; spin.classList.add('on'); btnTxt.textContent = 'Submitting...';
+
+  const payload = {
+    applicantType: state.type === 'org' ? 'organization' : 'individual',
+    fullName: document.getElementById('fullName').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    aadhaarVerified: true,
+    aadhaarLast4: state.adhLast4,
+    aadhaarVerifiedName: state.adhName,
+    aadhaarClientId: state.adhClientId,
+    password: document.getElementById('password').value,
+    agreementAccepted: !!document.getElementById('agreeChk').checked,
+    agreementVersion: 'v1-2026-09-28',
+    signatureDataUrl: state.signatureDataUrl,
+  };
+  if (state.gstOk) {
+    Object.assign(payload, {
+      gstin: document.getElementById('gstin').value.trim().toUpperCase(),
+      gstinVerified: true,
+      gstinVerifiedName: state.gstName,
+      businessAddress: state.gstAddress || null,
+    });
+  }
+  if (state.type === 'org') {
+    payload.orgLegalName = document.getElementById('orgLegalName').value.trim();
+  }
+
+  try {
+    const res = await apiCall('', payload);
+    document.getElementById('appRef').textContent = res.applicationRef;
+    document.getElementById('form').classList.add('done');
+    fireConfetti();
+    window.scrollTo({ top: document.getElementById('form').offsetTop - 30, behavior: 'smooth' });
+  } catch (e) {
+    alert('Submission failed: ' + e.message);
+    btn.disabled = false; btnTxt.textContent = 'Submit Application';
+  } finally {
+    spin.classList.remove('on');
+  }
+}
+
+function fireConfetti() {
+  const emojis = ['🎉', '🎊', '💰', '🏆', '⭐', '✨'];
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const c = document.createElement('div');
+      c.className = 'confetti';
+      c.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      c.style.left = Math.random() * 100 + '%';
+      c.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 5000);
+    }, i * 60);
+  }
+}
+</script>
+</body>
+</html>
