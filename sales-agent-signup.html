@@ -348,6 +348,13 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
       </div>
 
       <div class="fld">
+        <label>PAN card <span style="color:#F5B301">*</span></label>
+        <input id="pan" data-mono placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase" />
+        <div class="errmsg" id="errPan"></div>
+        <div class="hint">10-character PAN — needed for TDS compliance. Kept confidential; never shared with third parties.</div>
+      </div>
+
+      <div class="fld">
         <label>Aadhaar via DigiLocker</label>
         <div class="vg">
           <input id="aadhaarLabel" placeholder="Click verify — DigiLocker will open" disabled />
@@ -672,6 +679,20 @@ function pwOk() {
   return true;
 }
 
+const PAN_RE = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+function panOk() {
+  const p = (document.getElementById('pan').value || '').trim().toUpperCase();
+  const err = document.getElementById('errPan');
+  err.classList.remove('on');
+  if (!p) return false;
+  if (!PAN_RE.test(p)) {
+    err.textContent = 'PAN must be 10 characters (e.g. ABCDE1234F)';
+    err.classList.add('on');
+    return false;
+  }
+  return true;
+}
+
 function updateSubmitState() {
   const fullName = document.getElementById('fullName').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -679,12 +700,23 @@ function updateSubmitState() {
   const agreed = document.getElementById('agreeChk').checked;
   const signed = !!state.signatureDataUrl;
   // Signature pad only visible after agreement checkbox is ticked.
+  // BUG FIX: canvas must init AFTER the block is actually visible in the DOM,
+  // otherwise getBoundingClientRect returns 0 and the canvas stays blank forever.
+  // We use requestAnimationFrame so the browser has re-flowed after our display change.
   const sigBlock = document.getElementById('sigBlock');
   if (sigBlock) {
+    const wasHidden = sigBlock.style.display === 'none' || !sigBlock.style.display;
     sigBlock.style.display = agreed ? 'block' : 'none';
-    if (agreed) setTimeout(initSigPad, 0);
+    if (agreed && wasHidden) {
+      // Reset the guard so init runs fresh — needed when block was hidden then shown.
+      sigCtx = null;
+      requestAnimationFrame(() => {
+        initSigPad();
+        try { sigBlock.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+      });
+    }
   }
-  const baseOk = fullName && phone.length === 10 && email.includes('@') && state.adhOk && pwOk() && agreed && signed;
+  const baseOk = fullName && phone.length === 10 && email.includes('@') && state.adhOk && panOk() && pwOk() && agreed && signed;
   const orgOk = baseOk && state.gstOk && document.getElementById('orgLegalName').value.trim();
   const ready = state.type === 'ind' ? baseOk : orgOk;
   document.getElementById('btnSubmit').disabled = !ready;
@@ -703,6 +735,7 @@ async function submitApp() {
     fullName: document.getElementById('fullName').value.trim(),
     phone: document.getElementById('phone').value.trim(),
     email: document.getElementById('email').value.trim(),
+    pan: (document.getElementById('pan').value || '').trim().toUpperCase(),
     aadhaarVerified: true,
     aadhaarLast4: state.adhLast4,
     aadhaarVerifiedName: state.adhName,
