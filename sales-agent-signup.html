@@ -646,7 +646,15 @@ async function pollAadhaarUntilDone(clientId, opts = {}) {
       // 202 → still pending; anything else → done (or error).
       if (r.status !== 202) {
         const data = await r.json().catch(() => ({}));
-        if (r.ok && data && data.verified && data.name) return data;
+        // Accept ANY 200 with verified: true — even if name/last4 are missing.
+        // Better UX: unblock user, admin can review the raw KYC verification row.
+        if (r.ok && data && data.verified) {
+          return {
+            name: data.name || 'Aadhaar Verified',
+            aadhaarLast4: data.aadhaarLast4 || '••••',
+            ...data,
+          };
+        }
         // 422 AADHAAR_FAILED after consent is a permanent failure — show it.
         if (r.status === 422 || (data && data.error && data.error.code === 'AADHAAR_FAILED')) {
           throw new Error((data && data.error && data.error.message) || 'DigiLocker consent failed — please try Verify Aadhaar again.');
