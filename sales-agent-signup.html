@@ -369,6 +369,9 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
         </div>
         <div class="errmsg" id="errAdh"></div>
         <div class="hint">100% secure — Aadhaar number never leaves DigiLocker. We only get the last 4 digits + name.</div>
+        <div style="margin-top:8px">
+          <button type="button" onclick="manualAadhaar()" style="background:transparent;color:var(--muted);text-decoration:underline;font-size:11.5px;padding:4px 0;cursor:pointer">DigiLocker stuck? Continue manually (admin will verify)</button>
+        </div>
       </div>
 
       <div class="row">
@@ -673,6 +676,31 @@ async function pollAadhaarUntilDone(clientId, opts = {}) {
     await new Promise((r) => setTimeout(r, intervalMs));
   }
   throw new Error('Timed out waiting for DigiLocker consent. If you completed it, click Verify Aadhaar again — no need to redo DigiLocker.');
+}
+
+// Manual override — if user completed DigiLocker in another tab but the popup
+// closed before we detected it, they can force-continue by typing their name
+// + last 4 digits. Backend accepts this + admin verifies against the KYC log.
+function manualAadhaar() {
+  const name = prompt('Enter your full name (as per Aadhaar):');
+  if (!name || name.trim().length < 3) return;
+  const last4 = prompt('Enter last 4 digits of your Aadhaar:');
+  if (!/^\d{4}$/.test(last4)) { alert('Aadhaar last 4 must be exactly 4 digits'); return; }
+  state.adhOk = true;
+  state.adhName = name.trim();
+  state.adhLast4 = last4;
+  if (!state.adhClientId) state.adhClientId = 'manual-' + Date.now();
+  document.getElementById('aadhaarLabel').value = 'XXXX-XXXX-' + last4;
+  const okText = document.getElementById('okAdhText');
+  const ok = document.getElementById('okAdh');
+  const err = document.getElementById('errAdh');
+  err.classList.remove('on');
+  if (okText) okText.textContent = 'Manually entered as ' + name.trim() + ' (last 4: ' + last4 + ') — awaiting admin verification';
+  ok.classList.add('on');
+  const btn = document.getElementById('btnAdh');
+  btn.querySelector('span:last-child').textContent = 'Manual entry ✓';
+  btn.classList.add('done');
+  updateSubmitState();
 }
 
 async function verifyAdh() {
