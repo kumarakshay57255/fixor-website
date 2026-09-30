@@ -490,7 +490,10 @@ footer{position:relative;z-index:1;padding:28px 40px;border-top:1px solid var(--
 <footer>© 2026 FIXOR ASSIST · Roadside assistance across India · 9717758510 · admin@fixorassist.com</footer>
 
 <script>
-const API = 'http://localhost:3000/public/v2/sales-agents';
+// Auto-select backend host — localhost for dev, prod host otherwise.
+const API = (/^(localhost|127\.|192\.168\.)/.test(location.hostname)
+  ? 'http://localhost:3000'
+  : 'https://backend.fixorassist.com') + '/public/v2/sales-agents';
 const state = {
   type: 'org',
   gstOk: false, gstName: '', gstAddress: '',
