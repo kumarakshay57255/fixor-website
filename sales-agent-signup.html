@@ -628,32 +628,43 @@ async function verifyGst() {
   updateSubmitState();
 }
 
-// Poll the /aadhaar/poll endpoint every 3s until the user completes
-// DigiLocker consent or we time out (~2 minutes). Backend returns HTTP 202
+// Poll the /aadhaar/poll endpoint every 2s until the user completes
+// DigiLocker consent or we time out (~5 minutes). Backend returns HTTP 202
 // with { pending: true } until consent is done, then HTTP 200 with the
 // verified Aadhaar payload.
 async function pollAadhaarUntilDone(clientId, opts = {}) {
-  const maxAttempts = opts.maxAttempts || 40;   // 40 * 3s ≈ 2 minutes
-  const intervalMs = opts.intervalMs || 3000;
+  const maxAttempts = opts.maxAttempts || 150;  // 150 * 2s = 5 minutes
+  const intervalMs = opts.intervalMs || 2000;
+  const okText = document.getElementById('okAdhText');
   for (let i = 0; i < maxAttempts; i++) {
-    const r = await fetch(API + '/aadhaar/poll', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ clientId }),
-    });
-    // 202 → still pending; anything else → done (or error).
-    if (r.status !== 202) {
-      const data = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(data?.error?.message || data?.message || 'Aadhaar verification failed');
-      if (data && data.verified && data.name) return data;
-      // Server returned 200 but data looks incomplete — retry.
+    try {
+      const r = await fetch(API + '/aadhaar/poll', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ clientId }),
+      });
+      // 202 → still pending; anything else → done (or error).
+      if (r.status !== 202) {
+        const data = await r.json().catch(() => ({}));
+        if (r.ok && data && data.verified && data.name) return data;
+        // 422 AADHAAR_FAILED after consent is a permanent failure — show it.
+        if (r.status === 422 || (data && data.error && data.error.code === 'AADHAAR_FAILED')) {
+          throw new Error((data && data.error && data.error.message) || 'DigiLocker consent failed — please try Verify Aadhaar again.');
+        }
+        // Other non-200 → treat as transient, keep polling.
+      }
+    } catch (netErr) {
+      // Transient network error — keep polling instead of giving up.
     }
-    // Update spinner status text so the user sees progress.
-    const okText = document.getElementById('okAdhText');
-    if (okText) okText.textContent = 'Waiting for DigiLocker consent…  (' + Math.round((maxAttempts - i - 1) * intervalMs / 1000) + 's left)';
+    if (okText) {
+      const secLeft = Math.max(0, Math.round((maxAttempts - i - 1) * intervalMs / 1000));
+      const min = Math.floor(secLeft / 60), sec = secLeft % 60;
+      okText.textContent = 'Waiting for DigiLocker consent…  ('
+        + (min > 0 ? min + 'm ' : '') + sec + 's left)';
+    }
     await new Promise((r) => setTimeout(r, intervalMs));
   }
-  throw new Error('Timed out waiting for DigiLocker consent. Please click Verify Aadhaar again.');
+  throw new Error('Timed out waiting for DigiLocker consent. If you completed it, click Verify Aadhaar again — no need to redo DigiLocker.');
 }
 
 async function verifyAdh() {
