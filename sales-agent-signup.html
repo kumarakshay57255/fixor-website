@@ -628,28 +628,62 @@ async function verifyGst() {
   updateSubmitState();
 }
 
+// Poll the /aadhaar/poll endpoint every 3s until the user completes
+// DigiLocker consent or we time out (~2 minutes). Backend returns HTTP 202
+// with { pending: true } until consent is done, then HTTP 200 with the
+// verified Aadhaar payload.
+async function pollAadhaarUntilDone(clientId, opts = {}) {
+  const maxAttempts = opts.maxAttempts || 40;   // 40 * 3s ≈ 2 minutes
+  const intervalMs = opts.intervalMs || 3000;
+  for (let i = 0; i < maxAttempts; i++) {
+    const r = await fetch(API + '/aadhaar/poll', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clientId }),
+    });
+    // 202 → still pending; anything else → done (or error).
+    if (r.status !== 202) {
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data?.error?.message || data?.message || 'Aadhaar verification failed');
+      if (data && data.verified && data.name) return data;
+      // Server returned 200 but data looks incomplete — retry.
+    }
+    // Update spinner status text so the user sees progress.
+    const okText = document.getElementById('okAdhText');
+    if (okText) okText.textContent = 'Waiting for DigiLocker consent…  (' + Math.round((maxAttempts - i - 1) * intervalMs / 1000) + 's left)';
+    await new Promise((r) => setTimeout(r, intervalMs));
+  }
+  throw new Error('Timed out waiting for DigiLocker consent. Please click Verify Aadhaar again.');
+}
+
 async function verifyAdh() {
   const err = document.getElementById('errAdh');
   const ok = document.getElementById('okAdh');
+  const okText = document.getElementById('okAdhText');
   err.classList.remove('on');
   const btn = document.getElementById('btnAdh');
   const spin = document.getElementById('spinAdh');
   btn.disabled = true; spin.classList.add('on');
+  // Show the "waiting" chip immediately so the user gets feedback.
+  ok.classList.add('on');
+  if (okText) okText.textContent = 'Opening DigiLocker…';
   try {
     const init = await apiCall('/aadhaar/init', {});
     state.adhClientId = init.clientId;
     if (!init.mock && init.redirectUrl && init.redirectUrl !== 'about:blank') {
       window.open(init.redirectUrl, '_blank', 'width=500,height=650');
     }
-    const res = await apiCall('/aadhaar/poll', { clientId: init.clientId });
+    if (okText) okText.textContent = 'Waiting for DigiLocker consent…';
+    const res = await pollAadhaarUntilDone(init.clientId);
     state.adhOk = true; state.adhName = res.name; state.adhLast4 = res.aadhaarLast4;
     document.getElementById('aadhaarLabel').value = 'XXXX-XXXX-' + res.aadhaarLast4;
-    document.getElementById('okAdhText').textContent = 'Verified as ' + res.name + ' (last 4: ' + res.aadhaarLast4 + ')';
-    ok.classList.add('on');
+    if (okText) okText.textContent = 'Verified as ' + res.name + ' (last 4: ' + res.aadhaarLast4 + ')';
     btn.querySelector('span:last-child').textContent = 'Verified ✓';
     btn.classList.add('done');
   } catch (e) {
-    err.textContent = e.message; err.classList.add('on');
+    state.adhOk = false; state.adhName = ''; state.adhLast4 = '';
+    ok.classList.remove('on');
+    err.textContent = e.message || 'Aadhaar verification failed'; err.classList.add('on');
   } finally {
     spin.classList.remove('on'); btn.disabled = false;
   }
