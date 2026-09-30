@@ -681,8 +681,17 @@ async function verifyAdh() {
   try {
     const init = await apiCall('/aadhaar/init', {});
     state.adhClientId = init.clientId;
+    let popup = null;
     if (!init.mock && init.redirectUrl && init.redirectUrl !== 'about:blank') {
-      window.open(init.redirectUrl, '_blank', 'width=500,height=650');
+      popup = window.open(init.redirectUrl, 'fixorDigiLocker', 'width=500,height=650');
+      if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+        // Popup was blocked by the browser. Give the user an inline link.
+        ok.classList.remove('on');
+        err.innerHTML = 'Popup blocked. <a href="' + init.redirectUrl + '" target="_blank" style="text-decoration:underline;color:var(--accent);font-weight:600">Click here to open DigiLocker</a> — after you complete consent, click Verify Aadhaar again to check status.';
+        err.classList.add('on');
+        state.adhClientId = init.clientId; // preserve so retry uses same session
+        return;
+      }
     }
     if (okText) okText.textContent = 'Waiting for DigiLocker consent…';
     const res = await pollAadhaarUntilDone(init.clientId);
