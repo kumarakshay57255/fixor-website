@@ -654,7 +654,7 @@ async function pollAadhaarUntilDone(clientId, opts = {}) {
         if (r.ok && data && data.verified) {
           return {
             name: data.name || 'Aadhaar Verified',
-            aadhaarLast4: data.aadhaarLast4 || '••••',
+            aadhaarLast4: data.aadhaarLast4 || '',
             ...data,
           };
         }
@@ -731,9 +731,12 @@ async function verifyAdh() {
     }
     if (okText) okText.textContent = 'Waiting for DigiLocker consent…';
     const res = await pollAadhaarUntilDone(init.clientId);
-    state.adhOk = true; state.adhName = res.name; state.adhLast4 = res.aadhaarLast4;
-    document.getElementById('aadhaarLabel').value = 'XXXX-XXXX-' + res.aadhaarLast4;
-    if (okText) okText.textContent = 'Verified as ' + res.name + ' (last 4: ' + res.aadhaarLast4 + ')';
+    state.adhOk = true; state.adhName = res.name; state.adhLast4 = res.aadhaarLast4 || '';
+    // DigiLocker never shares Aadhaar digits — mask fully if last 4 unavailable.
+    document.getElementById('aadhaarLabel').value = state.adhLast4
+      ? ('XXXX-XXXX-' + state.adhLast4)
+      : 'XXXX-XXXX-XXXX  (verified by DigiLocker)';
+    if (okText) okText.textContent = 'Verified as ' + res.name + (state.adhLast4 ? ' (last 4: ' + state.adhLast4 + ')' : ' via DigiLocker');
     btn.querySelector('span:last-child').textContent = 'Verified ✓';
     btn.classList.add('done');
   } catch (e) {
